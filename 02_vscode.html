@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!-- [html-validate-disable no-trailing-whitespace] -->
+<html lang="nl">
+
+<head>
+   <title>VS Code | HTML cursus</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="common/styles.css">
+   <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="language-html showpro prism-default">
+   <div id="mode">
+      <span>n00b</span>
+      <label class="switch">
+         <input type="checkbox" checked>
+         <span class="slider round"></span>
+      </label>
+      <span>pro</span>
+   </div>
+   <nav class="site__nav">
+      <a href="01_browser.html" class="main__thumb" title="01. browser">
+         <p class="thumb__title">01. browser</p>
+         <img class="thumb__visual" src="img/01_browser/icon.jpg" alt="">
+      </a>
+      <a href="02_vscode.html" class="main__thumb active" title="02. VS code">
+         <p class="thumb__title">02. VS Code</p>
+         <img class="thumb__visual" src="img/02_vscode/icon.png" alt="">
+      </a>
+      <a href="03_github.html" class="main__thumb" title="03. Github">
+         <p class="thumb__title">03. Github</p>
+         <img class="thumb__visual" src="img/03_github/icon.jpg" alt="">
+      </a>
+      <a href="04_visualstudio.html" class="main__thumb" title="04. Visual Studio">
+         <p class="thumb__title">04. VIsual Studio</p>
+         <img class="thumb__visual" src="img/04_visualstudio/icon.jpg" alt="">
+      </a>
+   </nav>
+   <h1>02. VS Code</h1>
+   <div id="toc"></div>
+   <main>
+      <h2>NodeJS</h2>
+      <p><strong>NodeJS</strong> is een extensie van Javascript voor serverside en lokale toepassingen.</p>
+      <p>We zullen er zelf niet rechtstreeks mee werken, maar een aantal tools die we binnen onze tekst editor nodig hebben, vereisen dit. Dus <a href="https://nodejs.org/en/download">download</a> en installeer NodeJS (de windows installer is ok).</p>
+      <p><img src="img/02_vscode/nodejs.png" alt="" class="w-300"></p>
+      <p>Je kan in Visual Studio Code (die we in volgende stap installeren) eenvoudig controleren of NodeJS correct geïnstalleerd is door het versienummer op te vragen. Open een nieuwe terminal via <strong>View, New Terminal...</strong>, en tik het commando <strong>npm -version</strong> (<em>npm</em> is een afkorting van <em>Node Package Manager</em>). Als je een foutmelding krijgt, dan is NodeJS nog niet geïnstalleerd.</p>
+      <p><img src="img/02_vscode/NodeJS installatie test.png" alt="" class="w-700"></p>
+
+      <h2>Visual Studio Code</h2>
+      <p><strong>Visual Studio Code</strong> is de tekst editor waarmee we onze code zullen schrijven. Het heeft alle kenmerken die een tekst editor moet bezitten, en is vandaag dé editor voor web development:</p>
+      <ul>
+         <li><strong>visueel aantrekkelijk</strong> en strakke GUI</li>
+         <li><strong>bestanden &amp; mappen</strong>: navigatiebar, projecten, meerdere bestanden in tabbladen</li>
+         <li><strong>editeren</strong>: code folding, syntax highlighting, autocompletion en -indentatie, on-the-fly syntax check, shortcuts, refactoring, auto layout...</li>
+         <li><strong>zoeken/vervangen</strong>: basic search, searching in folders, reguliere expressies</li>
+         <li><strong>integraties</strong>: Git, terminal...</li>
+         <li><strong>aanpasbaarheid</strong>: kleurschema's, voorkeuren</li>
+         <li><strong>uitbreidbaarheid</strong>: mogelijkheid extensies te downloaden en installeren</li>
+      </ul>
+      <h2>Installatie</h2>
+      <h3>downloaden</h3>
+      <p><a href="https://code.visualstudio.com/download">Download</a> en installeer VS Code</p>
+      <p><a href="https://code.visualstudio.com/download"><img src="img/02_vscode/icon.png" alt="" class="w-150"></a></p>
+      <h3>installatie packages</h3>
+      <p><strong>Node packages</strong> kan je zien als code bibliotheken die kunnen gebruikt worden door allerhande extensies of VS Code zelf. Om deze packages te kunnen installeren en beheren heb je <strong>NodeJS</strong> nodig, dus mocht je dat nog niet geïnstalleerd hebben, ga dan terug naar stap 2 en installeer het eerst.</p>
+      <p>Open een nieuwe terminal in VS Code, en voer één voor één volgende vijf commando's uit:</p>
+      <pre class="language-js notoolbar"><code>&gt; npm install -g html-validate
+&gt; npm install -g eslint
+&gt; npm install -g stylelint
+&gt; npm install -g stylelint-config-recommended
+&gt; npm install -g stylelint-csstree-validator</code></pre>
+      <p>Een screenshot van het eerste commando:</p>
+      <p><img src="img/02_vscode/node packages.png" alt="" class="w-700"></p>
+      <p>
+         Als je niet zeker bent of je dit al gedaan hebt of niet, voer deze commando's gerust nog eens uit, dat kan geen kwaad. Je krijgt in het beste geval nieuwere versies.
+         Je kan altijd controleren welke packages al geïnstalleerd zijn met het <code>npm list -g</code> commando in terminal:
+      </p>
+      <p><img src="img/02_vscode/vs code npm packages.png" alt="" class="w-700"></p>
+      <h3>extensies</h3>
+      <p><strong>Extensies</strong> zijn plugins waarmee je de functionaliteit van VS Code kan uitbreiden of aanpassen. Sommige extensies hebben de Node packages uit vorige stap nodig, dus als je die nog niet geïnstalleerd hebt, doe dat dan eerst. Installeer volgende extensies (zie screenshot):</p>
+      <ol>
+         <li>EditorConfig for VS Code</li>
+         <li>ESLint</li>
+         <li>HTML-validate</li>
+         <li>htmltagwrap</li>
+         <li>Live Server</li>
+         <li>Quick HTML Previewer</li>
+         <li>Stylelint</li>
+         <li>W3C Web Validator</li>
+      </ol>      
+      <p><img src="img/02_vscode/vscode extensies.png" alt="" class="w-400"></p>
+      <h3>configuratie</h3>
+      <p>In de root van je project kunnen allerhande configuratiebestanden voorkomen. Wij gebruiken de volgende:</p>
+      <ul>
+         <li><strong>editorConfig</strong>: algemene editor instellingen</li>
+         <li><strong>eslintrc.json</strong>: ESLint Javascript linter opties</li>
+         <li><strong>gitignore</strong>: lijst bestanden en mappen die niet gepushed hoeven worden naar Github</li>
+         <li><strong>htmlvalidate.json</strong>: HTML-validate HTML linter opties</li>
+         <li><strong>stylelintrc.json</strong>: StyleLint CSS linter opties</li>
+      </ul>
+      <p>Deze bevatten allerhande instellingen zoals gebruikte karakterset, indentatiestijl (tabs of spaties, spronggrootte), voorkeuren qua hoofdlettergebruik, layout, toegelaten HTML tags, Javascript syntax, witruimtes enz...</p>
+      <p>Het is belangrijk dat deze instellingen <strong>bij iedereen gelijk</strong> zijn. De exacte configuratie <strong>verschilt van vak tot vak</strong>; voor <strong>Basic Web Development</strong> en <strong>Dynamic Web Development</strong> zul je een template vinden op Toled. Een screenshot voor BWD::</p>
+      <p><img src="img/02_vscode/vscode configuratie.png" alt="" class="w-400"></p>
+      <h2>Shortcuts</h2>
+      <p>Tabel van de belangrijkste shortcuts die je zo snel mogelijk onder de knie zou moeten krijgen (volledige cheatsheet zie <a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf">Windows</a> en <a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf">OSX</a>); probeer ze zoveel mogelijk uit tijdens de oefeningen.</p>
+      <p><img src="img/02_vscode/vs code shortcuts.png" alt="" class="w-800"></p>
+      <p>Er zijn twee belangrijke redenen om te investeren in het leren van shortcuts:</p>
+      <ul>
+         <li><strong>snelheid</strong>: een programmeur kost al snel 100€ per uur aan zijn werkgever; dankzij shortcuts kan je veel sneller werken</li>
+         <li><strong>ontlasting lichaam</strong>: met shortcuts werken is veel minder belastend voor gewrichten en spieren dan telkens te moeten wisselen tussen toetsenbord en muis</li>
+      </ul>
+
+   </main>   
+   <footer>
+      <img src="common/img/thats-all.jpg" alt="">
+      <p>@2014, Rogier van der Linde</p>
+   </footer>
+   <a aria-label="up" id="up" href="#top"><span class="fas fa-chevron-circle-up"></span></a>
+   <!-- popup -->
+   <div class="hystmodal dialog" id="diaDemo" aria-hidden="true">
+      <div class="hystmodal__wrap">
+         <div class="hystmodal__window" role="dialog" aria-modal="true">
+            <iframe title="demo"></iframe>
+         </div>
+      </div>
+   </div>
+   <!-- scripts -->
+   <script src="common/vendor/prism/prism.js"></script>
+   <script src="common/vendor/hystmodal/hystmodal.min.js"></script>
+   <script src="common/vendor/css.min.js"></script>
+   <script src="common/js/mode.js"></script>
+   <script src="common/js/scripts.js"></script>
+   <!-- Google tag (gtag.js) -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFJVGYKCY8"></script>
+   <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FFJVGYKCY8');
+   </script>
+</body>
+
+</html>
