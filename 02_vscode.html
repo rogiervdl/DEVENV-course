@@ -3,7 +3,7 @@
 <html lang="nl">
 
 <head>
-   <title>VS Code | HTML cursus</title>
+   <title>VS Code | Ontwikkelomgeving</title>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="common/styles.css">
@@ -66,7 +66,7 @@
       <p><strong>Node packages</strong> kan je zien als code bibliotheken die kunnen gebruikt worden door allerhande extensies of VS Code zelf. Om deze packages te kunnen installeren en beheren heb je <strong>NodeJS</strong> nodig, dus mocht je dat nog niet geïnstalleerd hebben, ga dan terug naar stap 2 en installeer het eerst.</p>
       <p>Open een nieuwe terminal in VS Code, en voer één voor één volgende vijf commando's uit:</p>
       <pre class="language-js notoolbar"><code>&gt; npm install -g html-validate
-&gt; npm install -g eslint
+&gt; npm install -g eslint@8.57.0
 &gt; npm install -g stylelint
 &gt; npm install -g stylelint-config-recommended
 &gt; npm install -g stylelint-csstree-validator</code></pre>
@@ -111,10 +111,130 @@
          <li><strong>ontlasting lichaam</strong>: met shortcuts werken is veel minder belastend voor gewrichten en spieren dan telkens te moeten wisselen tussen toetsenbord en muis</li>
       </ul>
 
+      <h2>Hoe oefeningen maken</h2>
+      <h3>stap 1: open je repository in VS Code</h3>
+      <p>
+         Voor elk vak zul je een repository moeten maken, zie <a href="03_github.html#repository-opzetten">dit hoofdstuk</a>. 
+         Elke keer als je een oefening maakt, open je de volledige repo in VS Code. 
+         Enkel één oefening kan ook, maar dan is het moeilijker om code uit andere lessen terug te vinden om te gebruiken. 
+         Er zijn meerdere manieren. Het makkelijkste is via <strong>Verkenner</strong> of via <strong>Github Desktop</strong>:
+      </p>
+      <figure>
+         <img src="img/02_vscode/repo openen verkenner.png" alt="" class="w-500">
+         <figcaption>methode 1: open via de rechtermuisknop in Verkenner</figcaption>
+      </figure>
+      <figure>
+         <img src="img/02_vscode/repo openen github desktop.png" alt="" class="w-700">
+         <figcaption>methode 2: open via Github Desktop</figcaption>
+      </figure>
+      <p>Je krijgt alle mappen te zien (screenshot voor Basic Web Development):</p>
+      <figure>
+         <img src="img/02_vscode/repo in vs code.png" alt="" class="w-700">
+         <figcaption>alle mappen in VS Codes</figcaption>
+      </figure>
+      <h3>stap 2: maak de oefening aan</h3>
+      <p>Eerst moet je weten om <strong>welke les</strong> en wat de <strong>naam van de oefening</strong> is. Dit vind je terug in de opgave:</p>
+      <figure>
+         <img src="img/02_vscode/les en oefening.png" alt="" class="w-500">
+         <figcaption>nummer van de les en naam van de oefening</figcaption>
+      </figure>
+      <p>Stappen:</p>
+      <ol>
+         <li>maak een <strong>submap</strong> in de les met <em>exact</em> de naam van de oefening, hier <em>MijnEerstePagina</em></li>
+         <li>voeg een bestand <strong>index.html</strong> toe</li>
+         <li>maak de <strong>HTML basiscode</strong> aan (b.v. met de <strong>html:5 + tab</strong> shortcut)</li>
+         <li>geef de pagina een titel</li>
+      </ol>
+      <figure>
+         <img src="img/02_vscode/stap1.png" alt="" class="w-300">
+         <figcaption>maak een nieuwe map...</figcaption>
+      </figure>
+      <figure>
+         <img src="img/02_vscode/stap2.png" alt="" class="w-300">
+         <figcaption>...met exact de naam van de oefening...</figcaption>
+      </figure>
+      <figure>
+         <img src="img/02_vscode/stap3.png" alt="" class="w-300">
+         <figcaption>...voeg dan een bestand toe...</figcaption>
+      </figure>
+      <figure>
+         <img src="img/02_vscode/stap4.png" alt="" class="w-600">
+         <figcaption>...met exact de naam <strong>index.html</strong>, en gebruik de <strong>html:5 + TAB</strong> shortcut...</figcaption>
+      </figure>
+      <figure>
+         <img src="img/02_vscode/stap5.png" alt="" class="w-600">
+         <figcaption>...en geef de pagina een titel</figcaption>
+      </figure>
+      <h3>stap 3: werk de oefening uit</h3>
+      <p>Voeg nu alle mappen en bestanden toe die je nodig hebt voor deze oefening, typisch:</p>      
+      <ul>
+         <li><em>img</em>: afbeeldingen (meestal meegegeven met de opgave)</li>
+         <li><em>css</em>: stijlen</li>
+         <li><em>js</em>: scripts</li>
+         <li><em>fonts</em>: lettertypes</li>
+         <li><em>vendor</em>: externe bestanden en plugins als lightbox, carousel...</li>
+         <li>...</li>
+      </ul>
+      <p>Werk tenslotte de opgave uit. Indien nodig, maak je nog extra submappen aan, b.v. voor afbeeldingen, CSS, fonts enz... Let er op dat alle resources correct gelinkt zijn:</p>
+      <figure>
+         <img src="img/02_vscode/live preview.png" alt="" class="w-1200">
+         <figcaption>uitwerking oefening met Live Preview</figcaption>
+      </figure>
+      <h3>stap 4: commit en push</h3>
+      <p>
+         Als je klaar bent met de oefening, commit en push je de wijzigingen naar Github. 
+         De eenvoudigste en meest universele manier is met Github Desktop; meer details in <a href="03_github.html#oefeningen-pushen">dit hoofdstuk</a>. 
+      </p>
+      <figure>
+         <img src="img/02_vscode/commit push.png" alt="" class="w-1200">
+         <figcaption>commit mededeling, commit en push</figcaption>
+      </figure>
+      <p>Controleer zeker online op github.com eens of alles er goed op staat:</p>
+      <figure>
+         <img src="img/02_vscode/github online.png" alt="" class="w-600">
+      </figure>
+
+
+      <h2>Live server</h2>
+      <p>Er zijn twee manieren om je werk te bekijken tijdens het werken:</p>
+      <ul>
+         <li><strong>Preview</strong>, standaard ingebouwd in VS Code: weergave in VS Code (zie screenshot hierboven)</li>
+         <li><strong>Live Server</strong> via de Live Server extensie: weergave in de browser met live update</li>
+      </ul>
+      <figure>
+         <img src="img/02_vscode/preview live.png" alt="" class="w-800">
+      </figure>
+      <p>De previewfunctie toont de pagina in VS Code in een tabblad:</p>
+      <figure>
+         <img src="img/02_vscode/live preview.png" alt="" class="w-600">
+         <figcaption>VS Code Preview</figcaption>
+      </figure>
+
+      <p>Het heeft een paar belangrijke beperkingen:</p>
+      <ul class="wrong">
+         <li><strong>werkt niet goed</strong> voor complexere CSS of Javascript</li>
+         <li>previewvenster is eigenlijk <strong>te klein</strong> om bruikbaar te zijn</li>
+         <li><strong>geen debugging</strong>mogelijkheden zoals developer tools in browsers</li>
+      </ul>
+      <p>Gebruik daarom &mdash; tenzij misschien voor snelle previews &mdash; <em>altijd</em> de <mark>Live Server</mark>. Je pagina zal openen in de browser, en elke keer als je opslaat bijgewerkt worden. Een voorbeeld van een correcte setup, met je code op je laptop en de live server op een externe monitor:</p>
+      <figure>
+         <img src="img/02_vscode/laptop en monitor.jpg" alt="" class="w-800">
+         <figcaption>correcte setup: code op je laptop, live server op een externe monitor</figcaption>
+      </figure>
+
+      <h2>Layout, validatie en linting</h2>
+
+
+
+
+
    </main>   
    <footer>
       <img src="common/img/thats-all.jpg" alt="">
-      <p>@2014, Rogier van der Linde</p>
+      <div class="footer__bottom">
+         <p>@2024, Rogier van der Linde</p>
+         <p>cursussen in dezelfde reeks: <a href="https://rogiervdl.github.io/HTML-course/">HTML</a> &mdash; <a href="https://rogiervdl.github.io/CSS-course/">CSS</a> &mdash; <a href="https://rogiervdl.github.io/JS-course/">Javascript</a> &mdash; <a href="https://rogiervdl.github.io/CS-course/">C#</a></p>
+      </div>
    </footer>
    <a aria-label="up" id="up" href="#top"><span class="fas fa-chevron-circle-up"></span></a>
    <!-- popup -->

@@ -3,7 +3,7 @@
 <html lang="nl">
 
 <head>
-   <title>Github | HTML cursus</title>
+   <title>Github | Ontwikkelomgeving</title>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="common/styles.css">
@@ -59,13 +59,19 @@
       <p><img src="img/03_github/github pro.png" alt="" class="w-500"></p>
       <p>In afwachting van de goedkeuring, kan je alvast verder zonder pro-account.</p>
       <h2>Repository opzetten</h2>
-      <h3>Aanmaken</h3>
-      <div class="tips" data-caption="☝🏻 OPMERKING">
+      <div class="tips" data-caption="☝🏻 LET OP">
          <p>
-            Voor het vak Basic Web Development, academiejaar 2024&ndash;2025 moet je één repository aanmaken met de naam (let op hoofdletters!):
-            <br><br><strong><em>BWD&ndash;VoornaamAchternaam&ndash;2425</em></strong> 
+            Kijk goed naar de exacte naam die gevraagd wordt voor het vak! Voor academiejaar 2024&ndash;2025 is dit (let op de hoofdletters):
          </p>
+         <ul>
+            <li>Basic Web Development: <strong>BWD-<em>VoornaamAchternaam</em>-2425</strong> </li>
+            <li>Dynamic Web Development: <strong>DWD-<em>VoornaamAchternaam</em>-2425</strong> </li>
+            <li>Introductie in Programmeren: <strong>IIP-<em>VoornaamAchternaam</em>-2425</strong> </li>
+            <li>OOA Application Development: <strong>OOAD-<em>VoornaamAchternaam</em>-2425</strong> </li>
+         </ul>
+         <p>Als de naam niet exact correct is, zal de docent je repository niet aanvaarden!</p>
       </div>
+      <h3>Aanmaken</h3>
 
       <p>Log in op github.com, en maak een nieuwe repository aan met de juiste naam:</p>      
       <p><img src="img/03_github/github repo aanmaken.png" alt="" class="w-800"></p>
@@ -86,16 +92,25 @@
       <h3>Vaktemplate toevoegen</h3>
       <p>
          Nu gaan we de standaard mappenstructuur en nog een paar bestanden overzetten naar je repository. Je zult een zip vinden op Toledo.
-         Die unzip je in de map waar je je repo eerder gecloned hebt. Het zou er ongeveer zo moeten uitzien (er kunnen kleine wijzigingen zijn van jaar tot jaar):
+         Die unzip je in de map waar je je repo eerder gecloned hebt. Het zou er voor de verschillende vakken ongeveer zo moeten uitzien (er kunnen kleine wijzigingen zijn van jaar tot jaar):
       </p>
-      <p><img src="img/03_github/github template.png" alt="" class="w-800"></p>
+      <figure>
+         <img src="img/03_github/template BWD.png" alt="" class="w-250">
+         <img src="img/03_github/template DWD.png" alt="" class="w-250">
+         <img src="img/03_github/template IIP.png" alt="" class="w-250">
+         <img src="img/03_github/template OOAD.png" alt="" class="w-250">
+         <figcaption>in volgorde: Basic Web Development, Dynamic Web Development, Introductie in Programmeren en OO Application Development</figcaption>
+      </figure>
       <h3>Readme.md invullen</h3>
       <p>Het bestand <strong>readme.md</strong> in de root bevat informatie over je repo. Een ideaal moment om te leren werken met Github, is het invullen van dit bestand, en de wijzigingen pushen naar github.com.</p>
       <ol>
          <li>open <strong>Visual Studio Code</strong>, en open de map van je repo</li>
          <li>open het bestand readme.md, <strong>vul de informatie aan</strong>, en sla het op</li>
       </ol>
-      <p><img src="img/03_github/github readme.png" alt="" class="w-800"></p>
+      <figure>
+         <img src="img/03_github/github readme.png" alt="" class="w-800">
+         <figcaption>screenshot voor Basic Web Development in prof. Bachelor; pas aan voor andere vakken</figcaption>
+      </figure>
 
       <h3>Commit en publish</h3>
       <p>Nu zullen we alle wijzigingen – de toegevoegde template met ingevulde readme – synchroniseren met de online repository op Github.com in twee stappen:</p>
@@ -105,21 +120,29 @@
       </ol>      
       <figure>
          <img src="img/03_github/github commit.png" alt="" class="bordered w-600">
-         <img src="img/03_github/github commit.png" alt="" class="bordered w-600">
-         <figcaption>commit en publish</figcaption>
+         <img src="img/03_github/github publish.png" alt="" class="bordered w-600">
+         <figcaption>commit en publish (screenshots voor Basic Web Development)</figcaption>
       </figure>
 
       <h3>Online versie bekijken</h3>
       <p>Als je online repo op github.com er ongeveer zo uitziet, is alles goed gelukt:</p>
-      <p><img src="img/03_github/github final.png" alt="" class="w-800"></p>
+      <figure>
+         <img src="img/03_github/github final.png" alt="" class="w-800">
+         <figcaption>screenshots voor Basic Web Development</figcaption>
+      </figure>
       <div class="tips" data-caption="💥 PAS OP!">
          <p><em>Let op: hoewel het theoretisch kan, mag je <strong>nooit een wijziging direct doorvoeren op github.com</strong> (upload, code aanpassen, bestand verwijderen...)! Je riskeert dat wijzigingen lokaal en online niet meer in sync zijn (de gevreesde merge conflicts), die zeer lastig op te lossen zijn.</em></p>
       </div>
 
+      <h2>Oefeningen pushen</h2>
+
    </main>   
    <footer>
       <img src="common/img/thats-all.jpg" alt="">
-      <p>@2014, Rogier van der Linde</p>
+      <div class="footer__bottom">
+         <p>@2024, Rogier van der Linde</p>
+         <p>cursussen in dezelfde reeks: <a href="https://rogiervdl.github.io/HTML-course/">HTML</a> &mdash; <a href="https://rogiervdl.github.io/CSS-course/">CSS</a> &mdash; <a href="https://rogiervdl.github.io/JS-course/">Javascript</a> &mdash; <a href="https://rogiervdl.github.io/CS-course/">C#</a></p>
+      </div>
    </footer>
    <a aria-label="up" id="up" href="#top"><span class="fas fa-chevron-circle-up"></span></a>
    <!-- popup -->
