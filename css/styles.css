@@ -5,3 +5,7 @@ pre[class*="language-"] {
 .classcolor {
    color: #3D808C !important;
 }
+
+#mode {
+   display: none !important;
+}
