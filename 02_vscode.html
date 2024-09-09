@@ -71,6 +71,11 @@
 &gt; npm install -g stylelint
 &gt; npm install -g stylelint-config-recommended
 &gt; npm install -g stylelint-csstree-validator</code></pre>
+      <div class="tips" data-caption="⚠️ ESLint versie">
+         <p>
+            Op moment van schrijven werkt de laatste versie 9.x van ESLint niet goed in VS Code, daarom installeren we de vorige versie 8.57.0.
+         </p>
+      </div>
       <p>Een screenshot van het eerste commando:</p>
       <p><img src="img/02_vscode/node packages.png" alt="" class="w-700"></p>
       <p>
@@ -103,14 +108,6 @@
       <p>Deze bevatten allerhande instellingen zoals gebruikte karakterset, indentatiestijl (tabs of spaties, spronggrootte), voorkeuren qua hoofdlettergebruik, layout, toegelaten HTML tags, Javascript syntax, witruimtes enz...</p>
       <p>Het is belangrijk dat deze instellingen <strong>bij iedereen gelijk</strong> zijn. De exacte configuratie <strong>verschilt van vak tot vak</strong>; voor <strong>Basic Web Development</strong> en <strong>Dynamic Web Development</strong> zul je een template vinden op Toled. Een screenshot voor BWD::</p>
       <p><img src="img/02_vscode/vscode configuratie.png" alt="" class="w-400"></p>
-      <h2>Shortcuts</h2>
-      <p>Tabel van de belangrijkste shortcuts die je zo snel mogelijk onder de knie zou moeten krijgen (volledige cheatsheet zie <a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf">Windows</a> en <a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf">OSX</a>); probeer ze zoveel mogelijk uit tijdens de oefeningen.</p>
-      <p><img src="img/02_vscode/vs code shortcuts.png" alt="" class="w-800"></p>
-      <p>Er zijn twee belangrijke redenen om te investeren in het leren van shortcuts:</p>
-      <ul>
-         <li><strong>snelheid</strong>: een programmeur kost al snel 100€ per uur aan zijn werkgever; dankzij shortcuts kan je veel sneller werken</li>
-         <li><strong>ontlasting lichaam</strong>: met shortcuts werken is veel minder belastend voor gewrichten en spieren dan telkens te moeten wisselen tussen toetsenbord en muis</li>
-      </ul>
 
       <h2>Hoe oefeningen maken</h2>
       <h3>stap 1: open je repository in VS Code</h3>
@@ -196,7 +193,7 @@
       </figure>
 
 
-      <h2>Live server</h2>
+      <h2>Live previewen</h2>
       <p>Er zijn twee manieren om je werk te bekijken tijdens het werken:</p>
       <ul>
          <li><strong>Preview</strong>, standaard ingebouwd in VS Code: weergave in VS Code (zie screenshot hierboven)</li>
@@ -205,6 +202,7 @@
       <figure>
          <img src="img/02_vscode/preview live.png" alt="" class="w-800">
       </figure>
+      <h3>VS Code Preview</h3>
       <p>De previewfunctie toont de pagina in VS Code in een tabblad:</p>
       <figure>
          <img src="img/02_vscode/live preview.png" alt="" class="w-600">
@@ -217,13 +215,99 @@
          <li>previewvenster is eigenlijk <strong>te klein</strong> om bruikbaar te zijn</li>
          <li><strong>geen debugging</strong>mogelijkheden zoals developer tools in browsers</li>
       </ul>
-      <p>Gebruik daarom &mdash; tenzij misschien voor snelle previews &mdash; <em>altijd</em> de <mark>Live Server</mark>. Je pagina zal openen in de browser, en elke keer als je opslaat bijgewerkt worden. Een voorbeeld van een correcte setup, met je code op je laptop en de live server op een externe monitor:</p>
+      <h3>Live Server extensie</h3>
+      <p>Wegens de beperkingen van de previewfunctie, gebruik je &mdash; tenzij misschien voor snelle previews &mdash; <em>altijd</em> de <mark>Live Server</mark>. Je pagina zal openen in de browser, en elke keer als je opslaat bijgewerkt worden. Een voorbeeld van een correcte setup, met je code op je laptop en de live server op een externe monitor:</p>
       <figure>
          <img src="img/02_vscode/laptop en monitor.jpg" alt="" class="w-800">
          <figcaption>correcte setup: code op je laptop, live server op een externe monitor</figcaption>
       </figure>
 
-      <h2>Layout, validatie en linting</h2>
+      <h2>Code kwaliteit</h2>
+      <p>Zeker even belangrijk als de code functionaliteit, is de <strong>code kwaliteit</strong>: voor de leesbaarheid, efficiëntie, fout(on)gevoeligheid. Gelukkig zijn er een aantal tools die ons kunnen helpen bij het schrijven van betere code en het opvangen van mogelijke fouten. </p>
+      <div class="tips" data-caption="☝🏾 opgelet">
+         <p>
+            Controleer altijd nog eens <strong>layout, linting en validatie</strong> vóór je pusht. Je verliest er veel punten mee en fouten zijn makkelijk te vermijden!
+         </p>
+      </div>
+
+      <h3>layout</h3>
+      <p>Zonder degelijke layout kan je de structuur van je programma niet zien, en dus onmogelijk programmeren. Zolang je zelf de code typt treden geen problemen op; elke editor auto-indenteert tegenwoordig. Als je fragmenten van elders kopieert, kan het zijn dat je de layout handmatig moet goedzetten. Gelukkig heeft elke editor daar een shortcut voor; in VS Code is dat <mark>Shift-Alt-F</mark>.</p>
+      <figure>
+         <img src="img/02_vscode/layout.gif" alt="" class="w-400">
+         <figcaption>layout goedzetten met <strong>Shift-Alt-F</strong></figcaption>
+      </figure>
+      <h3>linting</h3>
+      <p>Met <mark>linting</mark> tools wordt de code automatisch gecontroleerd op <strong>mogelijke bugs</strong> (verdachte/gevaarlijke code) en <strong>stijl inconsistentie</strong> (b.v. hoofdlettergebruik, layout...). Er zijn veel linting tools in omloop; wij gebruiken de volgende:</p>
+      <ul>
+         <li><strong>html-validate</strong> voor HTML</li>
+         <li><strong>stylelint</strong> voor CSS</li>
+         <li><strong>eslint</strong> voor Javascript</li>
+      </ul>
+      <p>Naast de tool zelf (geïnstalleerd als NPM package) heb je meestal ook een extensie nodig om het in VS Code te integreren. Tijdens de <a href="#installatie">installatie van VS Code</a> hebben we dat allemaal al in orde gebracht voor de deze drie tools. Een screenshot van typische meldingen:</p>
+      <figure>
+         <img src="img/02_vscode/linting messages.png" alt="" class="w-800">
+         <figcaption>voorbeeld van html-validate, stylelint en eslint meldingen (warnings en errors)</figcaption>
+      </figure>
+      <p>Het is uiteraard ook de bedoeling dat je de meldingen ook effectief oplost. Dit kan op volgende manieren:</p>
+      <ul>
+         <li class="right">de fout verbeteren</li>
+         <li class="warn">de regel lokaal uitschakelen</li>
+         <li class="wrong">het configuratiebestand van de linting tool aanpassen</li>
+      </ul>
+      <p>Het beste is altijd de fout verbeteren &mdash; meestal handmatig (lees de melding!), maar soms is er ook een <em>Quick Fix</em>:</p>
+      <figure>
+         <img src="img/02_vscode/quick fix.png" alt="" class="w-500 print">
+         <img src="img/02_vscode/quick fix.gif" alt="" class="w-500 noprint">
+         <figcaption>quick fix in ESLint</figcaption>
+      </figure>
+      <p>Je kan in theorie de melding ook soms uitschakelen voor deze regel, maar dan moet je echt wel een goede reden hebben (en geloof me, dat heb je meestal niet!):</p>
+      <figure>
+         <img src="img/02_vscode/linting ignore.png" alt="" class="w-500 print">
+         <img src="img/02_vscode/linting ignore.gif" alt="" class="w-500 noprint">
+         <figcaption>disable rule (niet gebruiken tenzij expliciet toegelaten door de docent)</figcaption>
+      </figure>
+      <h3>W3C validatie</h3>
+      <p>
+         Lintingtools zullen over het algemeen naast de stijl van je code ook controleren op <strong>pure syntaxfouten</strong>. 
+         Voor HTML worden de syntaxregels onderhouden door het W3C of <strong>World Wide Web Consortium</strong>. 
+         Dit zijn er dermate veel dat de HTML-validate linting tool niet volstaat, en een extra <strong>W3C Web Validator extensie</strong> nodig is (installatie zie <a href="#extensies">dit deel</a>).  
+         Deze moet je manueel uitvoeren, bij voorkeur telkens voor het pushen. Soms vindt het toch nog fouten die door de HTML-validate linting tool over het hoofd worden gezien, zoals hier:
+      </p>
+      <figure>
+         <img src="img/02_vscode/w3c validation.png" alt="" class="w-600">
+         <figcaption>validatiefout gevonden door de W3C Web Validator extensie</figcaption>
+      </figure>
+      <h2>Sneller typen</h2>
+      <p>Er zijn twee belangrijke redenen om te investeren in het sneller leren typen:</p>
+      <ul>
+         <li><strong>snelheid</strong>: een programmeur kost al snel 100€ per uur aan zijn werkgever; dankzij shortcuts kan je veel sneller werken</li>
+         <li><strong>ontlasting lichaam</strong>: met shortcuts werken b.v. is veel minder belastend voor gewrichten en spieren dan telkens te moeten wisselen tussen toetsenbord en muis</li>
+      </ul>
+      <h3>Shortcuts</h3>
+      <p>Tabel van de belangrijkste shortcuts die je zo snel mogelijk onder de knie zou moeten krijgen (volledige cheatsheet zie <a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf">Windows</a> en <a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf">OSX</a>); probeer ze zoveel mogelijk uit tijdens de oefeningen.</p>
+      <p><img src="img/02_vscode/vs code shortcuts.png" alt="" class="w-800"></p>
+      <h3>HTML tags aanvullen met TAB</h3>
+      <p>Tags voeg je snel toe door in HTML enkel de naam te typen, gevoldg door de <strong>TAB</strong>. Demo (animated gif):</p>
+      <figure>
+         <img src="img/02_vscode/typing tags.gif" alt="" class="w-500">
+         <figcaption>gebruik telkens de TAB toets</figcaption>
+      </figure>
+      <p>Daarnaast is het uiteraard ook belangrijk vlot te kunnen navigeren met pijltjestoetsen en te kunnen copy-pasten, zie <a href="#shortcuts">shortcuts</a></p>
+      <h3>htmltagwrap</h3>
+      <p>De veelgebruikte extensie htmltagwrap laat toe makkelijk een element rond een tekst of code te plaatsen met <strong>Alt-W</strong>:</p>
+      <figure>
+         <img src="img/02_vscode/htmltagwrap.gif" alt="" class="w-400">
+         <figcaption>htmltagwrap met <strong>Alt-W</strong></figcaption>
+      </figure>
+      <h3>Emmet HTML shortcodes</h3>
+      <p>Emmet is een standaard ingebouwde shortcode plugin. Demo (animated gif):</p>
+      <figure>
+         <img src="img/02_vscode/emmet.gif" alt="" class="w-400">
+         <figcaption>emmet shortcodes</figcaption>
+      </figure>
+
+
+
 
 
 
