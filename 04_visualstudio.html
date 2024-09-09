@@ -38,6 +38,7 @@
       </a>
    </nav>
    <h1>00. Visual Studio</h1>
+   <p class="othercourses"><small>Dit hoofdstuk is onderdeel van de cursus <a href="https://rogiervdl.github.io/DEVENV-course/">Ontwikkelomgeving</a>. Andere cursussen in dezelfde reeks: <a href="https://rogiervdl.github.io/HTML-course/">HTML</a>, <a href="https://rogiervdl.github.io/CSS-course/">CSS</a>, <a href="https://rogiervdl.github.io/JS-course/">Javascript</a>, <a href="https://rogiervdl.github.io/CS-course/">C#</a>.</small></p>
    <div id="toc"></div>
    <main>
 
@@ -50,7 +51,7 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
          <figure class="print">
-            <a href="https://www.youtube.com/watch?v=d8eND5KaB1c"><img src="img/00_visualstudio/youtube-visualstudio-wpf.png" alt="" class="w-500"></a>
+            <a href="https://www.youtube.com/watch?v=d8eND5KaB1c"><img src="img/04_visualstudio/youtube-visualstudio-wpf.png" alt="" class="w-500"></a>
             <figcaption><a href="https://www.youtube.com/watch?v=d8eND5KaB1c">https://www.youtube.com/watch?v=d8eND5KaB1c</a>
             </figcaption>
          </figure>
@@ -97,7 +98,7 @@
          <li>…</li>
       </ul>
       <p>In deze cursus gebruiken we het <strong>.NET Framework</strong>: het is weliswaar voornamelijk gericht op Windows apps, maar ook op mobiele (Android bv) of cloud toepassingen. Het werkt bovendien naadloos samen met C#.</p>
-      <p><img src="img/00_visualstudio/logo dotnet.jpg" alt="" class="w-150"></p>
+      <p><img src="img/04_visualstudio/logo dotnet.jpg" alt="" class="w-150"></p>
       <h3>Fasen van een programma</h3>
       <p>
          Een <strong>programma</strong> is een opeenvolging van instructies die in een bepaalde volgorde worden uitgevoerd. De verschillende fasen van een programma:
@@ -107,7 +108,7 @@
          <li>code <strong>compileren</strong>: code wordt omgezet naar platform-onafhankelijke Common Intermediate Language (CIL) bytecode, wat resulteert in een PE-file (Portable Executable)</li>
          <li>code <strong>uitvoeren</strong>: de .NET Common Language Runtime (CLR) vertaalt tijdens de uitvoering de bytecode in platform-specifieke machine-instructies</li>
       </ol>
-      <p><img src="img/00_visualstudio/stappen programma.png" alt="" class="w-300"></p>
+      <p><img src="img/04_visualstudio/stappen programma.png" alt="" class="w-300"></p>
       <h3>Soorten fouten</h3>
       <p>In elke fase van het programma kunnen fouten optreden:</p>
       <ol>
@@ -140,26 +141,26 @@
       <h2>Installatie Visual Studio</h2>
       <h3>Downloaden</h3>
       <p>Download en installeer Visual Studio gratis vanop <a href="https://visualstudio.microsoft.com/free-developer-offers/">https://visualstudio.microsoft.com/free-developer-offers/</a> (Visual Studio Community)</p>
-      <p><img src="img/00_visualstudio/vs-download.png" alt="" class="w-500"></p>
+      <p><img src="img/04_visualstudio/vs-download.png" alt="" class="w-500"></p>
 
       <h3>Keuze workload</h3>
       <p>In Visual Studio kan je programmeren in <strong>verschillende talen</strong> (en zelfs meerdere tegelijk in één project): Javascript, Python, C++, Visual Basic, R, F#, C#... en voor <strong>verschillende platforms</strong> (Windows, Azure, Android, Web…).&nbsp;Daarom biedt Visual Studio een heel aantal verschillende standaardomgevingen, <strong>workload</strong> genoemd, met tools, omgeving enz... aangepast aan jouw specifieke ontwikkelingsbehoeften. Wij gebruiken de <strong>.NET desktop environment</strong>; let er dus op dat je de juiste omgeving kiest tijdens installatie.</p>
       <figure>
-         <img src="img/00_visualstudio/workload.png" alt="" class="w-800">
+         <img src="img/04_visualstudio/workload.png" alt="" class="w-800">
          <figcaption>kies voor .NET desktop development</figcaption>
       </figure>
 
       <h3>Selecteren individuele componenten</h3>
       <p>Je kan tijdens installatie (of achteraf) individuele componenten kiezen, b.v. support voor oudere versies van .NET. Je kan dit deel voorlopig overslaan; individuele componenten kan je achteraf nog altijd selecteren via de <strong>Visual Studio installer</strong>.</p>
       <figure>
-         <img src="img/00_visualstudio/components.png" alt="" class="w-800">
+         <img src="img/04_visualstudio/components.png" alt="" class="w-800">
          <figcaption>selectie componenten (kan ook achteraf nog via Visual Studio installer)</figcaption>
       </figure>
 
       <h3>Taalkeuze</h3>
       <p>Het is sterk aangeraden de taal van Visual Studio op <strong>Engels</strong> in te stellen. Dit maakt het b.v. makkelijker foutmeldingen op te zoeken, en de interface sluit dan aan bij de screenshots in deze cursus. Standaard wordt de taal van Windows gekozen; bij veel studenten zal dat Frans of Nederlands zijn. Verander dit naar Engels via <strong>Tools, Options, Environment, International Settings</strong>:</p>
       <figure>
-         <img src="img/00_visualstudio/language.png" alt="" class="w-500 bordered">
+         <img src="img/04_visualstudio/language.png" alt="" class="w-500 bordered">
          <figcaption>kies voor Engels</figcaption>
       </figure>
       <p>Staat Engels er niet tussen? Voeg het dan toe via de Visual Studio Installer.</p>
@@ -168,26 +169,26 @@
       <h3>Thema veranderen</h3>
       <p>Pas het kleurschema aan via <strong>Tools, Theme</strong>:</p>
       <figure>
-         <img src="img/00_visualstudio/ui-theme.png" alt="" class="w-700">
+         <img src="img/04_visualstudio/ui-theme.png" alt="" class="w-700">
          <figcaption>pas kleurschema aan</figcaption>
       </figure>
 
       <h3>Panels toevoegen</h3>
       <p>Voeg panels toe via <strong>View</strong>:</p>
       <figure>
-         <img src="img/00_visualstudio/ui-window.png" alt="" class="w-1000">
+         <img src="img/04_visualstudio/ui-window.png" alt="" class="w-1000">
       </figure>
 
       <h3>Panels pinnen</h3>
       <p>Pin/unpin panels zodat ze altijd zichtbaar/ingeklapt weergegeven worden:</p>
       <figure>
-         <img src="img/00_visualstudio/ui-pin.gif" alt="" class="w-600 bordered">
+         <img src="img/04_visualstudio/ui-pin.gif" alt="" class="w-600 bordered">
       </figure>
 
       <h3>Panels docken</h3>
       <p>Kiezen waar je een panel plaatst heet <mark>docken</mark>. Opties zijn links, boven, rechts, onder en centraal. Versleep eenvoudigweg het panel aan de bovenbalk naar een nieuwe plaats:</p>
       <figure>
-         <img src="img/00_visualstudio/ui-docking.png" alt="" class="w-1000">
+         <img src="img/04_visualstudio/ui-docking.png" alt="" class="w-1000">
       </figure>
 
 
@@ -200,7 +201,7 @@
       </ul>
       <p>Hoe code georganiseerd wordt in solutions en projecten hangt af van vak tot vak. Voor <strong>Introductie in Programmeren</strong> (ORP42a, graduaat) en <strong>OO Application Development</strong> (OBI25a, bachelors) wordt gekozen voor <strong>één solution per les, één project per oefening</strong>. Hieronder een screenshot van een typische les geopend in Visual Studio.</p>
       <figure>
-         <img src="img/00_visualstudio/projects-solutions.png" alt="" class="w-1000">
+         <img src="img/04_visualstudio/projects-solutions.png" alt="" class="w-1000">
       </figure>
       <p>Je herkent:</p>
       <ul>
@@ -213,7 +214,7 @@
       <h3>Solution (=les) openen</h3>
       <p>In Visual Studio open je <strong>nooit een folder</strong>, maar een <strong>solution</strong>. Dit doe je door te dubbelklikken op het <strong>.sln</strong> solutionbestand van die les in verkenner:</p>
       <figure>
-         <img src="img/00_visualstudio/solution-openen.png" alt="" class="w-1200">
+         <img src="img/04_visualstudio/solution-openen.png" alt="" class="w-1200">
       </figure>
 
       <h3>Project (=oefening) toevoegen</h3>
@@ -221,13 +222,13 @@
          Voor elke oefening voegen we een nieuw project toe aan de solution van die les. De eenvoudigste manier is met de rechtermuisknop op de solution, <strong>Add, New Project...</strong>:
       </p>
       <figure>
-         <img src="img/00_visualstudio/project-toevoegen2.png" alt="" class="w-600 bordered">
+         <img src="img/04_visualstudio/project-toevoegen2.png" alt="" class="w-600 bordered">
       </figure>
       <p>
          In het volgende venster kan je kiezen uit heel veel projecttypes. In het volgende dialoogvenster je filtert best alvast op <strong>taal</strong> (C#) en <strong>platform</strong> (Windows):
       </p>
       <figure>
-         <img src="img/00_visualstudio/filteren.png" alt="" class="w-800">
+         <img src="img/04_visualstudio/filteren.png" alt="" class="w-800">
       </figure>
 
 
@@ -239,11 +240,11 @@
       </ul>
       <p>Op het einde van OO Application Development komt ook nog de <mark>class library</mark> aan bod, maar dat is voor <a href="10_sql_databanken.html#class-library-aanmaken">dit hoofdstuk</a>.</p>
       <figure>
-         <img src="img/00_visualstudio/console.png" alt="" class="w-500">
+         <img src="img/04_visualstudio/console.png" alt="" class="w-500">
          <figcaption>typische console app</figcaption>
       </figure>
       <figure>
-         <img src="img/00_visualstudio/wpf.png" alt="" class="w-500">
+         <img src="img/04_visualstudio/wpf.png" alt="" class="w-500">
          <figcaption>typische WPF app</figcaption>
       </figure>
       <p>
@@ -273,11 +274,11 @@
 
       <p>Om een console toepassing te maken, open je eerst de solution van de les. Dan voeg je zoals steeds een project toe met <strong>Add, New Project...</strong>:</p>
       <figure>
-         <img src="img/00_visualstudio/project-toevoegen2.png" alt="" class="w-600 bordered">
+         <img src="img/04_visualstudio/project-toevoegen2.png" alt="" class="w-600 bordered">
       </figure>
       <p>In het volgende venster kies je voor Console App:</p>
       <figure>
-         <img src="img/00_visualstudio/console-app.png" alt="" class="w-600 bordered">
+         <img src="img/04_visualstudio/console-app.png" alt="" class="w-600 bordered">
       </figure>
       <div class="tips" data-caption="💣 PAS OP">
          <p>
@@ -286,24 +287,24 @@
       </div>
       <p>Kies de naam van het project <strong>exact hetzelfde als de naam van de oefening</strong>:</p>
       <figure>
-         <img src="img/00_visualstudio/console-add.png" alt="" class="w-800">
+         <img src="img/04_visualstudio/console-add.png" alt="" class="w-800">
       </figure>
       <p>In het laatste venster kies je voor de laatste versie, en duid aan dat je <strong>geen top-level statements</strong> wil:</p>
       <figure>
-         <img src="img/00_visualstudio/console-additional.png" alt="" class="w-700 bordered">
+         <img src="img/04_visualstudio/console-additional.png" alt="" class="w-700 bordered">
       </figure>
       <h3>Voorbeeld: ConsoleHalloWereld</h3>
       <p>Tenslotte kan je de code van het programma intypen:</p>
       <figure>
-         <img src="img/00_visualstudio/console-code.png" alt="" class="w-900 bordered">
+         <img src="img/04_visualstudio/console-code.png" alt="" class="w-900 bordered">
       </figure>
       <p>Run het programma via F5 of deze knop:</p>
       <figure>
-         <img src="img/00_visualstudio/console-run.png" alt="" class="w-600 bordered">
+         <img src="img/04_visualstudio/console-run.png" alt="" class="w-600 bordered">
       </figure>
       <p>Het programma in actie:</p>
       <figure>
-         <img src="img/00_visualstudio/ConsoleHalloWereld.gif" alt="" class="w-500 bordered">
+         <img src="img/04_visualstudio/ConsoleHalloWereld.gif" alt="" class="w-500 bordered">
          <figcaption>resultaat in de console</figcaption>
       </figure>
       
@@ -315,11 +316,11 @@
       <h3>Aanmaken</h3>
       <p>Om een WPF toepassing te maken, open je weer eerst de solution van de les. Dan voeg je zoals steeds een project toe met <strong>Add, New Project...</strong>:</p>
       <figure>
-         <img src="img/00_visualstudio/project-toevoegen2.png" alt="" class="w-600 bordered">
+         <img src="img/04_visualstudio/project-toevoegen2.png" alt="" class="w-600 bordered">
       </figure>
       <p>In het volgende venster kies je voor WPF Application:</p>
       <figure>
-         <img src="img/00_visualstudio/wpf-app.png" alt="" class="w-600 bordered">
+         <img src="img/04_visualstudio/wpf-app.png" alt="" class="w-600 bordered">
       </figure>
       <div class="tips" data-caption="💣 PAS OP">
          <p>
@@ -328,11 +329,11 @@
       </div>
       <p>Kies de naam van het project <strong>exact hetzelfde als de naam van de oefening</strong>:</p>
       <figure>
-         <img src="img/00_visualstudio/wpf-add.png" alt="" class="w-800">
+         <img src="img/04_visualstudio/wpf-add.png" alt="" class="w-800">
       </figure>
       <p>In het laatste venster kies je voor de laatste versie:</p>
       <figure>
-         <img src="img/00_visualstudio/wpf-additional.png" alt="" class="w-700 bordered">
+         <img src="img/04_visualstudio/wpf-additional.png" alt="" class="w-700 bordered">
       </figure>
       <h3>Designer</h3>
       <p>WPF toepassingen hebben twee aparte delen:</p>
@@ -342,13 +343,13 @@
       </ul> 
       <p>In de designer kan je controls toevoegen en properties instellen; de gegenereerde <mark>XAML</mark> (spreek uit: &ldquo;zammel&rdquo;) middenonder kan je ook rechtstreeks met de hand aanpassen of aanvullen.</p>
       <figure>
-         <img src="img/00_visualstudio/wpf-designer.png" alt="" class="w-800 bordered">
+         <img src="img/04_visualstudio/wpf-designer.png" alt="" class="w-800 bordered">
       </figure>
       <h4>Controls toevoegen</h4>
       <p>Een WPF component als Button, TextBox enz... toevoegen heet een <mark>WPF control</mark>. In het <a href="03_wpfcontrols.html">hoofdstuk WPF Controls</a> komen we uitgebreid op terug op alle controls en hun gebruik. Voeg ze toe door verslepen uit de Toolbox:</p>
       <figure>
-         <img src="img/00_visualstudio/wpf-addcontrol1.png" alt="" class="w-500 bordered">
-         <img src="img/00_visualstudio/wpf-addcontrol2.png" alt="" class="w-500 bordered">
+         <img src="img/04_visualstudio/wpf-addcontrol1.png" alt="" class="w-500 bordered">
+         <img src="img/04_visualstudio/wpf-addcontrol2.png" alt="" class="w-500 bordered">
       </figure>
       <h4>Eigenschappen instellen</h4>
       <p>De volgende stap is het instellen van alle eigenschappen:</p>
@@ -362,7 +363,7 @@
       <h5>naam</h5>
       <p>Controls die je later nodig hebt, geef je best onmiddellijk een naam:</p>
       <figure>
-         <img src="img/00_visualstudio/wpf-control-name.png" alt="" class="w-800 bordered">
+         <img src="img/04_visualstudio/wpf-control-name.png" alt="" class="w-800 bordered">
       </figure>
       <div class="tips" data-caption="💡TIP">
          <p>
@@ -377,12 +378,12 @@
       <h5>opmaak</h5>
       <p>Opmaakeigenschappen kan je via het properties panel instellen, of rechtstreeks in de XAML:</p>
       <figure>
-         <img src="img/00_visualstudio/wpf-control-properties.png" alt="" class="w-800 bordered">
+         <img src="img/04_visualstudio/wpf-control-properties.png" alt="" class="w-800 bordered">
       </figure>
       <h5>layout</h5>
       <p>Een correcte flexibele layout maken vraagt best wel wat kennis en werk; dit komt in een apart hoofdstuk <a href="04_wpflayout.html">04. WPF layout</a> aan bod. Maar voorlopig kunnen we perfect uit de voeten met slepen, en handmatig aanpassen van <code>Padding</code> en <code>Margin</code>. De makkelijkste plaats is rechtstreeks in de XAML. Gebruik zoveel mogelijk <strong>afgeronde waarden</strong> voor een mooie layout:</p>
       <figure>
-         <img src="img/00_visualstudio/wpf-controls-layout.png" alt="" class="w-800 bordered">
+         <img src="img/04_visualstudio/wpf-controls-layout.png" alt="" class="w-800 bordered">
       </figure>
       <h4>Events toevoegen</h4>
       <p>We willen uiteraard ook kunnen reageren op interacties met onze controls. Denk aan:</p>
@@ -398,7 +399,7 @@
          Voeg een standaardevent toe door dubbelklikken op de control, of kies een willekeurig ander event via de⚡knop van het properties panel:
       </p>
       <figure>
-         <img src="img/00_visualstudio/wpf-event1.png" alt="" class="w-800 bordered">
+         <img src="img/04_visualstudio/wpf-event1.png" alt="" class="w-800 bordered">
          <figcaption>event handler in XAML code in MainWindow.xaml</figcaption>
       </figure>
       <p>Het toevoegen van een event heeft twee effecten:</p>
@@ -407,14 +408,14 @@
          <li>in de code-behind (bestand <em>MainWindow.xaml.cs</em>) wordt een lege event handler methode aangemaakt</li>
       </ul>
       <figure>
-         <img src="img/00_visualstudio/wpf-codebehind.png" alt="" class="w-800 bordered">
+         <img src="img/04_visualstudio/wpf-codebehind.png" alt="" class="w-800 bordered">
          <figcaption>event handler implementatie in code-behind in MainWindow.xaml.cs</figcaption>
       </figure>
       <h5>naam event handler aanpassen</h5>
       <p>De stijlregels (zie verder) vereisen dat alle namen van methodes met een hoofdletter beginnen. Pas daarom de naam aan zodat het begint met een hoofdletter:</p>
       <figure>
-         <img src="img/00_visualstudio/rename1.png" alt="" class="w-500 bordered">
-         <img src="img/00_visualstudio/rename2.png" alt="" class="w-500 bordered">
+         <img src="img/04_visualstudio/rename1.png" alt="" class="w-500 bordered">
+         <img src="img/04_visualstudio/rename2.png" alt="" class="w-500 bordered">
       </figure>
       <div class="tips" data-caption="💡 TIP">
          <p>
@@ -425,21 +426,21 @@
       <h3>Code-behind</h3>
       <p>De <mark>code-behind</mark>, dus de &ldquo;code achter het design&rdquo;, is het eigenlijke programma. Je vindt het terug in <strong>MainWindow.xaml.cs</strong>:</p>
       <figure>
-         <img src="img/00_visualstudio/wpf-hello-cs.png" alt="" class="w-800 bordered">
+         <img src="img/04_visualstudio/wpf-hello-cs.png" alt="" class="w-800 bordered">
       </figure>
 
       <h3>Voorbeeld: WpfHalloWereld</h3>
       <p>Je zou nu in staat moeten zijn volgend WPF programma in elkaar te steken:</p>
       <figure>
-         <img src="img/00_visualstudio/WpfHelloWorld XAML.png" alt="" class="w-800 bordered">
+         <img src="img/04_visualstudio/WpfHelloWorld XAML.png" alt="" class="w-800 bordered">
          <figcaption>WpfHalloWorld design</figcaption>
       </figure>
       <figure>
-         <img src="img/00_visualstudio/WpfHelloWorld CS.png" alt="" class="w-800 bordered">
+         <img src="img/04_visualstudio/WpfHelloWorld CS.png" alt="" class="w-800 bordered">
          <figcaption>WpfHalloWorld code-behind</figcaption>
       </figure>
       <figure>
-         <img src="img/00_visualstudio/WpfHalloWereld.gif" alt="" class="w-500">
+         <img src="img/04_visualstudio/WpfHalloWereld.gif" alt="" class="w-500">
          <figcaption>resultaat</figcaption>
       </figure>
 
@@ -454,7 +455,7 @@
          <li>selecteer bij de properties voor elke afbeelding bij <i>Build Action</i> <strong>Content</strong> en bij <i>Copy to Output Directory</i> <strong>Copy always</strong>:</li>
       </ol>
       <figure>
-         <img src="img/00_visualstudio/image-toevoegen.png" alt="" class="w-250 bordered">
+         <img src="img/04_visualstudio/image-toevoegen.png" alt="" class="w-250 bordered">
       </figure>
       <div class="tips" data-caption="🥸 NIET VERGETEN!">
          <p>Deze laatste stap mag je niet vergeten! Anders zullen je bestanden niet gevonden worden bij de uitvoering van je programma.</p>
@@ -468,11 +469,11 @@
          <li>voeg het project toe via rechtermuisknop, Add, Existing project... en selecteer het .csproj bestand van het project</li>
       </ol>
       <figure>
-         <img src="img/00_visualstudio/project-add1.png" alt="" class="w-500 bordered">
+         <img src="img/04_visualstudio/project-add1.png" alt="" class="w-500 bordered">
       </figure>
       <div class="noprint">
          <p>Een video voor wie het graag eens gedemonstreerd ziet:</p>
-         <video src="img/00_visualstudio/project-copy.mp4" width="800" controls></video>
+         <video src="img/04_visualstudio/project-copy.mp4" width="800" controls></video>
       </div>
       <h3>Project verwijderen</h3>
       <p>Als je een project wil verwijderen, moet je twee stappen ondernemen:</p>
@@ -481,12 +482,12 @@
          <li>verwijder het project van de harde schijf</li>
       </ol>
       <figure>
-         <img src="img/00_visualstudio/project-delete1.png" alt="" class="w-500 bordered">
-         <img src="img/00_visualstudio/project-delete2.png" alt="" class="w-300 bordered">
+         <img src="img/04_visualstudio/project-delete1.png" alt="" class="w-500 bordered">
+         <img src="img/04_visualstudio/project-delete2.png" alt="" class="w-300 bordered">
       </figure>
       <div class="noprint">
          <p>Een video voor wie het graag eens gedemonstreerd ziet:</p>
-         <video src="img/00_visualstudio/project-remove.mp4" width="800" controls></video>
+         <video src="img/04_visualstudio/project-remove.mp4" width="800" controls></video>
       </div>
       <h3>Naam solution wijzigen</h3>
       <p>Volg deze stappen om de naam van een solution te wijzigen, b.v. van SlnOld naar SlnNew:</p>
@@ -499,7 +500,7 @@
       </ol>
       <div class="noprint">
          <p>Een video voor wie het graag eens gedemonstreerd ziet:</p>
-         <video src="img/00_visualstudio/solution-rename.mp4" width="800" controls></video>
+         <video src="img/04_visualstudio/solution-rename.mp4" width="800" controls></video>
       </div>
       <h3>Naam project wijzigen</h3>
       <p>De naam van een project wijzigen vraagt best wel wat stappen. Een voorbeeld van WpfOld naar WpfNew:</p>
@@ -515,7 +516,7 @@
       </ol>
       <div class="noprint">
          <p>Een video voor wie het graag eens gedemonstreerd ziet (eerst voor een Console toepassing, dan nog eens voor een WPF toepassng):</p>
-         <video src="img/00_visualstudio/project-rename.mp4" width="800" controls></video>
+         <video src="img/04_visualstudio/project-rename.mp4" width="800" controls></video>
       </div>
 
 
@@ -534,14 +535,14 @@
          Voor C# gebruiken we de <mark>StyleCop.Analyzers</mark> NuGet package. Voeg het toe aan je project via de NuGet package manager:
       </p>
       <figure>
-         <img src="img/00_visualstudio/StyleCop1.png" alt="" class="w-600 bordered">
+         <img src="img/04_visualstudio/StyleCop1.png" alt="" class="w-600 bordered">
          <figcaption>NuGet package manager</figcaption>
       </figure>
       <p>
          Zoek op &ldquo;StyleCop.Analyzers&rdquo; en vink alle projecten aan:
       </p>
       <figure>
-         <img src="img/00_visualstudio/StyleCop2.png" alt="" class="w-600 bordered">
+         <img src="img/04_visualstudio/StyleCop2.png" alt="" class="w-600 bordered">
          <figcaption>Installatie in alle projecten</figcaption>
       </figure>
       <div class="tips" data-caption="💣 PAS OP">
@@ -554,14 +555,14 @@
          StyleCop.Analyzers heeft heel veel regels &mdash; teveel eigenlijk, zodat je massa's foutmeldingen krijgt. Gelukkig kan je de regels configureren met een <mark>.editorconfig</mark> in de solution map: 
       </p>
       <figure>
-         <img src="img/00_visualstudio/editorConfig.png" alt="" class="w-500 bordered">
+         <img src="img/04_visualstudio/editorConfig.png" alt="" class="w-500 bordered">
          <figcaption>.editorConfig configuratiebestand in de solution</figcaption>
       </figure>
       <p>
          Dit bestand bevat alle configureerbare regels:
       </p>
       <figure>
-         <img src="img/00_visualstudio/editorConfig2.png" alt="" class="w-500 bordered">
+         <img src="img/04_visualstudio/editorConfig2.png" alt="" class="w-500 bordered">
          <figcaption>.editorConfig regels</figcaption>
       </figure>
       <div class="tips" data-caption="🛑 STOP">
@@ -572,7 +573,7 @@
       <h3>Problemen oplossen</h3>
       <p>Je moet uiteraard niet alleen StyleCop installeren, maar ook effectief alle fouten en waarschuwingen oplossen:</p>
       <figure>
-         <img src="img/00_visualstudio/stylecop errors.png" alt="" class="w-800 bordered">
+         <img src="img/04_visualstudio/stylecop errors.png" alt="" class="w-800 bordered">
          <figcaption>StyleCop meldingen lezen</figcaption>
       </figure>
 
@@ -581,7 +582,7 @@
       <h3>Breekpunt(en) plaatsen</h3>
       <p>Plaats overal waar je de uitvoering van het programma wil pauzeren een breekpunt in de grijze balk links:</p>
       <figure>
-         <img src="img/00_visualstudio/debugging1.png" alt="" class="w-500 bordered">
+         <img src="img/04_visualstudio/debugging1.png" alt="" class="w-500 bordered">
          <figcaption>breekpunt plaatsen</figcaption>
       </figure>
       <h3>Programma doorlopen</h3>
@@ -593,23 +594,23 @@
          <li><strong>step out</strong>: stap uit een methode</li>
       </ul>
       <figure>
-         <img src="img/00_visualstudio/debugging2.png" alt="" class="w-300 bordered">
+         <img src="img/04_visualstudio/debugging2.png" alt="" class="w-300 bordered">
          <figcaption>programma doorlopen</figcaption>
       </figure>
       <h3>Variabelen inspecteren</h3>
       <p>Via de rechtermuisknop kan je een zgn. <mark>watch</mark> toevoegen aan een variabele:</p>
       <figure>
-         <img src="img/00_visualstudio/debugging3.png" alt="" class="w-300 bordered">
+         <img src="img/04_visualstudio/debugging3.png" alt="" class="w-300 bordered">
          <figcaption>watch toevoegen</figcaption>
       </figure>
       <p>Je kan dan de waarde van variabelen observeren tijdens het debuggen:</p>
       <figure>
-         <img src="img/00_visualstudio/debugging4.png" alt="" class="w-500 bordered">
+         <img src="img/04_visualstudio/debugging4.png" alt="" class="w-500 bordered">
          <figcaption>variabelen inspecteren</figcaption>
       </figure>
       <div class="noprint">
          <p>Een video voor wie het graag eens gedemonstreerd ziet:</p>
-         <video src="img/00_visualstudio/debugging.mp4" width="800" controls></video>
+         <video src="img/04_visualstudio/debugging.mp4" width="800" controls></video>
       </div>
             
 
@@ -655,7 +656,7 @@
       </table>
       <p>Nog enkele algemene shortcuts van elke tekst editor:</p>
       <figure>
-         <img src="img/00_visualstudio/shortcuts general.png" alt="" class="w-600">
+         <img src="img/04_visualstudio/shortcuts general.png" alt="" class="w-600">
       </figure>
 
 
