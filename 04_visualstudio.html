@@ -99,16 +99,53 @@
       </ul>
       <p>In deze cursus gebruiken we het <strong>.NET Framework</strong>: het is weliswaar voornamelijk gericht op Windows apps, maar ook op mobiele (Android bv) of cloud toepassingen. Het werkt bovendien naadloos samen met C#.</p>
       <p><img src="img/04_visualstudio/logo dotnet.jpg" alt="" class="w-150"></p>
-      <h3>Fasen van een programma</h3>
+      <div class="tips" data-caption="🤔 FRAMEWORK OF LIBRARY?">
+        <p>
+           De term <em>famework</em> wordt vaak verward met <em>library</em>. Er is nochtans een duidelijk verschil:
+        </p>
+        <ul>
+          <li>Een <strong>framework</strong> is een <em>fundamentele structuur</em> die als basis dient voor het schrijven van programma's, b.v. .NET, Angular (Javascript), Spring (Java)... Je <strong>plugt je code in een framework</strong>. </li>
+          <li>Een <strong>library</strong> is een <em>pakket herbruikbare code</em> die je in je projecten kan gebruiken, b.v. <a href="https://scottplot.net/">ScottPlot.NET</a> voor grafieken. Het is eerder een hulp; je <strong>plugt een library in je code</strong>.</li>
+        </ul>
+        <p>Verwar een library dan weer niet met een <strong>package</strong>, wat in .NET een manier is om libraries, scripts, tools enz... toe te voegen aan je .NET projecten &mdash; vergelijkbaar met extensies in VS Code, plugins in browsers en node modules in NodeJS. De gebruikte tool is NuGet Package Manager; we zullen dit later gebruiken voor de <a href="#stylecopanalyzers">StyleCop.Analyzers</a> code quality tool.</p>
+     </div>
+     <h3>Fasen van een programma</h3>
       <p>
-         Een <strong>programma</strong> is een opeenvolging van instructies die in een bepaalde volgorde worden uitgevoerd. De verschillende fasen van een programma:
+         Een <strong>programma</strong> is een opeenvolging van instructies die in een bepaalde volgorde worden uitgevoerd. Het hele proces van code tot uitvoering bestaat uit drie grote stappen. Grafisch samengevat:</p>
+      <p><img src="img/04_visualstudio/build-proces.png" alt="" class="w-800"></p>
+      <h4>Coderen</h4>
+      <p>Dit is het schrijven van een programma, b.v. C# in de Visual Studio ontwikkelomgeving. </p>
+      <img src="img/04_visualstudio/build-proces-1.png" alt="" class="w-400">
+
+      <h4>Builden</h4>
+      <p>Als je klaar bent, ga je naar de volgende stap, het builden (shortcut: <strong>Ctrl-B)</strong></p>
+      <img src="img/04_visualstudio/build-proces-2.png" alt="" class="w-500">
+      <p>
+        De code wordt in verschillende stappen omgezet naar een .exe bestand met platform-onafhankelijke tussencode, <mark>CIL</mark> of <strong>Common Intermediate Language</strong> genoemd, bestaande uit low-level instructies of <mark>bytecodes</mark>. Voor de geïnteresseerden: je kan de bytecodes zien door de .exe te openen in tools als <a href="https://apps.microsoft.com/detail/xp8c26vdwlp4t4?hl=en-us&gl=BE">ILSpy</a>. Enkele aspecten van het build proces:
       </p>
-      <ol>
-         <li>programma <strong>schrijven</strong>, bv. in C#</li>
-         <li>code <strong>compileren</strong>: code wordt omgezet naar platform-onafhankelijke Common Intermediate Language (CIL) bytecode, wat resulteert in een PE-file (Portable Executable)</li>
-         <li>code <strong>uitvoeren</strong>: de .NET Common Language Runtime (CLR) vertaalt tijdens de uitvoering de bytecode in platform-specifieke machine-instructies</li>
-      </ol>
-      <p><img src="img/04_visualstudio/stappen programma.png" alt="" class="w-300"></p>
+      <ul>
+        <li><strong>linking</strong>: combineren van alle bronnen, codefiles, libraries, referenties enz... in één bestand</li>
+        <li><strong>compiling</strong>: vertaling van hig-level C# code naar low-level bytecodes </li>
+      </ul>
+      <p>In de output kan je zien of er buildfouten zijn:</p>
+      <img src="img/04_visualstudio/build-proces-3.png" alt="" class="w-500">
+      <p>Als de build gelukt is, komen er twee mappen bij in je project:</p>
+      <img src="img/04_visualstudio/build-proces-4.png" alt="" class="w-400">
+      <ul>
+        <li><strong>bin</strong>: bevat de binaire (uitvoerbare) bestanden</li>
+        <li><strong>obj</strong>: bevat tijdelijke en intermediarie bestanden</li>
+      </ul>
+      <div class="tips" data-caption="💡TIP">
+        <p>
+           Sommige buildproblemen kan je oplossen door de bin en obj mappen handmatig te verwijderen, en opnieuw te builden.
+        </p>
+     </div>
+      <h4>Uitvoeren</h4>
+      <p>Je kan het programma nu starten vanuit Visual Studio (shortcut: <strong>Ctrl-F5</strong>):</p>
+      <img src="img/04_visualstudio/build-proces-5.png" alt="" class="w-500">
+      <p>Je kan het programma ook starten door het rechtstreeks te starten in de bin map:</p>
+      <img src="img/04_visualstudio/build-proces-6.png" alt="" class="w-500">
+      <p>De .NET Common Language Runtime (CLR) zal tijdens de uitvoering (<mark>JIT</mark>: <strong>just in time</strong>) de bytecode vertalen in platform-specifieke machine-instructies. </p>
       <h3>Soorten fouten</h3>
       <p>In elke fase van het programma kunnen fouten optreden:</p>
       <ol>
@@ -121,7 +158,7 @@
       <h3>Integrated Development Environment (IDE)</h3>
 
       <p>
-         De ontwikkelomgeving of <mark>Integrated Development Environment</mark> is de omgeving waarin je programma's ontwikkelt. Typische features van IDE's: 
+         De ontwikkelomgeving of <mark>Integrated Development Environment</mark> is de omgeving waarin je programma's ontwikkelt. Typische features van IDE's:
       </p>
       <ul>
          <li>werken met <strong>solutions &amp; projecten</strong></li>
@@ -248,9 +285,9 @@
          <figcaption>typische WPF app</figcaption>
       </figure>
       <p>
-         Console toepassingen hebben beperktere mogelijkheden dan WPF; daar staat tegenover dat je kan focussen op de essentie van leren programmeren. 
+         Console toepassingen hebben beperktere mogelijkheden dan WPF; daar staat tegenover dat je kan focussen op de essentie van leren programmeren.
          WPF toepassingen aan de andere kant laten toe snel een interface te bouwen met knoppen, menu's, sliders, date pickers enz... wat het dan weer makkelijker maakt complexere toepassingen te bouwen, al vraagt het meer kennis van Visual Studio.
-         Sommigen studenten schrijven liever console toepassingen, anderen geven de voorkeur aan WPF, maar bij de meesten is er geen duidelijke voorkeur. 
+         Sommigen studenten schrijven liever console toepassingen, anderen geven de voorkeur aan WPF, maar bij de meesten is er geen duidelijke voorkeur.
       </p>
       <p>
          Wij zijn ervan overtuigd dat <strong>beide projecttypes elkaar aanvullen</strong> als manier om te leren programmeren.
@@ -307,10 +344,10 @@
          <img src="img/04_visualstudio/ConsoleHalloWereld.gif" alt="" class="w-500 bordered">
          <figcaption>resultaat in de console</figcaption>
       </figure>
-      
+
       <h2>WPF Application</h2>
       <p>
-         WPF staat voor <mark>Windows Presentation Foundation</mark>, een technologie van Microsoft om Windows toepassingen te bouwen. 
+         WPF staat voor <mark>Windows Presentation Foundation</mark>, een technologie van Microsoft om Windows toepassingen te bouwen.
          Ze hebben een grafische interface met knoppen, menu's, sliders, tekstvakken, afbeeldingen... en zijn daardoor visueel aantrekkelijker dan console applicaties. De mogelijkheden zijn dus uitgebreider dan Console toepassingen, maar de leercurve is ook steiler.
       </p>
       <h3>Aanmaken</h3>
@@ -340,7 +377,7 @@
       <ul>
          <li><mark>designer</mark>: drag-drop interface (versleep controls uit de toolbox links) &rarr; XAML code in <strong>MainWindow.xaml</strong></li>
          <li><mark>code-behind</mark>, de &ldquo;code achter het design&rdquo;: geschreven in <strong>C#</strong> code &rarr; C# code in <strong>MainWindow.xaml.cs</strong></li>
-      </ul> 
+      </ul>
       <p>In de designer kan je controls toevoegen en properties instellen; de gegenereerde <mark>XAML</mark> (spreek uit: &ldquo;zammel&rdquo;) middenonder kan je ook rechtstreeks met de hand aanpassen of aanvullen.</p>
       <figure>
          <img src="img/04_visualstudio/wpf-designer.png" alt="" class="w-800 bordered">
@@ -552,7 +589,7 @@
       </div>
       <h3>Configuratie</h3>
       <p>
-         StyleCop.Analyzers heeft heel veel regels &mdash; teveel eigenlijk, zodat je massa's foutmeldingen krijgt. Gelukkig kan je de regels configureren met een <mark>.editorconfig</mark> in de solution map: 
+         StyleCop.Analyzers heeft heel veel regels &mdash; teveel eigenlijk, zodat je massa's foutmeldingen krijgt. Gelukkig kan je de regels configureren met een <mark>.editorconfig</mark> in de solution map:
       </p>
       <figure>
          <img src="img/04_visualstudio/editorConfig.png" alt="" class="w-500 bordered">
@@ -612,7 +649,7 @@
          <p>Een video voor wie het graag eens gedemonstreerd ziet:</p>
          <video src="img/04_visualstudio/debugging.mp4" width="800" controls></video>
       </div>
-            
+
 
 
 
