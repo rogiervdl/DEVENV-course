@@ -6,6 +6,14 @@ pre.padtop {
 	padding-top: 2.5em;
 }
 
+[contenteditable] {
+	outline: 1px solid transparent !important;
+}
+
+body pre[class*="language-"]:has([contenteditable]:focus) {
+  border: 1px dashed #666 !important;
+}
+
 /* color scheme mods */
 
 code[class*="language-"] {
@@ -70,11 +78,11 @@ div.code-toolbar>.toolbar>.toolbar-item>button:focus {
 }
 
 pre.notoolbar {
-   padding: 0.5em 1em;
+	padding: 0.5em 1em;
 }
 
-pre.notoolbar + .toolbar .toolbar-item {
-   display: none !important;
+pre.notoolbar+.toolbar .toolbar-item {
+	display: none !important;
 }
 
 /* hystmodal mods */
@@ -85,7 +93,8 @@ pre.notoolbar + .toolbar .toolbar-item {
 }
 
 .hystmodal__window {
-	width: 800px;
+	width: 1200px;
+	max-width: 90vw;
 }
 
 /* fancybox mods */
