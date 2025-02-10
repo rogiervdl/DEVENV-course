@@ -37,7 +37,7 @@
       <img class="thumb__visual" src="img/04_visualstudio/icon.jpg" alt="">
     </a>
   </nav>
-  <h1>00. Visual Studio</h1>
+  <h1>04. Visual Studio</h1>
   <p class="othercourses"><small>Dit hoofdstuk is onderdeel van de cursus <a href="https://rogiervdl.github.io/DEVENV-course/">Ontwikkelomgeving</a>. Andere cursussen in dezelfde reeks: <a href="https://rogiervdl.github.io/HTML-course/">HTML</a>, <a href="https://rogiervdl.github.io/CSS-course/">CSS</a>, <a href="https://rogiervdl.github.io/JS-course/">Javascript</a>, <a href="https://rogiervdl.github.io/CS-course/">C#</a>.</small></p>
   <div id="toc"></div>
   <main>
@@ -507,8 +507,8 @@ private void Sld1_ValueChanged(object sender, RoutedPropertyChangedEventArgs&lt;
     <p>Het probleem in detail:</p>
     <ol>
       <li>in regel 2 van de XAML wordt de waarde van de slider ingesteld met <code>Value="100"</code></li>
-      <li>dit triggert <code>Sld1_ValueChanged()</code>, eveneens gedefinieerd op regel 2</li>
-      <li>daar op de eerste regel de waarde van de <code>TextBlock</code> ingesteld wordt met <code>txt1.Text = $"{sld1.Value:F0}";</code></li>
+      <li>dit triggert <code>Sld1_ValueChanged()</code> via <code>ValueChanged="Sld1_ValueChanged"</code></li>
+      <li>in die event handler wordt de waarde van de <code>TextBlock</code> ingesteld met <code>txt1.Text = $"{sld1.Value:F0}";</code></li>
       <li>dit spreekt de TextBlock <code>txt1</code> aan, maar die staat pas in regel 3 van de XAML, en is dus nog niet gekend &rarr; <code>null</code>!</li>
     </ol>
     <p>Dit probleem geldt niet alleen voor <code>Value</code>, maar ook voor <code>Minimum</code> en <code>Maximum</code>; ze triggeren de event handler te vroeg. De oplossing is eenvoudig: stel <code>Value="50" Minimum="1" Maximum="100"</code> in de code-behind in, na <code>InitializeComponent()</code>, de regel die alle XAML inleest:</p>
