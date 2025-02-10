@@ -75,44 +75,11 @@
          <li>W3C Web Validator</li>
       </ol>
       <p><img src="img/02_vscode/vscode extensies.png" alt="" class="w-400"></p>
-
-      <h2>Boilerplate</h2>
-      <p>
-        Een <mark>boilerplate</mark> is een kant-en-klare template die je kan gebruiken in eigen projecten. Voor elk webvak zullen we zo'n boilerplate voorzien.
-      </p>
-      <h3>toevoegen aan je repository</h3>
-      <p>
-        Download de boilerplate van Toledo, en voeg het toe aan je github repository. Je krijgt dan&mdash;geopend in VS Code&mdash;het volgende te zien (screenshot voor Basic Web Development):
-      </p>
-      <p><img src="img/02_vscode/vscode configuratie.png" alt="" class="w-300"></p>
-      <p>In de root van de boilerplate komen allerhande configuratiebestanden voor. Wij gebruiken de volgende:</p>
-      <ul>
-         <li><strong>.editorconfig</strong>: algemene editor instellingen</li>
-         <li><strong>.gitignore</strong>: lijst bestanden en mappen die niet gepushed hoeven worden naar Github</li>
-         <li><strong>.htmlvalidate.json</strong>: HTML-validate HTML linter opties</li>
-         <li><strong>.stylelintrc.json</strong>: StyleLint CSS linter opties</li>
-         <li><strong>eslint.config.mjs</strong>: ESLint Javascript linter opties</li>
-         <li><strong>package.json</strong>: bestand met alle packages die geïnstalleerd zullen worden via het <code>npm install</code> commando in de terminal</li>
-         <li><strong>package-lock.json</strong>: bestand met alle packages versies</li>
-      </ul>
-      <p>Deze bevatten allerhande instellingen zoals gebruikte karakterset, indentatiestijl (tabs of spaties, spronggrootte), voorkeuren qua hoofdlettergebruik, layout, toegelaten HTML tags, Javascript syntax, witruimtes enz...</p>
-      <p>Het is belangrijk dat deze instellingen <strong>bij iedereen gelijk</strong> zijn: breng dus geen wijzigingen aan deze bestanden aan!</p>
-      <h3>installatie packages met package.json</h3>
-      <p>
-        We hebben de extensies Html-Validate, StyleLint en ESLint geïnstalleerd.
-        Deze extensies hebben echter om te kunnen werken een aantal <mark>Node packages</mark> nodig. Dit zijn code libraries met specifieke functionaliteit.
-        Je kan ze manueel één voor één installeren, maar handiger is <strong>package.json</strong>, waarin alle nodige packages voor deze boilerplate staan:
-      </p>
-      <p><img src="img/02_vscode/package-json.png" alt="" class="w-500"></p>
-      <p>Installeer ze met het <code>npm install</code> commando in de Terminal (Terminal, new Terminal... of Shift-Ctrl-`). </p>
-      <p><img src="img/02_vscode/npm-install.png" alt="" class="w-700"></p>
-      <h3>node_modules</h3>
-      <p>Je ziet dat er een map <strong>node_modules</strong> bijgekomen is. Deze bevat alle packages uit package.json, plus alle packages die zij weer nodig hebben, de zgn. <mark>dependencies</mark>:</p>
-      <p><img src="img/02_vscode/node_modules.png" alt="" class="w-300"></p>
-      <p>Dit zijn er gemakkelijk een paar honderd! Dit zijn duizenden bestanden en tientallen megabytes die je eenvoudig kan herstellen door opnieuw <code>npm install</code> uit te voeren. We zullen de map <strong>node_modules</strong> daarom uitsluiten van versiebeheer (i.e. het wordt niet meegepushed naar Github.com) met deze regel in <strong>.gitignore</strong>:</p>
-      <p><img src="img/02_vscode/node_modules-ignore.png" alt="" class="w-250"></p>
-      <p>Je moet er alleen aan denken elke keer je een clone van de repository maakt (b.v. op een andere PC) opnieuw even <code>npm install</code> uit te voeren om de map <strong>node_modules</strong> te herstellen.</p>
-
+      <div class="tips" data-caption="☝🏾 let op">
+        <p>
+           Deze extensies werken alleen als je ook de nodige node packages toevoegt aan je repository, zie <a href="03_github.html#installatie-packages-met-packagejson">installatie packages met package.json</a>
+        </p>
+     </div>
 
       <h2>Hoe oefeningen maken</h2>
       <h3>stap 1: open je repository in VS Code</h3>
