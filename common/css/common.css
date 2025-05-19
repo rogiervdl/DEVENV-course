@@ -75,7 +75,6 @@ figure {
 figcaption {
 	font-size: smaller;
 	font-style: italic;
-	margin-top: -5px;
 }
 
 main>h1,
@@ -168,7 +167,13 @@ nav {
 
 table {
 	border-collapse: collapse;
+	caption-side: bottom;
 	margin-bottom: 2rem;
+}
+
+table caption {
+	font-size: 0.8em;
+	text-align: left;
 }
 
 /* CLASSES */
@@ -204,6 +209,10 @@ table {
 	padding-bottom: 0.3em;
 	text-transform: uppercase;
 	width: fit-content;
+}
+
+.larger {
+	font-size: 150%;
 }
 
 .print {
@@ -263,6 +272,10 @@ body .green {
 body .brown {
 	border-color: #996633;
 	color: #996633;
+}
+
+body .keyword {
+	color: #3200ff;
 }
 
 figure.console pre {
@@ -931,6 +944,7 @@ body pre.right,
 body div.right,
 body pre.wrong,
 body div.wrong {
+	overflow: visible !important;
 	position: relative;
 }
 
