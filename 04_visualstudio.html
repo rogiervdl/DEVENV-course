@@ -11,7 +11,7 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
-<body class="prism-vslight language-cs showpro">
+<body class="prism prism-vslight language-cs showpro">
   <div id="mode">
     <span>n00b</span>
     <label class="switch">
@@ -21,24 +21,28 @@
     <span>pro</span>
   </div>
   <nav class="site__nav">
-    <a href="01_browser.html" class="main__thumb" title="01. browser">
-      <p class="thumb__title">01. browser</p>
+    <a href="01_browser.html" class="main__thumb" title="browser">
+      <p class="thumb__title">browser</p>
       <img class="thumb__visual" src="img/01_browser/icon.jpg" alt="">
     </a>
-    <a href="02_vscode.html" class="main__thumb" title="02. VS code">
-      <p class="thumb__title">02. VS Code</p>
+    <a href="02_vscode.html" class="main__thumb" title="VS code">
+      <p class="thumb__title">VS Code</p>
       <img class="thumb__visual" src="img/02_vscode/icon.png" alt="">
     </a>
-    <a href="03_github.html" class="main__thumb" title="03. Github">
-      <p class="thumb__title">03. Github</p>
+    <a href="03_github.html" class="main__thumb" title="Github">
+      <p class="thumb__title">Github</p>
       <img class="thumb__visual" src="img/03_github/icon.jpg" alt="">
     </a>
-    <a href="04_visualstudio.html" class="main__thumb active" title="04. Visual Studio">
-      <p class="thumb__title">04. VIsual Studio</p>
+    <a href="04_visualstudio.html" class="main__thumb active" title="Visual Studio">
+      <p class="thumb__title">Visual Studio</p>
       <img class="thumb__visual" src="img/04_visualstudio/icon.jpg" alt="">
     </a>
+    <a href="05_npp.html" class="main__thumb" title="C#.NET in Notepad++">
+      <p class="thumb__title">C#.NET in Notepad++</p>
+      <img class="thumb__visual" src="img/05_npp/icon.svg" alt="">
+    </a>
   </nav>
-  <h1>04. Visual Studio</h1>
+  <h1>Visual Studio</h1>
   <p class="othercourses"><small>Dit hoofdstuk is onderdeel van de cursus <a href="https://rogiervdl.github.io/DEVENV-course/">Ontwikkelomgeving</a>. Andere cursussen in dezelfde reeks: <a href="https://rogiervdl.github.io/HTML-course/">HTML</a>, <a href="https://rogiervdl.github.io/CSS-course/">CSS</a>, <a href="https://rogiervdl.github.io/JS-course/">Javascript</a>, <a href="https://rogiervdl.github.io/CS-course/">C#</a>.</small></p>
   <div id="toc"></div>
   <main>
@@ -112,7 +116,8 @@
     </div>
     <h3>Fasen van een programma</h3>
     <p>
-      Een <strong>programma</strong> is een opeenvolging van instructies die in een bepaalde volgorde worden uitgevoerd. Het hele proces van code tot uitvoering bestaat uit drie grote stappen. Grafisch samengevat:</p>
+      Een <strong>programma</strong> is een opeenvolging van instructies die in een bepaalde volgorde worden uitgevoerd. Het hele proces van code tot uitvoering bestaat uit drie grote stappen. Grafisch samengevat:
+	</p>
     <p><img src="img/04_visualstudio/build-proces.png" alt="" class="w-800"></p>
     <h4>Coderen</h4>
     <p>Dit is het schrijven van een programma, b.v. C# in de Visual Studio ontwikkelomgeving. </p>
@@ -526,7 +531,7 @@ private void Sld1_ValueChanged(object sender, RoutedPropertyChangedEventArgs&lt;
       <img src="img/04_visualstudio/null-exception.gif" alt="" class="w-500">
     </figure>
     <div class="tips" data-caption="💣SAMENGEVAT">
-      <p style="font-size: larger;">Stel properties die event handers kunnen triggeren in de code-behind in, niet in de XAML!</p>
+      <p class="larger">Stel properties die event handers kunnen triggeren in de code-behind in, niet in de XAML!</p>
     </div>
 
     <h2>Media en andere bestanden toevoegen</h2>
@@ -536,7 +541,7 @@ private void Sld1_ValueChanged(object sender, RoutedPropertyChangedEventArgs&lt;
     <ol>
       <li>maak een map aan in je project voor de media bestanden via <strong>Add, New Folder...</strong></li>
       <li><strong>drag drop</strong> de afbeeldingen in deze map uit verkenner</li>
-      <li>selecteer bij de properties voor elke afbeelding bij <i>Build Action</i> <strong>Content</strong> en bij <i>Copy to Output Directory</i> <strong>Copy always</strong>:</li>
+      <li>selecteer bij de properties voor elke afbeelding bij <em>Build Action</em> <strong>Content</strong> en bij <em>Copy to Output Directory</em> <strong>Copy always</strong>:</li>
     </ol>
     <figure>
       <img src="img/04_visualstudio/image-toevoegen.png" alt="" class="w-250 bordered">

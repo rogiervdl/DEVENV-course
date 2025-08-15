@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<!-- [html-validate-disable no-trailing-whitespace] -->
+<html lang="nl">
+
+<head>
+	<title>Notepad++ | Ontwikkelomgeving</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="common/styles.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body class="prism prism-vslight language-cs showpro">
+	<div id="mode">
+		<span>n00b</span>
+		<label class="switch">
+			<input type="checkbox" checked>
+			<span class="slider round"></span>
+		</label>
+		<span>pro</span>
+	</div>
+	<nav class="site__nav">
+		<a href="01_browser.html" class="main__thumb" title="browser">
+			<p class="thumb__title">browser</p>
+			<img class="thumb__visual" src="img/01_browser/icon.jpg" alt="">
+		</a>
+		<a href="02_vscode.html" class="main__thumb" title="VS code">
+			<p class="thumb__title">VS Code</p>
+			<img class="thumb__visual" src="img/02_vscode/icon.png" alt="">
+		</a>
+		<a href="03_github.html" class="main__thumb" title="Github">
+			<p class="thumb__title">Github</p>
+			<img class="thumb__visual" src="img/03_github/icon.jpg" alt="">
+		</a>
+		<a href="04_visualstudio.html" class="main__thumb" title="Visual Studio">
+			<p class="thumb__title">Visual Studio</p>
+			<img class="thumb__visual" src="img/04_visualstudio/icon.jpg" alt="">
+		</a>
+		<a href="05_npp.html" class="main__thumb active" title="C#.NET in Notepad++">
+			<p class="thumb__title">C#.NET in Notepad++</p>
+			<img class="thumb__visual" src="img/05_npp/icon.svg" alt="">
+		</a>
+	</nav>
+	<h1>C#.NET in Notepad++</h1>
+	<p class="othercourses"><small>Dit hoofdstuk is onderdeel van de cursus <a href="https://rogiervdl.github.io/DEVENV-course/">Ontwikkelomgeving</a>. Andere cursussen in dezelfde reeks: <a href="https://rogiervdl.github.io/HTML-course/">HTML</a>, <a href="https://rogiervdl.github.io/CSS-course/">CSS</a>, <a href="https://rogiervdl.github.io/JS-course/">Javascript</a>, <a href="https://rogiervdl.github.io/CS-course/">C#</a>.</small></p>
+	<div id="toc"></div>
+	<main>
+		<h2>Vooraf</h2>
+		<h3>Installatie software</h3>
+		<p>Voor dit deel heb je niet veel nodig; download en installeer het volgende:</p>
+		<ul>
+			<li><strong>Notepad++</strong>, te vinden op <a href="https://notepad-plus-plus.org/downloads/">https://notepad-plus-plus.org/downloads/</a></li>
+			<li><strong>.NET8 SDK</strong> (SDK: Software Development Kit), te vinden op <a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0">https://dotnet.microsoft.com/en-us/download/dotnet/8.0</a></li>
+		</ul>
+
+		<h3>C# programmeertaal</h3>
+		<p>
+			Er zijn veel programmeertalen: Javascript, Python, C#, Ruby... Een programmeertaal legt de regels vast (grammatica, of <span class="em">syntax</span>) volgens dewelke code geschreven wordt.
+			Een vergelijking van C# met bijvoorbeeld Javascript, Ruby en Python:
+		</p>
+		<pre class="language-cs" data-caption="C#"><code>for (int i = 1; i &lt;= 5; i++) 
+{          
+  if (i % 2 == 0) Console.WriteLine(i);
+}</code></pre>
+		<pre class="prism-okaida language-javascript" data-caption="Javascript"><code>for (let i = 1; i &lt;= 5; i++) {          
+  if (i % 2 == 0) console.log(i);
+}  
+</code></pre>
+		<pre class="prism-okaida language-ruby" data-caption="ruby"><code>(1..5).each do |i|
+  puts i if i.even?
+end
+</code></pre>
+		<pre class="prism-atom-dark language-python" data-caption="python"><code>for i in range(1, 6):
+  if i % 2 == 0:
+      print(i)
+</code></pre>
+
+		<h3>.NET Framework</h3>
+		<p>
+			Naast een programmeertaal, heb je ook een <strong>context</strong> nodig, i.e. de omgeving waarbinnen je de taal wil gebruiken.
+			C# is sterk verbonden met het <mark>.NET Framework</mark>, gebruikt om Windows toepassingen te schrijven.
+			Dit bestaat hoofdzakelijk uit een bundel pakketten met voorgeschreven code, georganiseerd in een boomstructuur of <mark>namespaces</mark>.
+			Enkele die je regelmatig zal tegenkomen:
+		</p>
+		<table class="light">
+			<thead>
+				<tr>
+					<th scope="col">namespace</th>
+					<th scope="col">omschrijving</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><code>System</code></td>
+					<td>basisfuncties: schrijven/lezen in console, random getallen...</td>
+				</tr>
+				<tr>
+					<td><code>System.Collections.Generic</code></td>
+					<td>lijsten, dictionaries, sets</td>
+				</tr>
+				<tr>
+					<td><code>System.IO</code></td>
+					<td>bestanden en mappen</td>
+				</tr>
+				<tr>
+					<td><code>System.Text</code></td>
+					<td>tekstbewerking, <code>StringBuilder</code></td>
+				</tr>
+			</tbody>
+		</table>
+		<p>Om een namespace te gebruiken in je programma, moet je het bovenaan toevoegen:</p>
+		<pre><code>using System;
+using System.Collections.Generic;
+... 	 		
+</code></pre>
+		<p><img src="img/04_visualstudio/logo dotnet.jpg" alt="" class="w-150"></p>
+
+      <div class="tips" data-caption="💡ANDERE OMGEVINGEN">
+			<p>
+				C# wordt ook in andere omgevingen gebruikt dan .NET; enkele voorbeelden:
+			</p>
+			<ul>
+				<li><strong>Unity</strong> (game programming) gebruikt C# als primaire scripttaal</li>
+				<li><strong>.NET nanoFramework</strong> en <strong>Meadow</strong> gebruiken C# op microcontrollers</li>
+				<li><strong>Mono</strong> laat toe C# te draaien op Linux/Mac zonder Microsoft’s .NET.</li>
+			</ul>
+			<p>Maar in praktijk wordt C# dus hoofdzakelijk gebruikt met het .NET Framework.</p>
+      </div>
+
+		<h2>C#.NET programmeren in Notepad++</h2>
+		<p>
+			Een <strong>programma</strong> is een opeenvolging van instructies die in een bepaalde volgorde worden uitgevoerd. Het hele proces van code tot uitvoering bestaat uit drie grote stappen: <strong>coderen&mdash;builden&mdash;runnen</strong>. Grafisch samengevat:
+		</p>
+		<p><img src="img/05_npp/build-proces.png" alt="" class="w-800"></p>
+
+		<h3>Stap 1: bestanden aanmaken</h3>
+		<p>Maak eerst in verkenner een projectmap aan voor je oefening, b.v. <strong>ConsoleHalloWereld</strong>. Open de folder dan in Notepad++:</p>
+		<img src="img/05_npp/stap1a.png" alt="" class="w-600 bordered">
+		<p>Vervolgens maak je twee bestanden aan in die map (in Verkenner of in Notepad++):</p>
+		<ul>
+			<li><strong>Program.cs</strong>: eigenlijke programmacode</li>
+			<li><strong>ConsoleHalloWereld.csproj</strong>: meta informatie over je programma (.NET versie e.d.)</li>
+		</ul>
+		<p><img src="img/05_npp/stap1b.png" alt="" class="w-600 bordered"></p>
+		<div class="tips" data-caption="☝🏻 bestandsnamen">
+			<p>
+				In principe maken de namen van de bestanden en mappen niet uit. Uit conventie houden we ons aan volgende regels: 
+			</p>
+			<ul>
+				<li>projectmap: <em>Console + oefeningnaam</em>, b.v. ConsoleHalloWereld, ConsoleGetalRaden, ConsoleBankautomaat...</li>
+				<li>programmabestand: <em>Program.cs</em></li>
+				<li>projectbestand: <em>projectmapnaam + .csproj</em>, b.v. ConsoleHalloWereld.csproj, ConsoleGetalRaden.csproj...</li>
+			</ul>
+		</div>
+
+		<h3>Stap 2: coderen</h3>
+		<p>Dit is het schrijven van het programma zelf. Screenshot van een eenvoudig C# programma in Notepad++:</p>
+		<img src="img/05_npp/stap2a.png" alt="" class="w-600 bordered">
+
+		<h3>Stap 3: builden</h3>
+		<p>Als je klaar bent, ga je naar de volgende stap, het <mark>builden</mark>. De eenvoudigste manier is de projectmap eerst openen in Terminal:</p>
+		<img src="img/05_npp/stap3a.png" alt="" class="w-500">
+		<p>
+			Daarna gebruik je het commando <code>dotnet build</code>:
+		</p>
+		<img src="img/05_npp/stap3b.png" alt="" class="w-500">
+		<p>
+			Als er fouten in je programma staan, krijg je de mededeling dat de build mislukt is en een overzicht van de fouten:
+		</p>
+		<img src="img/05_npp/stap3c.png" alt="" class="w-500">
+		<p>
+			De code wordt door het builden in verschillende stappen omgezet naar een .exe bestand met platform-onafhankelijke tussencode, <mark>CIL</mark> of <strong>Common Intermediate Language</strong> genoemd, bestaande uit low-level instructies of <mark>bytecodes</mark>. Voor de geïnteresseerden: je kan de bytecodes zien door de .exe te openen in tools als <a href="https://apps.microsoft.com/detail/xp8c26vdwlp4t4?hl=en-us&gl=BE">ILSpy</a>. Enkele aspecten van het build proces:
+		</p>
+		<ul>
+			<li><strong>linking</strong>: combineren van alle bronnen, codefiles, libraries, referenties enz... in één bestand</li>
+			<li><strong>compiling</strong>: vertaling van hig-level C# code naar low-level bytecodes </li>
+		</ul>
+		<p>Als de build gelukt is, komen er twee mappen bij in je project:</p>
+		<img src="img/05_npp/stap3d.png" alt="" class="w-400">
+		<ul>
+			<li><strong>bin</strong>: bevat de binaire (uitvoerbare) bestanden</li>
+			<li><strong>obj</strong>: bevat tijdelijke en intermediarie bestanden</li>
+		</ul>
+		<div class="tips" data-caption="💡TIP">
+			<p>
+				Je mag die <em>bin</em> en <em>obj</em> mappen altijd handmatig verwijderen en opnieuw builden; soms kan je daarmee buildproblemen oplossen.
+			</p>
+		</div>
+		<h3>Stap 4: runnen</h3>
+		<p>De eenvoudigste manier is het <em>.exe</em> bestand in <em>bin/Debug/net8.0</em> starten door dubbelklikken in Verkenner:</p>
+		<img src="img/05_npp/stap4a.png" alt="" class="w-400">
+		<p>De .NET Common Language Runtime (CLR) zal tijdens de uitvoering (<mark>JIT</mark>: <strong>just in time</strong>) de bytecode vertalen in platform-specifieke machine-instructies. Het programma in actie:</p>
+		<img src="img/05_npp/stap4b.png" alt="" class="w-300">
+
+		<h2>Soorten Fouten</h2>
+		<p>In elke fase van het programma kunnen fouten optreden:</p>
+		<ol>
+			<li><strong>syntax error</strong>: je code bevat een fout tegen de vormregels van de programmeertaal, bv. puntkomma of haakje vergeten</li>
+			<li><strong>build error</strong>: je code is correct geschreven, maar tijdens het builden loopt iets fout, bv. een bibliotheek wordt niet gevonden</li>
+			<li><strong>runtime error</strong>: je code compileert netjes, maar tijdens het uitvoeren loopt je programma vast, bv. een onverwachte deling door nul, geheugenfout, bestand wordt niet gevonden enz...</li>
+			<li><strong>logical error</strong>: je programma loopt niet vast, maar doet niet wat je verwacht, bv. de output is verkeerd of een knop werkt niet</li>
+		</ol>
+
+		<h2>Builden/runnen met NPPExec</h2>
+		<p>Om binnen Notepad++ zelf te kunnen builden en runnen, heb je de <strong>NPPExec</strong> plugin nodig. Het vraagt éénmalig wat configuratie. Hier gaan we.</p>
+		<h3>Plugin toevoegen</h3>
+		<p>Kies <strong>Plugins, Plugins admin...:</strong></p>
+		<img src="img/05_npp/nppexe1.png" alt="" class="w-200 bordered">
+		<p>Zoek op <em>NppExe</em> en klik <strong>install</strong>:</p>
+		<img src="img/05_npp/nppexe2.png" alt="" class="w-400">
+		<h3>Script aanmaken</h3>
+		<p>Kies <strong>Plugins, NppExe, Execute NppExe script...</strong>:</p>
+		<img src="img/05_npp/nppexe3.png" alt="" class="w-400 bordered">
+		<p>Voer deze code in, en klik <strong>Save...</strong>:</p>
+		<img src="img/05_npp/nppexe4.png" alt="" class="w-400">
+		<p>Geef een willekeurige beschrijving:</p>
+		<img src="img/05_npp/nppexe5.png" alt="" class="w-400">
+		<h3>Menu item aanmaken</h3>
+		<p>Kies <strong>Plugins, NppExe, Advanced options...</strong>:</p>
+		<img src="img/05_npp/nppexe6.png" alt="" class="w-400 bordered">
+		<p>Geef je menu item een naam, b.v. <strong>Run C#</strong>, kies het script en klik <strong>Add/Modify</strong>:</p>
+		<img src="img/05_npp/nppexe7.png" alt="" class="w-400">
+		<p>Je kan het nu al runnen vanuit het Macro menu:</p>
+		<img src="img/05_npp/nppexe7b.png" alt="" class="w-500">
+		<h3>Shortcut aanmaken</h3>
+		<p>Kies <strong>Settings, shortcut mapper...</strong>:</p>
+		<img src="img/05_npp/nppexe8.png" alt="" class="w-250 bordered">
+		<p>Zoek onder <strong>Plugin commands</strong> je macro, en geef het volgende shortcut:</p>
+		<img src="img/05_npp/nppexe9.png" alt="" class="w-400">
+		<h3>Programma stoppen met Ctrl-C</h3>
+		<p>Om de uitvoering van een programma voortijdig te stoppen, druk in de console <strong>Ctrl-C</strong>:</p>
+		<img src="img/05_npp/kill.png" alt="" class="w-400">
+
+		<h2>Notepad++</h2>
+		<h3>Lettertype veranderen</h3>
+		<p>Het standaard lettertype voor code is Courier New, wat lastig leesbaar is. In Notepad++ kan je dit aanpassen via <strong>Settings, Style Configurator</strong>:</p>
+		<img src="img/05_npp/style-configurator.png" alt="" class="w-400">
+		<h3>Dark mode</h3>
+		<p>Via <strong>Settings, Preferences</strong> kan je dark mode inschakelen:</p>
+		<img src="img/05_npp/dark.png" alt="" class="w-400">
+		<p>Voor het overige raden we aan niet teveel aan de instellingen te prutsen.</p>
+		<h3>Shortcuts</h3>
+		<p>Algemene shortcuts van elke tekst editor:</p>
+		<figure>
+			<img src="img/04_visualstudio/shortcuts general.png" alt="" class="w-600">
+		</figure>
+		<p>Nog een paar typische Notepad++ shortcuts die je zou moeten kennen:</p>
+		<table class="light">
+			<thead>
+				<tr>
+					<th scope="col">Shortcut</th>
+					<th scope="col">Betekenis</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><code>Ctrl-K, Ctrl-Shift-K</code></td>
+					<td><strong>C</strong>omment, <strong>U</strong>ncomment geselecteerd blok</td>
+				</tr>
+				<tr>
+					<td><code>Ctrl-H</code></td>
+					<td>zoeken en vervangen</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</main>
+	<footer>
+		<img src="common/img/thats-all.jpg" alt="">
+		<div class="footer__bottom">
+			<p>@2024, Rogier van der Linde</p>
+			<p>cursussen in dezelfde reeks: <a href="https://rogiervdl.github.io/HTML-course/">HTML</a> &mdash; <a href="https://rogiervdl.github.io/CSS-course/">CSS</a> &mdash; <a href="https://rogiervdl.github.io/JS-course/">Javascript</a> &mdash; <a href="https://rogiervdl.github.io/CS-course/">C#</a></p>
+		</div>
+	</footer>
+	<a aria-label="up" id="up" href="#top"><span class="fas fa-chevron-circle-up"></span></a>
+	<!-- scripts -->
+	<script src="common/vendor/prism/prism.js"></script>
+	<script src="common/vendor/hystmodal/hystmodal.min.js"></script>
+	<script src="common/js/mode.js"></script>
+	<script src="common/js/scripts.js"></script>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7JWZ9HHW0"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-Q7JWZ9HHW0');
+	</script>
+</body>
+
+</html>
