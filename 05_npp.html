@@ -46,15 +46,15 @@
 	<p class="othercourses"><small>Dit hoofdstuk is onderdeel van de cursus <a href="https://rogiervdl.github.io/DEVENV-course/">Ontwikkelomgeving</a>. Andere cursussen in dezelfde reeks: <a href="https://rogiervdl.github.io/HTML-course/">HTML</a>, <a href="https://rogiervdl.github.io/CSS-course/">CSS</a>, <a href="https://rogiervdl.github.io/JS-course/">Javascript</a>, <a href="https://rogiervdl.github.io/CS-course/">C#</a>.</small></p>
 	<div id="toc"></div>
 	<main>
-		<h2>Vooraf</h2>
-		<h3>Installatie software</h3>
+		<h2>Installatie software</h2>
 		<p>Voor dit deel heb je niet veel nodig; download en installeer het volgende:</p>
 		<ul>
 			<li><strong>Notepad++</strong>, te vinden op <a href="https://notepad-plus-plus.org/downloads/">https://notepad-plus-plus.org/downloads/</a></li>
 			<li><strong>.NET8 SDK</strong> (SDK: Software Development Kit), te vinden op <a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0">https://dotnet.microsoft.com/en-us/download/dotnet/8.0</a></li>
 		</ul>
 
-		<h3>C# programmeertaal</h3>
+		<h2>C#.NET programmeren in Notepad++</h2>
+		<h3>C# als programmeertaal</h3>
 		<p>
 			Er zijn veel programmeertalen: Javascript, Python, C#, Ruby... Een programmeertaal legt de regels vast (grammatica, of <span class="em">syntax</span>) volgens dewelke code geschreven wordt.
 			Een vergelijking van C# met bijvoorbeeld Javascript, Ruby en Python:
@@ -128,13 +128,13 @@ using System.Collections.Generic;
 			<p>Maar in praktijk wordt C# dus hoofdzakelijk gebruikt met het .NET Framework.</p>
       </div>
 
-		<h2>C#.NET programmeren in Notepad++</h2>
 		<p>
 			Een <strong>programma</strong> is een opeenvolging van instructies die in een bepaalde volgorde worden uitgevoerd. Het hele proces van code tot uitvoering bestaat uit drie grote stappen: <strong>coderen&mdash;builden&mdash;runnen</strong>. Grafisch samengevat:
 		</p>
 		<p><img src="img/05_npp/build-proces.png" alt="" class="w-800"></p>
 
-		<h3>Stap 1: bestanden aanmaken</h3>
+		<h3>Stap voor stap</h3>
+		<h4>bestanden aanmaken</h4>
 		<p>Maak eerst in verkenner een projectmap aan voor je oefening, b.v. <strong>ConsoleHalloWereld</strong>. Open de folder dan in Notepad++:</p>
 		<img src="img/05_npp/stap1a.png" alt="" class="w-600 bordered">
 		<p>Vervolgens maak je twee bestanden aan in die map (in Verkenner of in Notepad++):</p>
@@ -154,11 +154,11 @@ using System.Collections.Generic;
 			</ul>
 		</div>
 
-		<h3>Stap 2: coderen</h3>
+		<h4>coderen</h4>
 		<p>Dit is het schrijven van het programma zelf. Screenshot van een eenvoudig C# programma in Notepad++:</p>
 		<img src="img/05_npp/stap2a.png" alt="" class="w-600 bordered">
 
-		<h3>Stap 3: builden</h3>
+		<h4>builden</h4>
 		<p>Als je klaar bent, ga je naar de volgende stap, het <mark>builden</mark>. De eenvoudigste manier is de projectmap eerst openen in Terminal:</p>
 		<img src="img/05_npp/stap3a.png" alt="" class="w-500">
 		<p>
@@ -187,7 +187,7 @@ using System.Collections.Generic;
 				Je mag die <em>bin</em> en <em>obj</em> mappen altijd handmatig verwijderen en opnieuw builden; soms kan je daarmee buildproblemen oplossen.
 			</p>
 		</div>
-		<h3>Stap 4: runnen</h3>
+		<h4>runnen</h4>
 		<p>De eenvoudigste manier is het <em>.exe</em> bestand in <em>bin/Debug/net8.0</em> starten door dubbelklikken in Verkenner:</p>
 		<img src="img/05_npp/stap4a.png" alt="" class="w-400">
 		<p>De .NET Common Language Runtime (CLR) zal tijdens de uitvoering (<mark>JIT</mark>: <strong>just in time</strong>) de bytecode vertalen in platform-specifieke machine-instructies. Het programma in actie:</p>
@@ -232,7 +232,7 @@ using System.Collections.Generic;
 		<p>Om de uitvoering van een programma voortijdig te stoppen, druk in de console <strong>Ctrl-C</strong>:</p>
 		<img src="img/05_npp/kill.png" alt="" class="w-400">
 
-		<h2>Notepad++</h2>
+		<h2>Notepad++ weetjes</h2>
 		<h3>Lettertype veranderen</h3>
 		<p>Het standaard lettertype voor code is Courier New, wat lastig leesbaar is. In Notepad++ kan je dit aanpassen via <strong>Settings, Style Configurator</strong>:</p>
 		<img src="img/05_npp/style-configurator.png" alt="" class="w-400">
