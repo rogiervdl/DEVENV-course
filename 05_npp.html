@@ -179,6 +179,33 @@ using System.Collections.Generic;
       <h3>coderen</h3>
       <p>Dit is het schrijven van het programma zelf. Screenshot van een eenvoudig C# programma in Notepad++:</p>
       <img src="img/05_npp/stap2a.png" alt="" class="w-600 bordered">
+      <p>Het <strong>.csproj</strong> bestand is heeft altijd de naam van de map, dus <em>ConsoleHalloWereld</em>, <em>ConsoleGetalRaden</em> enz... De code is altijd dit:</p>
+      <pre class="language-html language-xaml" data-caption=".csproj bestand"><code>&lt;Project Sdk="Microsoft.NET.Sdk"&gt;
+  &lt;PropertyGroup&gt;
+    &lt;OutputType&gt;Exe&lt;/OutputType&gt;
+    &lt;TargetFramework&gt;net8.0&lt;/TargetFramework&gt;
+    &lt;ImplicitUsings&gt;disable&lt;/ImplicitUsings&gt;
+  &lt;/PropertyGroup&gt;
+&lt;/Project&gt;</code></pre>
+      <p>Het <strong>.cs</strong> bestand heet altijd <em>Program.cs</em>. De basisstructuur:</p>
+<pre class="language-cs" data-caption="Program.cs"><code>/*
+ * Auteur: Rogier van der Linde
+ * Datum: 2025-09-05
+ */
+using System;
+
+namespace ConsoleNaamVanDeOefening
+{
+   class Program
+   {
+      static void Main(string[] args)
+      {
+         // programmacode hier
+         // ...
+      }
+   }
+}
+</code></pre>
 
       <h3>builden</h3>
       <p>
