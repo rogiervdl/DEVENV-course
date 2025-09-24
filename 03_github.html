@@ -137,45 +137,6 @@
       <div class="tips" data-caption="☝🏻ATTENTIE">
          <p>Maak enkel de repo voor een vak aan als dat gevraagd wordt; begin niet gelijk alle vier aan te maken!</p>
       </div>
-      <h2>Packages (webvakken only)</h2>
-      <div class="tips" data-caption="☝🏻 LET OP!">
-         <p>Dit onderdeel is alleen voor webvakken, dus niet voor programmeervakken!</p>
-      </div>
-      <h3>configuratiebestanden</h3>
-      <p><img src="img/02_vscode/vscode configuratie.png" alt="" class="w-300"></p>
-      <p>In de root van de boilerplate komen vaak allerhande configuratiebestanden voor. Enkele typische voor webvakken:</p>
-      <ul>
-         <li><strong>.editorconfig</strong>: algemene editor instellingen</li>
-         <li><strong>.gitignore</strong>: lijst bestanden en mappen die niet gepushed hoeven worden naar Github</li>
-         <li><strong>.htmlvalidate.json</strong>: HTML-validate HTML linter opties</li>
-         <li><strong>.stylelintrc.json</strong>: StyleLint CSS linter opties</li>
-         <li><strong>eslint.config.mjs</strong>: ESLint Javascript linter opties</li>
-         <li><strong>package.json</strong>: bestand met alle packages die geïnstalleerd zullen worden via het <code>npm install</code> commando in de terminal</li>
-         <li><strong>package-lock.json</strong>: bestand met alle packages versies</li>
-      </ul>
-      <p>Deze bevatten allerhande instellingen zoals gebruikte karakterset, indentatiestijl (tabs of spaties, spronggrootte), voorkeuren qua hoofdlettergebruik, layout, toegelaten HTML tags, Javascript syntax, witruimtes enz...</p>
-      <p>Het is belangrijk dat deze instellingen <strong>bij iedereen gelijk</strong> zijn: breng dus geen wijzigingen aan deze bestanden aan!</p>
-      <h3>installatie packages met package.json</h3>
-      <p>
-         We hebben in het deel <a href="02_vscode.html#extensies-installeren">VS Code</a> de extensies Html-Validate, StyleLint en ESLint geïnstalleerd.
-         Deze extensies hebben echter om te kunnen werken een aantal <mark>Node packages</mark> nodig. Dit zijn code libraries met specifieke functionaliteit.
-         Je kan ze manueel één voor één installeren, maar handiger is <strong>package.json</strong>, waarin alle nodige packages voor deze boilerplate staan:
-      </p>
-      <p><img src="img/03_github/package-json.png" alt="" class="w-500"></p>
-      <p>Installeer ze met het <code>npm install</code> commando in de Terminal (Terminal, new Terminal... of Shift-Ctrl-`). </p>
-      <p><img src="img/03_github/npm-install.png" alt="" class="w-700"></p>
-      <p>Opmerking: als je volgende foutmelding krijgt, run je eerst dit commando:</p>
-      <p><img src="img/03_github/running scripts foutmelding.jpg" alt="" class="w-800"></p>
-      <p>Het commando:</p>
-      <pre class="language-cs prism-okaida"><code>Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned</code></pre>
-
-      <h3>node_modules</h3>
-      <p>Je ziet dat er een map <strong>node_modules</strong> bijgekomen is. Deze bevat alle packages uit package.json, plus alle packages die zij weer nodig hebben, de zgn. <mark>dependencies</mark>:</p>
-      <p><img src="img/03_github/node_modules.png" alt="" class="w-300"></p>
-      <p>Dit zijn er gemakkelijk een paar honderd! Dit zijn duizenden bestanden en tientallen megabytes die je eenvoudig kan herstellen door opnieuw <code>npm install</code> uit te voeren. We zullen de map <strong>node_modules</strong> daarom uitsluiten van versiebeheer (i.e. het wordt niet meegepushed naar Github.com) met deze regel in <strong>.gitignore</strong>:</p>
-      <p><img src="img/03_github/node_modules-ignore.png" alt="" class="w-250"></p>
-      <p>Je moet er alleen aan denken elke keer je een clone van de repository maakt (b.v. op een andere PC) opnieuw even <code>npm install</code> uit te voeren om de map <strong>node_modules</strong> te herstellen.</p>
-
       <h2>Eerste commit</h2>
       <h3>Readme.md invullen</h3>
       <p>Het bestand <strong>readme.md</strong> in de root bevat informatie over je repo. Een ideaal moment om te leren werken met Github, is het invullen van dit bestand, en de wijzigingen pushen naar github.com.</p>

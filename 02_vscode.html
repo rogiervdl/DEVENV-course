@@ -81,18 +81,14 @@
       </ol>
       <p><img src="img/02_vscode/vscode extensies.png" alt="" class="w-400"></p>
       <div class="tips" data-caption="☝🏾 let op">
-        <p>
-           Deze extensies werken alleen als je ook de nodige node packages toevoegt aan je repository, zie <a href="03_github.html#installatie-packages-met-packagejson">installatie packages met package.json</a>
-        </p>
-     </div>
-
-      <h2>Hoe oefeningen maken</h2>
-      <h3>stap 1: open je repository in VS Code</h3>
+         <p>
+            Deze extensies werken alleen als je ook de nodige node packages toevoegt aan je repository, zie <a href="03_github.html#installatie-packages-met-packagejson">installatie packages met package.json</a>
+         </p>
+      </div>
+      <h3>repository openen</h3>
       <p>
          Voor elk vak zul je een repository moeten maken, zie <a href="03_github.html#repository-opzetten">dit hoofdstuk</a>.
-         Elke keer als je een oefening maakt, open je de volledige repo in VS Code.
-         Enkel één oefening kan ook, maar dan is het moeilijker om code uit andere lessen terug te vinden om te gebruiken.
-         Er zijn meerdere manieren. Het makkelijkste is via <strong>Verkenner</strong> of via <strong>Github Desktop</strong>:
+         Als je oefeningen maakt, open je altijd eerst de <strong>volledige repository</strong> in VS Code. Het makkelijkste is via <strong>Verkenner</strong> of via <strong>Github Desktop</strong>:
       </p>
       <figure>
          <img src="img/02_vscode/repo openen verkenner.png" alt="" class="w-500">
@@ -107,7 +103,45 @@
          <img src="img/02_vscode/repo in vs code.png" alt="" class="w-700">
          <figcaption>alle mappen in VS Codes</figcaption>
       </figure>
-      <h3>stap 2: maak de oefening aan</h3>
+
+      <h3>packages installeren</h3>
+      <p>
+         We hebben nu een aantal extensies als html-validate, stylelint en eslint geïnstalleerd.
+         Deze extensies hebben om te kunnen werken een aantal <mark>Node packages</mark> nodig. Dit zijn code libraries met specifieke functionaliteit.
+         Je repository bevat een bestand <strong>package.json</strong>, waarin alle nodige packages staan:
+      </p>
+      <p><img src="img/03_github/package-json.png" alt="" class="w-500"></p>
+      <p>Installeer ze met het <code>npm install</code> commando in de Terminal (Terminal, new Terminal... of Shift-Ctrl-`). </p>
+      <p><img src="img/03_github/npm-install.png" alt="" class="w-700"></p>
+      <p>Opmerking: als je volgende foutmelding krijgt, run je eerst dit commando:</p>
+      <p><img src="img/03_github/running scripts foutmelding.jpg" alt="" class="w-800"></p>
+      <p>Het commando:</p>
+      <pre class="language-cs prism-okaida"><code>Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned</code></pre>
+      <p>Je ziet dat er een map <strong>node_modules</strong> bijgekomen is. Deze bevat alle packages uit package.json, plus alle packages die zij weer nodig hebben, de zgn. <mark>dependencies</mark>:</p>
+      <p><img src="img/03_github/node_modules.png" alt="" class="w-300"></p>
+      <p>Dit zijn er gemakkelijk een paar honderd! Dit zijn duizenden bestanden en tientallen megabytes die je eenvoudig kan herstellen door opnieuw <code>npm install</code> uit te voeren. We zullen de map <strong>node_modules</strong> daarom uitsluiten van versiebeheer (i.e. het wordt niet meegepushed naar Github.com) met deze regel in <strong>.gitignore</strong>:</p>
+      <p><img src="img/03_github/node_modules-ignore.png" alt="" class="w-250"></p>
+      <p>Je moet er alleen aan denken elke keer je een clone van de repository maakt (b.v. op een andere PC) opnieuw even <code>npm install</code> uit te voeren om de map <strong>node_modules</strong> te herstellen.</p>
+      <h3>uitleg configuratiebestanden</h3>
+      <p>In de root van de boilerplate komen allerhande configuratiebestanden voor.</p>
+      <p><img src="img/02_vscode/vscode configuratie.png" alt="" class="w-300"></p>
+      <p>Enkele typische:</p>
+      <ul>
+         <li><strong>.editorconfig</strong>: algemene editor instellingen</li>
+         <li><strong>.gitignore</strong>: lijst bestanden en mappen die niet gepushed hoeven worden naar Github</li>
+         <li><strong>.htmlvalidate.json</strong>: HTML-validate HTML linter opties</li>
+         <li><strong>.stylelintrc.json</strong>: StyleLint CSS linter opties</li>
+         <li><strong>eslint.config.mjs</strong>: ESLint Javascript linter opties</li>
+         <li><strong>package.json</strong>: bestand met alle packages die geïnstalleerd zullen worden via het <code>npm install</code> commando in de terminal</li>
+         <li><strong>package-lock.json</strong>: bestand met alle packages versies</li>
+      </ul>
+      <p>Deze bevatten allerhande instellingen zoals gebruikte karakterset, indentatiestijl (tabs of spaties, spronggrootte), voorkeuren qua hoofdlettergebruik, layout, toegelaten HTML tags, Javascript syntax, witruimtes enz...</p>
+      <p>Het is belangrijk dat deze instellingen <strong>bij iedereen gelijk</strong> zijn: breng dus geen wijzigingen aan deze bestanden aan!</p>
+
+
+      <h2>Hoe oefeningen maken</h2>
+      <p>Open altijd eerst je volledige repository in VS Code, zie <a href="#repository-openen">repository openen</a></p>
+      <h3>stap 1: maak de oefening aan</h3>
       <p>Eerst moet je weten om <strong>welke les</strong> en wat de <strong>naam van de oefening</strong> is. Dit vind je terug in de opgave:</p>
       <figure>
          <img src="img/02_vscode/les en oefening.png" alt="" class="w-500">
@@ -140,7 +174,7 @@
          <img src="img/02_vscode/stap5.png" alt="" class="w-600">
          <figcaption>...en geef de pagina een titel</figcaption>
       </figure>
-      <h3>stap 3: werk de oefening uit</h3>
+      <h3>stap 2: werk de oefening uit</h3>
       <p>Voeg nu alle mappen en bestanden toe die je nodig hebt voor deze oefening, typisch:</p>
       <ul>
          <li><em>img</em>: afbeeldingen (meestal meegegeven met de opgave)</li>
@@ -159,7 +193,7 @@
       <figure>
          <img src="img/03_github/vscode integratie.png" alt="" class="w-800">
       </figure>
-      <h3>stap 4: commit en push</h3>
+      <h3>stap 3: commit en push</h3>
       <p>Open nu Github Desktop (zie <a href="03_github.html#oefeningen-pushen">dit hoofdstuk</a>). Je ziet gelijkaardige kleurcodes met alle wijzigingen:</p>
       <figure>
          <img src="img/03_github/github oefening commit.png" alt="" class="w-600">
@@ -323,7 +357,7 @@
    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFJVGYKCY8"></script>
    <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
 
       gtag('config', 'G-FFJVGYKCY8');
