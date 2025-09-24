@@ -3,273 +3,262 @@
 <html lang="nl">
 
 <head>
-  <title>Github | Ontwikkelomgeving</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="common/styles.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+   <title>Github | Ontwikkelomgeving</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="common/styles.css">
+   <link rel="stylesheet" href="css/styles.css">
+   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body class="prism language-html showpro prism-default">
-  <div id="mode">
-    <span>n00b</span>
-    <label class="switch">
-      <input type="checkbox" checked>
-      <span class="slider round"></span>
-    </label>
-    <span>pro</span>
-  </div>
-  <nav class="site__nav">
-    <a href="01_browser.html" class="main__thumb" title="browser">
-      <p class="thumb__title">browser</p>
-      <img class="thumb__visual" src="img/01_browser/icon.jpg" alt="">
-    </a>
-    <a href="02_vscode.html" class="main__thumb" title="VS code">
-      <p class="thumb__title">VS Code</p>
-      <img class="thumb__visual" src="img/02_vscode/icon.png" alt="">
-    </a>
-    <a href="03_github.html" class="main__thumb active" title="Github">
-      <p class="thumb__title">Github</p>
-      <img class="thumb__visual" src="img/03_github/icon.jpg" alt="">
-    </a>
-    <a href="04_visualstudio.html" class="main__thumb" title="Visual Studio">
-      <p class="thumb__title">Visual Studio</p>
-      <img class="thumb__visual" src="img/04_visualstudio/icon.jpg" alt="">
-    </a>
-    <a href="05_npp.html" class="main__thumb" title="C#.NET in Notepad++">
-      <p class="thumb__title">C#.NET in Notepad++</p>
-      <img class="thumb__visual" src="img/05_npp/icon.svg" alt="">
-    </a>
-  </nav>
-  <h1>Github</h1>
-  <p class="othercourses"><small>Dit hoofdstuk is onderdeel van de cursus <a href="https://rogiervdl.github.io/DEVENV-course/">Ontwikkelomgeving</a>. Andere cursussen in dezelfde reeks: <a href="https://rogiervdl.github.io/HTML-course/">HTML</a>, <a href="https://rogiervdl.github.io/CSS-course/">CSS</a>, <a href="https://rogiervdl.github.io/JS-course/">Javascript</a>, <a href="https://rogiervdl.github.io/CS-course/">C#</a>.</small></p>
-  <div id="toc"></div>
-  <main>
+   <div id="mode">
+      <span>n00b</span>
+      <label class="switch">
+         <input type="checkbox" checked>
+         <span class="slider round"></span>
+      </label>
+      <span>pro</span>
+   </div>
+   <nav class="site__nav">
+      <a href="01_browser.html" class="main__thumb" title="browser">
+         <p class="thumb__title">browser</p>
+         <img class="thumb__visual" src="img/01_browser/icon.jpg" alt="">
+      </a>
+      <a href="02_vscode.html" class="main__thumb" title="VS code">
+         <p class="thumb__title">VS Code</p>
+         <img class="thumb__visual" src="img/02_vscode/icon.png" alt="">
+      </a>
+      <a href="03_github.html" class="main__thumb active" title="Github">
+         <p class="thumb__title">Github</p>
+         <img class="thumb__visual" src="img/03_github/icon.jpg" alt="">
+      </a>
+      <a href="04_visualstudio.html" class="main__thumb" title="Visual Studio">
+         <p class="thumb__title">Visual Studio</p>
+         <img class="thumb__visual" src="img/04_visualstudio/icon.jpg" alt="">
+      </a>
+      <a href="05_npp.html" class="main__thumb" title="C#.NET in Notepad++">
+         <p class="thumb__title">C#.NET in Notepad++</p>
+         <img class="thumb__visual" src="img/05_npp/icon.svg" alt="">
+      </a>
+   </nav>
+   <h1>Github</h1>
+   <p class="othercourses"><small>Dit hoofdstuk is onderdeel van de cursus <a href="https://rogiervdl.github.io/DEVENV-course/">Ontwikkelomgeving</a>. Andere cursussen in dezelfde reeks: <a href="https://rogiervdl.github.io/HTML-course/">HTML</a>, <a href="https://rogiervdl.github.io/CSS-course/">CSS</a>, <a href="https://rogiervdl.github.io/JS-course/">Javascript</a>, <a href="https://rogiervdl.github.io/CS-course/">C#</a>.</small></p>
+   <div id="toc"></div>
+   <main>
 
-    <h2>Wat is GitHub</h2>
-    <p>Github is een <em>versioning tool</em>, bedoeld om samen te kunnen werken aan één code met een team; je kan altijd terugkeren naar vorige versies. Alvast enkele begrippen:</p>
-    <ul>
-      <li><strong>repository</strong>: bewaarplaats voor alle gedeelde bestanden</li>
-      <li><strong>clone</strong>: een lokale kopie van een online repository</li>
-      <li><strong>commit</strong>: wijzigingen doorvoeren aan een repository</li>
-      <li><strong>push</strong>: uploaden van een lokale commit naar een online repository</li>
-      <li><strong>pull</strong>: binnenhalen van wijzigingen in de online repository naar de lokale clone</li>
-    </ul>
+      <h2>Wat is GitHub</h2>
+      <p>Github is een <em>versioning tool</em>, bedoeld om samen te kunnen werken aan één code met een team; je kan altijd terugkeren naar vorige versies. Alvast enkele begrippen:</p>
+      <ul>
+         <li><strong>repository</strong>: bewaarplaats voor alle gedeelde bestanden</li>
+         <li><strong>clone</strong>: een lokale kopie van een online repository</li>
+         <li><strong>commit</strong>: wijzigingen doorvoeren aan een repository</li>
+         <li><strong>push</strong>: uploaden van een lokale commit naar een online repository</li>
+         <li><strong>pull</strong>: binnenhalen van wijzigingen in de online repository naar de lokale clone</li>
+      </ul>
 
-    <h2>Github account</h2>
-    <h3>Aanmaken</h3>
-    <p>Je bestanden hou je online bij op het online sharingplatform <a href="https://github.com/">github.com</a>. Registreer eerst voor een gratis account op <a href="https://github.com/signup">https://github.com/signup</a>. Let er op dat je met je <strong>@student.odisee.be</strong> e-mail adres registreert, dit is belangrijk! Als je dit eerder al voor een ander vak deed, dan kun je deze en volgende stap overslaan uiteraard.</p>
-    <p><img src="img/03_github/github signup.png" alt="" class="w-500"></p>
-    <h3>Omzetten naar Pro account</h3>
-    <p>Als Odisee-student, kun je je Github account gratis laten omzetten naar een Pro-account. Ga daarvoor naar <a href="https://education.github.com/discount_requests/application">https://education.github.com/discount_requests/application</a>, en dien een aanvraag in. Let op: de goedkeuring kan tot een dag duren, dus hou daar rekening mee.</p>
-    <p><img src="img/03_github/github pro.png" alt="" class="w-500"></p>
-    <p>In afwachting van de goedkeuring, kan je alvast verder zonder pro-account.</p>
+      <h2>Github account</h2>
+      <h3>Aanmaken</h3>
+      <p>Je bestanden hou je online bij op het online sharingplatform <a href="https://github.com/">github.com</a>. Registreer eerst voor een gratis account op <a href="https://github.com/signup">https://github.com/signup</a>. Let er op dat je met je <strong>@student.odisee.be</strong> e-mail adres registreert, dit is belangrijk! Als je dit eerder al voor een ander vak deed, dan kun je deze en volgende stap overslaan uiteraard.</p>
+      <p><img src="img/03_github/github signup.png" alt="" class="w-300 bordered"></p>
+      <h3>Omzetten naar Pro account</h3>
+      <p>Als Odisee-student, kun je je Github account gratis laten omzetten naar een Pro-account. Ga daarvoor naar <a href="https://education.github.com/discount_requests/application">https://education.github.com/discount_requests/application</a>, en dien een aanvraag in. Let op: de goedkeuring kan tot een dag duren, dus hou daar rekening mee.</p>
+      <p><img src="img/03_github/github pro.png" alt="" class="w-500"></p>
+      <p>In afwachting van de goedkeuring, kan je <strong>alvast verder zonder pro-account</strong>.</p>
 
-    <h2>Github Desktop</h2>
-    <p>Om het werken met Github te vergemakkelijken, gebruiken we de Github Desktop app.</p>
-    <h3>Installatie</h3>
-    <p>Download en installeer <a href="https://github.com/apps/desktop">Github Desktop</a></p>
-    <h3>Verbinden met Github account</h3>
-    <p>Open Github Desktop, en log in met je Github account. Je kan dit ook achteraf op elk moment nog doen via File, Options:</p>
-    <p><img src="img/03_github/github desktop login.png" alt="" class="w-400"></p>
-    <p>Log in via de browser:</p>
-    <figure>
-      <img src="img/03_github/github desktop login2.png" alt="" class="w-300">
-      <img src="img/03_github/github desktop login3.png" alt="" class="w-150">
-    </figure>
+      <h2>Github Desktop</h2>
+      <p>Om het werken met Github te vergemakkelijken, gebruiken we de Github Desktop app.</p>
+      <h3>Installatie</h3>
+      <p>Download en installeer <a href="https://github.com/apps/desktop">Github Desktop</a></p>
+      <h3>Verbinden met Github account</h3>
+      <p>Open Github Desktop, en log in met je Github account. Je kan dit ook achteraf op elk moment nog doen via File, Options:</p>
+      <p><img src="img/03_github/github desktop login.png" alt="" class="w-400"></p>
+      <p>Log in via de browser:</p>
+      <figure>
+         <img src="img/03_github/github desktop login2.png" alt="" class="w-300">
+         <img src="img/03_github/github desktop login3.png" alt="" class="w-150">
+      </figure>
 
-    <h2>Repository opzetten</h2>
-    <div class="tips" data-caption="☝🏻 LET OP">
+      <h2>Repository opzetten</h2>
+      <div class="tips" data-caption="☝🏻 LET OP">
+         <p>
+            Kijk goed naar de exacte naam die gevraagd wordt voor het vak! Voor het begin van academiejaar 2025&ndash;2026 is dit (let op de hoofdletters):
+         </p>
+         <ul>
+            <li>Web Development Fundamentals (bachelors): <strong>WDF-<em>VoornaamAchternaam</em>-2526</strong> </li>
+            <li>Basic Web Development 1 (graduaten): <strong>BWD1-<em>VoornaamAchternaam</em>-2526</strong> </li>
+            <li>Introductie in Programmeren 1 (graduaten): <strong>IIP-<em>VoornaamAchternaam</em>-2526</strong> </li>
+         </ul>
+         <p>Maak uiteraard alleen de repositories aan voor vakken die je effectief volgt. Als de naam niet exact correct is, zal de docent je repository niet aanvaarden!</p>
+      </div>
+      <h3>Aanmaken</h3>
+      <p>Log in op github.com, en maak een nieuwe repository aan met de juiste naam:</p>
+      <p><img src="img/03_github/github repo aanmaken.png" alt="" class="w-800"></p>
+      <h3>Docent toevoegen</h3>
       <p>
-        Kijk goed naar de exacte naam die gevraagd wordt voor het vak! Voor academiejaar 2024&ndash;2025 is dit (let op de hoofdletters):
+         Vervolgens ga je naar settings, collaborators en klik je op Add people. Daar typ je de gebruikersnaam van je docent in en klik je op add to this repository. <strong>Nodig alleen je eigen docent uit</strong>. Je docent zal je uitnodiging per mail krijgen en accepteren.
+      </p>
+      <p><img src="img/03_github/github collaborator.png" alt="" class="w-500"></p>
+      <p>
+         De gebruikersnamen van docenten zijn:
       </p>
       <ul>
-        <li>Basic Web Development: <strong>BWD-<em>VoornaamAchternaam</em>-2425</strong> </li>
-        <li>Dynamic Web Development: <strong>DWD-<em>VoornaamAchternaam</em>-2425</strong> </li>
-        <li>Introductie in Programmeren: <strong>IIP-<em>VoornaamAchternaam</em>-2425</strong> </li>
-        <li>OOA Application Development: <strong>OOAD-<em>VoornaamAchternaam</em>-2425</strong> </li>
+         <li>Rogier van der Linde: <strong>rogiervdl</strong></li>
+         <li>Steven Ophalvens: <strong>ophalvens</strong></li>
+         <li>Polina Kozlova: <strong>polinakozlova</strong></li>
+         <li>Philippe De Winne: <strong>odiseephilippedewinne</strong></li>
+         <li>Dirk Leemans: <strong>DiLeOdisee</strong></li>
       </ul>
-      <p>Als de naam niet exact correct is, zal de docent je repository niet aanvaarden!</p>
-    </div>
-    <h3>Aanmaken</h3>
-    <p>Log in op github.com, en maak een nieuwe repository aan met de juiste naam:</p>
-    <p><img src="img/03_github/github repo aanmaken.png" alt="" class="w-800"></p>
-    <h3>Docent toevoegen</h3>
-    <p>
-      Vervolgens ga je naar settings, collaborators en klik je op Add people. Daar typ je de gebruikersnaam van je docent in (rogiervdl, ophalvens, polinakozlova, odiseephilippedewinne, fsalliau...) en klik je op add to this repository. Je docent zal je uitnodiging per mail krijgen en accepteren.
-    </p>
-    <p><img src="img/03_github/github collaborator.png" alt="" class="w-500"></p>
-    <h3>Lokaal clonen</h3>
-    <p>Open <a href="#github-desktop">Github Desktop</a>. Open het programma, en maak hiermee een lokale kopie (<em>clone</em>) van je repo:</p>
-    <ol>
-      <li>kies <strong>Add, clone repository...</strong></li>
-      <li>tik de <strong>naam van je repo</strong> in, en selecteer het uit de lijst</li>
-      <li>klik op <strong>Choose</strong>... en kies een zinvolle locatie</li>
-      <li>klik op <strong>Clone</strong></li>
-    </ol>
-    <p><img src="img/03_github/github clone.png" alt="" class="w-800"></p>
-    <h3>Boilerplate toevoegen</h3>
-    <p>
-      Een <mark>boilerplate</mark> is een kant-en-klare template die je kan gebruiken in eigen projecten. Voor elk webvak zullen we zo'n boilerplate voorzien.
-      Je zult een zip vinden op Toledo; waar het staat, hangt af van vak tot vak; je zult het b.v. vinden in module "opzetten leeromgeving":
-    </p>
-    <p><img src="img/03_github/github template op ultra.png" alt="" class="w-600 bordered"></p>
-    <p><img src="img/03_github/github template op ultra2.png" alt="" class="w-600 bordered"></p>
-    <p>
-      Die unzip je in de map waar je je repo eerder gecloned hebt. Het zou er voor de verschillende vakken ongeveer zo moeten uitzien (er kunnen kleine wijzigingen zijn van jaar tot jaar):
-    </p>
-    <figure>
-      <img src="img/03_github/template BWD.png" alt="" class="w-250">
-      <img src="img/03_github/template DWD.png" alt="" class="w-250">
-      <img src="img/03_github/template IIP.png" alt="" class="w-250">
-      <img src="img/03_github/template OOAD.png" alt="" class="w-250">
-      <figcaption>in volgorde: Basic Web Development, Dynamic Web Development, Introductie in Programmeren en OO Application Development</figcaption>
-    </figure>
-    <div class="tips" data-caption="☝🏻ATTENTIE">
-      <p>Maak enkel de repo voor een vak aan als dat gevraagd wordt; begin niet gelijk alle vier aan te maken!</p>
-    </div>
-    <div class="tips" data-caption="☝🏻ATTENTIE">
-      <p>Let er op dat alle bestanden rechtstreeks in je repository staan, dus niet met een tussenmap <strong>github template</strong> (klassieke fout van studenten):</p>
-      <p><img src="img/03_github/github template fout.png" alt="" class="bordered w-300 wrong"></p>
-    </div>
-    <h4>configuratiebestanden</h4>
-    <p><img src="img/02_vscode/vscode configuratie.png" alt="" class="w-300"></p>
-    <p>In de root van de boilerplate komen allerhande configuratiebestanden voor. Wij gebruiken de volgende:</p>
-    <ul>
-      <li><strong>.editorconfig</strong>: algemene editor instellingen</li>
-      <li><strong>.gitignore</strong>: lijst bestanden en mappen die niet gepushed hoeven worden naar Github</li>
-      <li><strong>.htmlvalidate.json</strong>: HTML-validate HTML linter opties</li>
-      <li><strong>.stylelintrc.json</strong>: StyleLint CSS linter opties</li>
-      <li><strong>eslint.config.mjs</strong>: ESLint Javascript linter opties</li>
-      <li><strong>package.json</strong>: bestand met alle packages die geïnstalleerd zullen worden via het <code>npm install</code> commando in de terminal</li>
-      <li><strong>package-lock.json</strong>: bestand met alle packages versies</li>
-    </ul>
-    <p>Deze bevatten allerhande instellingen zoals gebruikte karakterset, indentatiestijl (tabs of spaties, spronggrootte), voorkeuren qua hoofdlettergebruik, layout, toegelaten HTML tags, Javascript syntax, witruimtes enz...</p>
-    <p>Het is belangrijk dat deze instellingen <strong>bij iedereen gelijk</strong> zijn: breng dus geen wijzigingen aan deze bestanden aan!</p>
-    <h4>installatie packages met package.json</h4>
-    <p>
-      We hebben de extensies Html-Validate, StyleLint en ESLint geïnstalleerd.
-      Deze extensies hebben echter om te kunnen werken een aantal <mark>Node packages</mark> nodig. Dit zijn code libraries met specifieke functionaliteit.
-      Je kan ze manueel één voor één installeren, maar handiger is <strong>package.json</strong>, waarin alle nodige packages voor deze boilerplate staan:
-    </p>
-    <p><img src="img/03_github/package-json.png" alt="" class="w-500"></p>
-    <p>Installeer ze met het <code>npm install</code> commando in de Terminal (Terminal, new Terminal... of Shift-Ctrl-`). </p>
-    <p><img src="img/03_github/npm-install.png" alt="" class="w-700"></p>
-    <h4>node_modules</h4>
-    <p>Je ziet dat er een map <strong>node_modules</strong> bijgekomen is. Deze bevat alle packages uit package.json, plus alle packages die zij weer nodig hebben, de zgn. <mark>dependencies</mark>:</p>
-    <p><img src="img/03_github/node_modules.png" alt="" class="w-300"></p>
-    <p>Dit zijn er gemakkelijk een paar honderd! Dit zijn duizenden bestanden en tientallen megabytes die je eenvoudig kan herstellen door opnieuw <code>npm install</code> uit te voeren. We zullen de map <strong>node_modules</strong> daarom uitsluiten van versiebeheer (i.e. het wordt niet meegepushed naar Github.com) met deze regel in <strong>.gitignore</strong>:</p>
-    <p><img src="img/03_github/node_modules-ignore.png" alt="" class="w-250"></p>
-    <p>Je moet er alleen aan denken elke keer je een clone van de repository maakt (b.v. op een andere PC) opnieuw even <code>npm install</code> uit te voeren om de map <strong>node_modules</strong> te herstellen.</p>
+      <p>Staat je docent er niet tussen? Vraag hem/haar naar de gebruikersnaam.</p>
 
-    <h3>Readme.md invullen</h3>
-    <p>Het bestand <strong>readme.md</strong> in de root bevat informatie over je repo. Een ideaal moment om te leren werken met Github, is het invullen van dit bestand, en de wijzigingen pushen naar github.com.</p>
-    <ol>
-      <li>open <strong>Visual Studio Code</strong>, en open de map van je repo</li>
-      <li>open het bestand readme.md, <strong>vul de informatie aan</strong>, en sla het op</li>
-    </ol>
-    <figure>
-      <img src="img/03_github/github readme.png" alt="" class="w-800">
-      <figcaption>screenshot voor Basic Web Development in prof. Bachelor; pas aan voor andere vakken</figcaption>
-    </figure>
-
-    <h3>Commit en publish</h3>
-    <p>Nu zullen we alle wijzigingen – de toegevoegde template met ingevulde readme – synchroniseren met de online repository op Github.com in twee stappen:</p>
-    <ol>
-      <li>ga terug naar <strong>Github Desktop</strong>; je zult zien dat er wijzigingen gebeurt zijn aan je repo</li>
-      <li>eerst zullen we de wijzigingen <strong>committen</strong>, d.w.z. opslaan in onze lokale repository: geef de commit een naam (b.v. "eerste push") en klik op <strong>commit to main</strong>; als alles goed is, is de lijst met wijzigingen nu leeg dan zullen we de commit kopiëren naar de remote repository op Github.com: klik op <strong>Publish branch</strong></li>
-    </ol>
-    <figure>
-      <img src="img/03_github/github commit.png" alt="" class="bordered w-600">
-      <img src="img/03_github/github publish.png" alt="" class="bordered w-600">
-      <figcaption>commit en publish (screenshots voor Basic Web Development)</figcaption>
-    </figure>
-
-    <h3>Online versie bekijken</h3>
-    <p>Als je online repo op github.com er ongeveer zo uitziet, is alles goed gelukt:</p>
-    <figure>
-      <img src="img/03_github/github final.png" alt="" class="w-800">
-      <figcaption>screenshots voor Basic Web Development</figcaption>
-    </figure>
-    <div class="tips" data-caption="💥 PAS OP!">
-      <p><em>Let op: hoewel het theoretisch kan, mag je <strong>nooit een wijziging direct doorvoeren op github.com</strong> (upload, code aanpassen, bestand verwijderen...)! Je riskeert dat wijzigingen lokaal en online niet meer in sync zijn (de gevreesde merge conflicts), die zeer lastig op te lossen zijn.</em></p>
-    </div>
-
-    <h2>Oefeningen pushen</h2>
-    <p>In principe kan je zo vaak pushen als je wil, maar dat maakt het moeilijk achteraf een bepaalde commit terug te vinden. <br>Een goede stelregel is dus ongeveer: push <strong>na elke oefening</strong>.</p>
-    <h3>Wijzigingen in VS Code bekijken</h3>
-    <p>VS Code herkent een git repository en geeft in kleur aan welke veranderingen er zijn sinds de laatste commit:</p>
-    <figure>
-      <img src="img/03_github/vscode integratie.png" alt="" class="w-800">
-    </figure>
-    <h3>Lokale commit</h3>
-    <p>Als je Github Desktop opent, zie je met gelijkaardige kleurcodes alle wijzigingen. Geef een duidelijke commit mededeling, en druk op de commit knop:</p>
-    <figure>
-      <img src="img/03_github/github oefening commit.png" alt="" class="w-600">
-    </figure>
-    <h4>Goede commit messages</h4>
-    <p>Goede commit messages schrijven is niet makkelijk. Het is nochtans belangrijk, want ze komen op veel plaatsen voor, o.a. in het overzicht van de bestanden en de commit historiek. Een voorbeeld van hoe het niet moet:</p>
-    <figure>
-      <img src="img/03_github/messages fout 2.png" alt="" class="w-400">
-      <img src="img/03_github/messages fout 1.png" alt="" class="w-400">
-      <figcaption>onduidelijke messages</figcaption>
-    </figure>
-    <p>Een beter voorbeeld:</p>
-    <figure>
-      <img src="img/03_github/messages goed 1.png" alt="" class="w-400">
-      <img src="img/03_github/messages goed 2.png" alt="" class="w-400">
-      <figcaption>duidelijke messages</figcaption>
-    </figure>
-    <p>Je kan trouwens ook iconen gebruiken in je commit messages als je dat handig vindt:</p>
-    <figure>
-      <img src="img/03_github/messages iconen.png" alt="" class="w-400">
-      <figcaption>gebruik iconen in commit messages</figcaption>
-    </figure>
-
-
-    <h3>Online pushen</h3>
-    <p>Nu zijn we klaar de gecommitte wijzigingen ook online te pushen:</p>
-    <figure>
-      <img src="img/03_github/github oefening push.png" alt="" class="w-600">
-    </figure>
-    <h3>Bekijken op github.com</h3>
-    <p>Controleer op github.com of alles goed is aangekomen:</p>
-    <figure>
-      <img src="img/03_github/github oefening online.png" alt="" class="w-800">
-    </figure>
-
-  </main>
-  <footer>
-    <img src="common/img/thats-all.jpg" alt="">
-    <div class="footer__bottom">
-      <p>@2024, Rogier van der Linde</p>
-      <p>cursussen in dezelfde reeks: <a href="https://rogiervdl.github.io/HTML-course/">HTML</a> &mdash; <a href="https://rogiervdl.github.io/CSS-course/">CSS</a> &mdash; <a href="https://rogiervdl.github.io/JS-course/">Javascript</a> &mdash; <a href="https://rogiervdl.github.io/CS-course/">C#</a></p>
-    </div>
-  </footer>
-  <a aria-label="up" id="up" href="#top"><span class="fas fa-chevron-circle-up"></span></a>
-  <!-- popup -->
-  <div class="hystmodal dialog" id="diaDemo" aria-hidden="true">
-    <div class="hystmodal__wrap">
-      <div class="hystmodal__window" role="dialog" aria-modal="true">
-        <iframe title="demo"></iframe>
+      <h3>Lokaal clonen</h3>
+      <p>Open <a href="#github-desktop">Github Desktop</a>. Open het programma, en maak hiermee een lokale kopie (<em>clone</em>) van je repo:</p>
+      <ol>
+         <li>kies <strong>Add, clone repository...</strong></li>
+         <li>tik de <strong>naam van je repo</strong> in, en selecteer het uit de lijst</li>
+         <li>klik op <strong>Choose</strong>... en kies een zinvolle locatie</li>
+         <li>klik op <strong>Clone</strong></li>
+      </ol>
+      <p><img src="img/03_github/github clone.png" alt="" class="w-800"></p>
+      <h3>Boilerplate toevoegen</h3>
+      <p>
+         Een <mark>boilerplate</mark> is een kant-en-klare template die je kan gebruiken in eigen projecten. Voor elk webvak zullen we zo'n boilerplate voorzien.
+         Je zult een zip vinden op Toledo; waar het staat, hangt af van vak tot vak; je zult het b.v. vinden in module "opzetten leeromgeving":
+      </p>
+      <p><img src="img/03_github/github template op ultra.png" alt="" class="w-600 bordered"></p>
+      <p><img src="img/03_github/github template op ultra2.png" alt="" class="w-600 bordered"></p>
+      <p>
+         Die unzip je in de map waar je je repo eerder gecloned hebt. Het zou er voor de verschillende vakken ongeveer zo moeten uitzien (er kunnen kleine wijzigingen zijn van jaar tot jaar):
+      </p>
+      <figure>
+         <img src="img/03_github/template WDF.png" alt="" class="w-250">
+         <figcaption>screenshot voor Web Development Fundamentals</figcaption>
+      </figure>
+      <div class="tips" data-caption="☝🏻ATTENTIE">
+         <p>Maak enkel de repo voor een vak aan als dat gevraagd wordt; begin niet gelijk alle vier aan te maken!</p>
       </div>
-    </div>
-  </div>
-  <!-- scripts -->
-  <script src="common/vendor/prism/prism.js"></script>
-  <script src="common/vendor/hystmodal/hystmodal.min.js"></script>
-  <script src="common/js/mode.js"></script>
-  <script src="common/js/scripts.js"></script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFJVGYKCY8"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+      <h2>Packages (webvakken only)</h2>
+      <div class="tips" data-caption="☝🏻 LET OP!">
+         <p>Dit onderdeel is alleen voor webvakken, dus niet voor programmeervakken!</p>
+      </div>
+      <h3>configuratiebestanden</h3>
+      <p><img src="img/02_vscode/vscode configuratie.png" alt="" class="w-300"></p>
+      <p>In de root van de boilerplate komen vaak allerhande configuratiebestanden voor. Enkele typische voor webvakken:</p>
+      <ul>
+         <li><strong>.editorconfig</strong>: algemene editor instellingen</li>
+         <li><strong>.gitignore</strong>: lijst bestanden en mappen die niet gepushed hoeven worden naar Github</li>
+         <li><strong>.htmlvalidate.json</strong>: HTML-validate HTML linter opties</li>
+         <li><strong>.stylelintrc.json</strong>: StyleLint CSS linter opties</li>
+         <li><strong>eslint.config.mjs</strong>: ESLint Javascript linter opties</li>
+         <li><strong>package.json</strong>: bestand met alle packages die geïnstalleerd zullen worden via het <code>npm install</code> commando in de terminal</li>
+         <li><strong>package-lock.json</strong>: bestand met alle packages versies</li>
+      </ul>
+      <p>Deze bevatten allerhande instellingen zoals gebruikte karakterset, indentatiestijl (tabs of spaties, spronggrootte), voorkeuren qua hoofdlettergebruik, layout, toegelaten HTML tags, Javascript syntax, witruimtes enz...</p>
+      <p>Het is belangrijk dat deze instellingen <strong>bij iedereen gelijk</strong> zijn: breng dus geen wijzigingen aan deze bestanden aan!</p>
+      <h3>installatie packages met package.json</h3>
+      <p>
+         We hebben in het deel <a href="02_vscode.html#extensies-installeren">VS Code</a> de extensies Html-Validate, StyleLint en ESLint geïnstalleerd.
+         Deze extensies hebben echter om te kunnen werken een aantal <mark>Node packages</mark> nodig. Dit zijn code libraries met specifieke functionaliteit.
+         Je kan ze manueel één voor één installeren, maar handiger is <strong>package.json</strong>, waarin alle nodige packages voor deze boilerplate staan:
+      </p>
+      <p><img src="img/03_github/package-json.png" alt="" class="w-500"></p>
+      <p>Installeer ze met het <code>npm install</code> commando in de Terminal (Terminal, new Terminal... of Shift-Ctrl-`). </p>
+      <p><img src="img/03_github/npm-install.png" alt="" class="w-700"></p>
+      <p>Opmerking: als je volgende foutmelding krijgt, run je eerst dit commando:</p>
+      <p><img src="img/03_github/running scripts foutmelding.jpg" alt="" class="w-800"></p>
+      <p>Het commando:</p>
+      <pre class="language-cs prism-okaida"><code>Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned</code></pre>
 
-    gtag('config', 'G-FFJVGYKCY8');
-  </script>
+      <h3>node_modules</h3>
+      <p>Je ziet dat er een map <strong>node_modules</strong> bijgekomen is. Deze bevat alle packages uit package.json, plus alle packages die zij weer nodig hebben, de zgn. <mark>dependencies</mark>:</p>
+      <p><img src="img/03_github/node_modules.png" alt="" class="w-300"></p>
+      <p>Dit zijn er gemakkelijk een paar honderd! Dit zijn duizenden bestanden en tientallen megabytes die je eenvoudig kan herstellen door opnieuw <code>npm install</code> uit te voeren. We zullen de map <strong>node_modules</strong> daarom uitsluiten van versiebeheer (i.e. het wordt niet meegepushed naar Github.com) met deze regel in <strong>.gitignore</strong>:</p>
+      <p><img src="img/03_github/node_modules-ignore.png" alt="" class="w-250"></p>
+      <p>Je moet er alleen aan denken elke keer je een clone van de repository maakt (b.v. op een andere PC) opnieuw even <code>npm install</code> uit te voeren om de map <strong>node_modules</strong> te herstellen.</p>
+
+      <h2>Eerste commit</h2>
+      <h3>Readme.md invullen</h3>
+      <p>Het bestand <strong>readme.md</strong> in de root bevat informatie over je repo. Een ideaal moment om te leren werken met Github, is het invullen van dit bestand, en de wijzigingen pushen naar github.com.</p>
+      <ol>
+         <li>open <strong>Visual Studio Code</strong>, en open de map van je repo</li>
+         <li>open het bestand readme.md, <strong>vul de informatie aan</strong>, en sla het op</li>
+      </ol>
+      <figure>
+         <img src="img/03_github/github readme.png" alt="" class="w-800">
+         <figcaption>screenshot voor Basic Web Development in prof. Bachelor; pas aan voor andere vakken</figcaption>
+      </figure>
+
+      <h3>Commit en push</h3>
+      <p>Nu zullen we alle wijzigingen – de toegevoegde template met ingevulde readme – synchroniseren met de online repository op Github.com in twee stappen:</p>
+      <ol>
+         <li>ga terug naar <strong>Github Desktop</strong>; je zult zien dat er wijzigingen gebeurt zijn aan je repo</li>
+         <li>eerst zullen we de wijzigingen <strong>committen</strong>, d.w.z. opslaan in onze lokale repository: geef de commit een naam (b.v. "eerste commit") en klik op <strong>commit to main</strong></li>
+         <li>als alles goed is, is de lijst met wijzigingen nu leeg dan zullen we de commit kopiëren ("pushen") naar de remote repository op Github.com: klik op <strong>Publish branch</strong></li>
+      </ol>
+      <figure>
+         <img src="img/03_github/github commit.png" alt="" class="bordered w-600">
+         <img src="img/03_github/github publish.png" alt="" class="bordered w-600">
+         <figcaption>commit en publish (screenshots voor Basic Web Development)</figcaption>
+      </figure>
+
+      <h3>Online versie bekijken</h3>
+      <p>Als je online repo op github.com er ongeveer zo uitziet, is alles goed gelukt:</p>
+      <figure>
+         <img src="img/03_github/github final.png" alt="" class="w-800">
+         <figcaption>screenshots voor Basic Web Development</figcaption>
+      </figure>
+      <div class="tips" data-caption="💥 PAS OP!">
+         <p><em>Let op: hoewel het theoretisch kan, mag je <strong>nooit een wijziging direct doorvoeren op github.com</strong> (upload, code aanpassen, bestand verwijderen...)! Je riskeert dat wijzigingen lokaal en online niet meer in sync zijn (de gevreesde merge conflicts), die zeer lastig op te lossen zijn.</em></p>
+      </div>
+
+      <h2>Toekomstige commits</h2>
+      <p>Dit systeem van <strong>(lokale) commit en (online) push</strong> pas je toe telkens je je wijzigingen online wil bewaren. In principe kan je zo vaak committen/pushen als je wil, maar dat maakt het moeilijk achteraf een bepaalde commit terug te vinden. Een goede stelregel is dus ongeveer: push <strong>na elke oefening</strong>. Een extra uitleg <a href="02_vscode.html#stap-4-commit-en-push">voor webvakken vind je hier</a>.</p>
+
+      <h4>Goede commit messages</h4>
+      <p>Goede commit messages schrijven is niet makkelijk. Het is nochtans belangrijk, want ze komen op veel plaatsen voor, o.a. in het overzicht van de bestanden en de commit historiek. Een voorbeeld van hoe het niet moet:</p>
+      <figure>
+         <img src="img/03_github/messages fout 2.png" alt="" class="w-400">
+         <img src="img/03_github/messages fout 1.png" alt="" class="w-400">
+         <figcaption>onduidelijke messages</figcaption>
+      </figure>
+      <p>Een beter voorbeeld:</p>
+      <figure>
+         <img src="img/03_github/messages goed 1.png" alt="" class="w-400">
+         <img src="img/03_github/messages goed 2.png" alt="" class="w-400">
+         <figcaption>duidelijke messages</figcaption>
+      </figure>
+
+   </main>
+   <footer>
+      <img src="common/img/thats-all.jpg" alt="">
+      <div class="footer__bottom">
+         <p>@2024, Rogier van der Linde</p>
+         <p>cursussen in dezelfde reeks: <a href="https://rogiervdl.github.io/HTML-course/">HTML</a> &mdash; <a href="https://rogiervdl.github.io/CSS-course/">CSS</a> &mdash; <a href="https://rogiervdl.github.io/JS-course/">Javascript</a> &mdash; <a href="https://rogiervdl.github.io/CS-course/">C#</a></p>
+      </div>
+   </footer>
+   <a aria-label="up" id="up" href="#top"><span class="fas fa-chevron-circle-up"></span></a>
+   <!-- popup -->
+   <div class="hystmodal dialog" id="diaDemo" aria-hidden="true">
+      <div class="hystmodal__wrap">
+         <div class="hystmodal__window" role="dialog" aria-modal="true">
+            <iframe title="demo"></iframe>
+         </div>
+      </div>
+   </div>
+   <!-- scripts -->
+   <script src="common/vendor/prism/prism.js"></script>
+   <script src="common/vendor/hystmodal/hystmodal.min.js"></script>
+   <script src="common/js/mode.js"></script>
+   <script src="common/js/scripts.js"></script>
+   <!-- Google tag (gtag.js) -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFJVGYKCY8"></script>
+   <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'G-FFJVGYKCY8');
+   </script>
 </body>
 
 </html>
