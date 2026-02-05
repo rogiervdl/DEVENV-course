@@ -11,7 +11,7 @@
    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
-<body class="prism language-html showpro prism-default">
+<body class="prism language-html showpro prism-default" id="top">
    <div id="mode">
       <span>n00b</span>
       <label class="switch">
@@ -29,8 +29,8 @@
          <p class="thumb__title">VS Code</p>
          <img class="thumb__visual" src="img/02_vscode/icon.png" alt="">
       </a>
-      <a href="03_github.html" class="main__thumb" title="Github">
-         <p class="thumb__title">Github</p>
+      <a href="03_github.html" class="main__thumb" title="GitHub">
+         <p class="thumb__title">GitHub</p>
          <img class="thumb__visual" src="img/03_github/icon.jpg" alt="">
       </a>
       <a href="04_visualstudio.html" class="main__thumb" title="Visual Studio">
@@ -82,12 +82,12 @@
       <p><img src="img/02_vscode/vscode extensies.png" alt="" class="w-400"></p>
       <div class="tips" data-caption="☝🏾 let op">
          <p>
-            Deze extensies werken alleen als je ook de nodige node packages toevoegt aan je repository, zie <a href="03_github.html#installatie-packages-met-packagejson">installatie packages met package.json</a>
+            Deze extensies werken alleen als je ook de nodige node packages toevoegt aan je repository, zie <a href="02_vscode.html#packages-installeren">packages installeren</a>
          </p>
       </div>
       <h3>repository openen</h3>
       <p>
-         Voor elk vak zul je een repository moeten maken, zie <a href="03_github.html#repository-opzetten">dit hoofdstuk</a>.
+         Voor elk vak zul je een repository moeten maken, zie <a href="03_github.html#repository-opzetten">Repository opzetten</a>.
          Als je oefeningen maakt, open je altijd eerst de <strong>volledige repository</strong> in VS Code. Het makkelijkste is via <strong>Verkenner</strong> of via <strong>Github Desktop</strong>:
       </p>
       <figure>
@@ -101,7 +101,7 @@
       <p>Je krijgt alle mappen te zien (screenshot voor Basic Web Development):</p>
       <figure>
          <img src="img/02_vscode/repo in vs code.png" alt="" class="w-700">
-         <figcaption>alle mappen in VS Codes</figcaption>
+         <figcaption>alle mappen in VS Code</figcaption>
       </figure>
 
       <h3>packages installeren</h3>
@@ -194,7 +194,7 @@
          <img src="img/03_github/vscode integratie.png" alt="" class="w-800">
       </figure>
       <h3>stap 3: commit en push</h3>
-      <p>Open nu Github Desktop (zie <a href="03_github.html#oefeningen-pushen">dit hoofdstuk</a>). Je ziet gelijkaardige kleurcodes met alle wijzigingen:</p>
+      <p>Open nu Github Desktop (zie <a href="03_github.html#commit-en-push">Commit en push</a>). Je ziet gelijkaardige kleurcodes met alle wijzigingen:</p>
       <figure>
          <img src="img/03_github/github oefening commit.png" alt="" class="w-600">
       </figure>
@@ -231,7 +231,7 @@
       <ul class="wrong">
          <li><strong>werkt niet goed</strong> voor complexere CSS of Javascript</li>
          <li>previewvenster is eigenlijk <strong>te klein</strong> om bruikbaar te zijn</li>
-         <li><strong>geen debugging</strong>mogelijkheden zoals developer tools in browsers</li>
+         <li><strong>geen debugging</strong> mogelijkheden zoals developer tools in browsers</li>
       </ul>
       <h3>Live Server extensie</h3>
       <p>Wegens de beperkingen van de previewfunctie, gebruik je &mdash; tenzij misschien voor snelle previews &mdash; <em>altijd</em> de <mark>Live Server</mark>. Je pagina zal openen in de browser, en elke keer als je opslaat bijgewerkt worden. Een voorbeeld van een correcte setup, met je code op je laptop en de live server op een externe monitor:</p>
@@ -261,7 +261,7 @@
          <li><strong>stylelint</strong> voor CSS</li>
          <li><strong>eslint</strong> voor Javascript</li>
       </ul>
-      <p>Naast de tool zelf (geïnstalleerd als NPM package) heb je meestal ook een extensie nodig om het in VS Code te integreren. Tijdens de <a href="#installatie">installatie van VS Code</a> hebben we dat allemaal al in orde gebracht voor de deze drie tools. Een screenshot van typische meldingen:</p>
+      <p>Naast de tool zelf (geïnstalleerd als NPM package) heb je meestal ook een extensie nodig om het in VS Code te integreren. Tijdens de <a href="#extensies-installeren">installatie van de extensies</a> hebben we dat allemaal al in orde gebracht voor deze drie tools. Een screenshot van typische meldingen:</p>
       <figure>
          <img src="img/02_vscode/linting messages.png" alt="" class="w-800">
          <figcaption>voorbeeld van html-validate, stylelint en eslint meldingen (warnings en errors)</figcaption>
@@ -288,7 +288,7 @@
       <p>
          Lintingtools zullen over het algemeen naast de stijl van je code ook controleren op <strong>pure syntaxfouten</strong>.
          Voor HTML worden de syntaxregels onderhouden door het W3C of <strong>World Wide Web Consortium</strong>.
-         Dit zijn er dermate veel dat de HTML-validate linting tool niet volstaat, en een extra <strong>W3C Web Validator extensie</strong> nodig is (installatie zie <a href="#extensies">dit deel</a>).
+         Dit zijn er dermate veel dat de HTML-validate linting tool niet volstaat, en een extra <strong>W3C Web Validator extensie</strong> nodig is (installatie zie <a href="#extensies-installeren">extensies installeren</a>).
          Deze moet je manueel uitvoeren, bij voorkeur telkens voor het pushen. Soms vindt het toch nog fouten die door de HTML-validate linting tool over het hoofd worden gezien, zoals hier:
       </p>
       <figure>
@@ -305,7 +305,7 @@
       <p>Tabel van de belangrijkste shortcuts die je zo snel mogelijk onder de knie zou moeten krijgen (volledige cheatsheet zie <a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf">Windows</a> en <a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf">OSX</a>); probeer ze zoveel mogelijk uit tijdens de oefeningen.</p>
       <p><img src="img/02_vscode/vs code shortcuts.png" alt="" class="w-800"></p>
       <h3>HTML tags aanvullen met TAB</h3>
-      <p>Tags voeg je snel toe door in HTML enkel de naam te typen, gevoldg door de <strong>TAB</strong>. Demo (animated gif):</p>
+      <p>Tags voeg je snel toe door in HTML enkel de naam te typen, gevolgd door de <strong>TAB</strong>. Demo (animated gif):</p>
       <figure>
          <img src="img/02_vscode/typing tags.gif" alt="" class="w-500">
          <figcaption>gebruik telkens de TAB toets</figcaption>

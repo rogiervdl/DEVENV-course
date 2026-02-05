@@ -11,7 +11,7 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
-<body class="prism prism-vslight language-cs showpro">
+<body class="prism prism-vslight language-cs showpro" id="top">
   <div id="mode">
     <span>n00b</span>
     <label class="switch">
@@ -106,7 +106,7 @@
     <p><img src="img/04_visualstudio/logo dotnet.jpg" alt="" class="w-150"></p>
     <div class="tips" data-caption="🤔 FRAMEWORK OF LIBRARY?">
       <p>
-        De term <em>famework</em> wordt vaak verward met <em>library</em>. Er is nochtans een duidelijk verschil:
+        De term <em>framework</em> wordt vaak verward met <em>library</em>. Er is nochtans een duidelijk verschil:
       </p>
       <ul>
         <li>Een <strong>framework</strong> is een <em>fundamentele structuur</em> die als basis dient voor het schrijven van programma's, b.v. .NET, Angular (Javascript), Spring (Java)... Je <strong>plugt je code in een framework</strong>. </li>
@@ -131,7 +131,7 @@
     </p>
     <ul>
       <li><strong>linking</strong>: combineren van alle bronnen, codefiles, libraries, referenties enz... in één bestand</li>
-      <li><strong>compiling</strong>: vertaling van hig-level C# code naar low-level bytecodes </li>
+      <li><strong>compiling</strong>: vertaling van high-level C# code naar low-level bytecodes </li>
     </ul>
     <p>In de output kan je zien of er buildfouten zijn:</p>
     <img src="img/04_visualstudio/build-proces-3.png" alt="" class="w-500">
@@ -139,7 +139,7 @@
     <img src="img/04_visualstudio/build-proces-4.png" alt="" class="w-400">
     <ul>
       <li><strong>bin</strong>: bevat de binaire (uitvoerbare) bestanden</li>
-      <li><strong>obj</strong>: bevat tijdelijke en intermediarie bestanden</li>
+      <li><strong>obj</strong>: bevat tijdelijke en intermediaire bestanden</li>
     </ul>
     <div class="tips" data-caption="💡TIP">
       <p>
@@ -248,7 +248,7 @@
     </figure>
     <p>Je herkent:</p>
     <ul>
-      <li>de solution <em>SlnBasis</em>; dit is de les waamee we bezig zijn</li>
+      <li>de solution <em>SlnBasis</em>; dit is de les waarmee we bezig zijn</li>
       <li>de projecten <em>ConsoleAsciiArt</em>, <em>ConsoleGedicht</em>, <em>ConsoleHalloWereld</em>...; dit zijn de oefeningen behorende bij die les</li>
       <li>de bronnen <em>Properties, References, App.config, Program.cs</em> onder <em>ConsoleHalloWereld</em>: dit zijn de bestanden/mappen behorende bij die oefening</li>
       <li>het codevenster links: hierin schrijf je je code</li>
@@ -268,7 +268,7 @@
       <img src="img/04_visualstudio/project-toevoegen2.png" alt="" class="w-600 bordered">
     </figure>
     <p>
-      In het volgende venster kan je kiezen uit heel veel projecttypes. In het volgende dialoogvenster je filtert best alvast op <strong>taal</strong> (C#) en <strong>platform</strong> (Windows):
+      In het volgende venster kan je kiezen uit heel veel projecttypes. In het volgende dialoogvenster filter je best alvast op <strong>taal</strong> (C#) en <strong>platform</strong> (Windows):
     </p>
     <figure>
       <img src="img/04_visualstudio/filteren.png" alt="" class="w-800">
@@ -281,7 +281,7 @@
       <li><mark>Console application</mark>: programma uitgevoerd in een simpel commandprompt-achtig venster</li>
       <li><mark>WPF application</mark>: een typisch Windows programma in een venster met menu’s, knoppen, dialoogvensters, scrollbars…</li>
     </ul>
-    <p>Op het einde van OO Application Development komt ook nog de <mark>class library</mark> aan bod, maar dat is voor <a href="10_sql_databanken.html#class-library-aanmaken">dit hoofdstuk</a>.</p>
+    <p>Op het einde van OO Application Development komt ook nog de <mark>class library</mark> aan bod, maar dat is voor <a href="https://rogiervdl.github.io/CS-course/10_sql_databanken.html#class-library-aanmaken">dit hoofdstuk in de C# cursus</a>.</p>
     <figure>
       <img src="img/04_visualstudio/console.png" alt="" class="w-500">
       <figcaption>typische console app</figcaption>
@@ -394,7 +394,7 @@
       <img src="img/04_visualstudio/xaml-edit.png" alt="" class="w-500 bordered">
     </figure>
     <h4>Controls toevoegen</h4>
-    <p>Een WPF component als Button, TextBox enz... toevoegen heet een <mark>WPF control</mark>. In het <a href="03_wpfcontrols.html">hoofdstuk WPF Controls</a> komen we uitgebreid op terug op alle controls en hun gebruik. Voeg ze toe door verslepen uit de Toolbox:</p>
+    <p>Een WPF component als Button, TextBox enz... toevoegen heet een <mark>WPF control</mark>. In het <a href="https://rogiervdl.github.io/CS-course/03_wpfcontrols.html">hoofdstuk WPF Controls</a> komen we uitgebreid op terug op alle controls en hun gebruik. Voeg ze toe door verslepen uit de Toolbox:</p>
     <figure>
       <img src="img/04_visualstudio/wpf-addcontrol1.png" alt="" class="w-500 bordered">
       <img src="img/04_visualstudio/wpf-addcontrol2.png" alt="" class="w-500 bordered">
@@ -429,7 +429,7 @@
       <img src="img/04_visualstudio/wpf-control-properties.png" alt="" class="w-800 bordered">
     </figure>
     <h5>layout</h5>
-    <p>Een correcte flexibele layout maken vraagt best wel wat kennis en werk; dit komt in een apart hoofdstuk <a href="04_wpflayout.html">04. WPF layout</a> aan bod. Maar voorlopig kunnen we perfect uit de voeten met slepen, en handmatig aanpassen van <code>Padding</code> en <code>Margin</code>. De makkelijkste plaats is rechtstreeks in de XAML. Gebruik zoveel mogelijk <strong>afgeronde waarden</strong> voor een mooie layout:</p>
+    <p>Een correcte flexibele layout maken vraagt best wel wat kennis en werk; dit komt in een apart hoofdstuk <a href="https://rogiervdl.github.io/CS-course/04_wpflayout.html">WPF layout</a> aan bod. Maar voorlopig kunnen we perfect uit de voeten met slepen, en handmatig aanpassen van <code>Padding</code> en <code>Margin</code>. De makkelijkste plaats is rechtstreeks in de XAML. Gebruik zoveel mogelijk <strong>afgeronde waarden</strong> voor een mooie layout:</p>
     <figure>
       <img src="img/04_visualstudio/wpf-controls-layout.png" alt="" class="w-800 bordered">
     </figure>
@@ -444,7 +444,7 @@
     </ul>
     <p>
       Er zijn meerdere soorten events mogelijk op controls, b.v. een <code>Button</code> kent zowel <code>Click</code>, <code>MouseEnter</code> als MouseLeave events. Het &ldquo;meest logische&rdquo; event is het <strong>standaardevent</strong>; bij de <code>Button</code> is dat <code>Click</code>.
-      Voeg een standaardevent toe door dubbelklikken op de control, of kies een willekeurig ander event via de⚡knop van het properties panel:
+      Voeg een standaardevent toe door dubbelklikken op de control, of kies een willekeurig ander event via de ⚡ knop van het properties panel:
     </p>
     <figure>
       <img src="img/04_visualstudio/wpf-event1.png" alt="" class="w-800 bordered">
@@ -481,7 +481,7 @@
     <p>Je zou nu in staat moeten zijn volgend WPF programma in elkaar te steken:</p>
     <figure>
       <img src="img/04_visualstudio/WpfHelloWorld XAML.png" alt="" class="w-800 bordered">
-      <figcaption>WpfHalloWorld design</figcaption>
+      <figcaption>WpfHalloWereld design</figcaption>
     </figure>
     <figure>
       <img src="img/04_visualstudio/WpfHelloWorld CS.png" alt="" class="w-800 bordered">
@@ -596,7 +596,7 @@ private void Sld1_ValueChanged(object sender, RoutedPropertyChangedEventArgs&lt;
     <ol>
       <li>sluit de solution</li>
       <li>hernoem de project folder naar WpfNew</li>
-      <li>hernoem het .csproj bestand naar SlnNew.csproj</li>
+      <li>hernoem het .csproj bestand naar WpfNew.csproj</li>
       <li>(voor de zekerheid) open de project folder eens in VS Code (dus <em>niet</em> Visual Studio) en vervang met search/replace overal WpfOld door WpfNew</li>
       <li>open de solution; het oude project WpfOld zal niet meer gevonden worden, verwijder die dus uit de solution</li>
       <li>voeg het nieuwe project WpfNew toe aan de solution</li>
