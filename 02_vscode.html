@@ -74,53 +74,65 @@
          <li>ESLint</li>
          <li>HTML-validate</li>
          <li>htmltagwrap</li>
-         <li>Live Server</li>
+         <li>Live Preview</li>
          <li>Stylelint</li>
          <li>W3C Web Validator</li>
       </ol>
-      <p><img src="img/02_vscode/vscode extensies.png" alt="" class="w-400"></p>
+      <p><img src="img/02_vscode/vscode extensies.png" alt="" class="w-300"></p>
       <div class="tips" data-caption="☝🏾 let op">
          <p>
-            Deze extensies werken alleen als je ook de nodige node packages toevoegt aan je repository, zie <a href="02_vscode.html#packages-installeren">packages installeren</a>
+            Veel extensies werken alleen als je ook de nodige node packages toevoegt aan je repository, zie <a href="02_vscode.html#packages-installeren">packages installeren</a>
          </p>
       </div>
-      <h3>repository openen</h3>
+      <h3>github copilot verwijderen</h3>
+      <p>Github Copilot is een niet erg bruikbare AI-assistent (met een slechte rating), die je beter verwijdert:</p>
+      <p><img src="img/02_vscode/copilot-disable.png" alt="" class="w-700"></p>
+      <h3>werkmap openen</h3>
       <p>
-         Voor elk vak zul je een repository moeten maken, zie <a href="03_github.html#repository-opzetten">Repository opzetten</a>.
-         Als je oefeningen maakt, open je altijd eerst de <strong>volledige repository</strong> in VS Code. Het makkelijkste is via <strong>Verkenner</strong> of via <strong>Github Desktop</strong>:
+         Je opent nooit zomaar losse bestanden in VS code, maar een folder waarin je werkt &mdash; de <em class="em">werkmap</em> of <em class="em">working directory</em>. 
+         Voor elk vak zul je een <mark>boilerplate</mark> krijgen (te downloaden van Toledo): dit is een kant-en-klare mappenstructuur voor je oefeningen. 
+         Open altijd de <strong>volledige boilerplate</strong> in VS Code via het <em>File</em> menu: 
       </p>
       <figure>
-         <img src="img/02_vscode/repo openen verkenner.png" alt="" class="w-500">
-         <figcaption>methode 1: open via de rechtermuisknop in Verkenner</figcaption>
-      </figure>
-      <figure>
-         <img src="img/02_vscode/repo openen github desktop.png" alt="" class="w-700">
-         <figcaption>methode 2: open via Github Desktop</figcaption>
-      </figure>
-      <p>Je krijgt alle mappen te zien (screenshot voor Basic Web Development):</p>
-      <figure>
-         <img src="img/02_vscode/repo in vs code.png" alt="" class="w-700">
+         <img src="img/02_vscode/vs code open folder.png" alt="" class="w-400">
          <figcaption>alle mappen in VS Code</figcaption>
       </figure>
+      <p>
+         Je krijgt alle mappen te zien (screenshot voor Web Development Fundamentals). 
+         Uit veiligheid wordt de geopende folder niet zomaar vertrouwd. Maak deze folder trusted:
+      </p>
+      <figure>
+         <img src="img/02_vscode/trust folder.png" alt="" class="w-700">
+         <figcaption>folder vertrouwen</figcaption>
+      </figure>
+      <p>Je ziet tenslotte links alle submappen, samen met een paar configuratiebestanden:</p>
+      <figure>
+         <img src="img/02_vscode/vs code start.png" alt="" class="w-700">
+         <figcaption>folder vertrouwen</figcaption>
+      </figure>
+      <div class="tips" data-caption="☝🏾 opgelet">
+         <p>
+            De volledige mappenstructuur moet altijd zichtbaar zijn, anders kan je niet fatsoenlijk werken!
+         </p>
+      </div>
 
       <h3>packages installeren</h3>
       <p>
-         We hebben nu een aantal extensies als html-validate, stylelint en eslint geïnstalleerd.
-         Deze extensies hebben om te kunnen werken een aantal <mark>Node packages</mark> nodig. Dit zijn code libraries met specifieke functionaliteit.
-         Je repository bevat een bestand <strong>package.json</strong>, waarin alle nodige packages staan:
+         We hebben eerder een aantal extensies als html-validate, stylelint en eslint geïnstalleerd in VS Code.
+         Om te kunnen werken hebben ze een aantal <mark>Node packages</mark> nodig. Dit zijn code libraries met specifieke functionaliteit, die we zullen installeren in de working directory. 
+         Je boilerplate bevat een bestand <strong>package.json</strong>, waarin alle nodige packages opgelijst staan:
       </p>
-      <p><img src="img/03_github/package-json.png" alt="" class="w-500"></p>
-      <p>Installeer ze met het <code>npm install</code> commando in de Terminal (Terminal, new Terminal... of Shift-Ctrl-`). </p>
-      <p><img src="img/03_github/npm-install.png" alt="" class="w-700"></p>
-      <p>Opmerking: als je volgende foutmelding krijgt, run je eerst dit commando:</p>
-      <p><img src="img/03_github/running scripts foutmelding.jpg" alt="" class="w-800"></p>
-      <p>Het commando:</p>
+      <p><img src="img/02_vscode/package-json.png" alt="" class="w-500"></p>
+      <p>Open de Terminal (<em>Terminal</em>, <em>new Terminal...</em> of Shift-Ctrl-`), en installeer alle packages in je working directory met volgend commando:</p>
+      <pre class="language-cs prism-okaida"><code>npm install</code></pre>
+      <p>Het kan zijn dat je eerst volgende foutmelding krijgt:</p>
+      <p><img src="img/02_vscode/running scripts foutmelding.jpg" alt="" class="w-800"></p>
+      <p>Run dan dit commando, en voer daarna <code>npm install</code> opnieuw uit:</p>
       <pre class="language-cs prism-okaida"><code>Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned</code></pre>
+      <p>Samenvattende screenshot:</p>
+      <p><img src="img/02_vscode/npm install.png" alt="" class="w-800"></p>
       <p>Je ziet dat er een map <strong>node_modules</strong> bijgekomen is. Deze bevat alle packages uit package.json, plus alle packages die zij weer nodig hebben, de zgn. <mark>dependencies</mark>:</p>
-      <p><img src="img/03_github/node_modules.png" alt="" class="w-300"></p>
-      <p>Dit zijn er gemakkelijk een paar honderd! Dit zijn duizenden bestanden en tientallen megabytes die je eenvoudig kan herstellen door opnieuw <code>npm install</code> uit te voeren. We zullen de map <strong>node_modules</strong> daarom uitsluiten van versiebeheer (i.e. het wordt niet meegepushed naar Github.com) met deze regel in <strong>.gitignore</strong>:</p>
-      <p><img src="img/03_github/node_modules-ignore.png" alt="" class="w-250"></p>
-      <p>Je moet er alleen aan denken elke keer je een clone van de repository maakt (b.v. op een andere PC) opnieuw even <code>npm install</code> uit te voeren om de map <strong>node_modules</strong> te herstellen.</p>
+      <p><img src="img/02_vscode/node_modules.png" alt="" class="w-300"></p>
       <h3>uitleg configuratiebestanden</h3>
       <p>In de root van de boilerplate komen allerhande configuratiebestanden voor.</p>
       <p><img src="img/02_vscode/vscode configuratie.png" alt="" class="w-300"></p>
@@ -140,7 +152,7 @@
 
       <h2>Hoe oefeningen maken</h2>
       <p>Open altijd eerst je volledige repository in VS Code, zie <a href="#repository-openen">repository openen</a></p>
-      <h3>stap 1: maak de oefening aan</h3>
+      <h3>oefening aanmaken</h3>
       <p>Eerst moet je weten om <strong>welke les</strong> en wat de <strong>naam van de oefening</strong> is. Dit vind je terug in de opgave:</p>
       <figure>
          <img src="img/02_vscode/les en oefening.png" alt="" class="w-500">
@@ -173,7 +185,7 @@
          <img src="img/02_vscode/stap5.png" alt="" class="w-600">
          <figcaption>...en geef de pagina een titel</figcaption>
       </figure>
-      <h3>stap 2: werk de oefening uit</h3>
+      <h3>oefening uitwerken</h3>
       <p>Voeg nu alle mappen en bestanden toe die je nodig hebt voor deze oefening, typisch:</p>
       <ul>
          <li><em>img</em>: afbeeldingen (meestal meegegeven met de opgave)</li>
@@ -185,28 +197,33 @@
       </ul>
       <p>Werk tenslotte de opgave uit. Indien nodig, maak je nog extra submappen aan, b.v. voor afbeeldingen, CSS, fonts enz... VS Code herkent een git repository en geeft in kleur aan welke veranderingen er zijn sinds de laatste commit:</p>
       <figure>
-         <img src="img/03_github/vscode integratie.png" alt="" class="w-800">
+         <img src="img/02_vscode/vscode integratie.png" alt="" class="w-800">
       </figure>
-      <h3>stap 3: commit en push</h3>
-      <p>Open nu Github Desktop (zie <a href="03_github.html#commit-en-push">Commit en push</a>). Je ziet gelijkaardige kleurcodes met alle wijzigingen:</p>
+
+      <h3>live preview</h3>
+      <p>De <mark>Live Preview</mark> extensie opent je pagina in de browser; elke keer als je opslaat wordt de pagina automatisch bijgewerkt. Je vindt de knop rechtsboven (als een html pagina openstaat):</p>
       <figure>
-         <img src="img/03_github/github oefening commit.png" alt="" class="w-600">
+         <img src="img/02_vscode/live preview start.png" alt="" class="w-200">
+      </figure>
+      <p>De preview opent in een nieuw tabblad. Handiger is direct in de browser:</p>
+      <figure>
+         <img src="img/02_vscode/live preview extern.png" alt="" class="w-700">
+         <figcaption>correcte setup: code op je laptop, live server op een externe monitor</figcaption>
+      </figure>
+      <p>Je ziet je code en het resultaat dan apart, live gerefreshed:</p>
+      <figure>
+         <img src="img/02_vscode/live preview.png" alt="" class="w-700">
+         <figcaption>correcte setup: code op je laptop, live server op een externe monitor</figcaption>
       </figure>
       <p>
-         Geef een commit message, commit en push je de wijzigingen naar Github.com.
+         Standaard gebeurt de update elke toetsaanslag, wat hinderlijk kan zijn. 
+         Verander het bij instellingen (shortcut: <kbd>Ctrl ,</kbd>) zodat de update enkel bij het opslaan (shortcut: <kbd>Ctrl S</kbd>) gebeurt:
       </p>
       <figure>
-         <img src="img/02_vscode/commit push.png" alt="" class="w-1200">
-         <figcaption>commit mededeling, commit en push</figcaption>
+         <img src="img/02_vscode/live preview on save only.png" alt="" class="w-400">
+         <figcaption>correcte setup: code op je laptop, live server op een externe monitor</figcaption>
       </figure>
-      <p>Controleer zeker online op github.com eens of alles er goed op staat:</p>
-      <figure>
-         <img src="img/02_vscode/github online.png" alt="" class="w-600">
-      </figure>
-
-
-      <h2>Live previewen</h2>
-      <p>De <mark>Live Server</mark> opent je pagina in de browser; elke keer als je opslaat wordt de pagina automatisch bijgewerkt. Een voorbeeld van een correcte setup, met je code op je laptop en de live server op een externe monitor:</p>
+      <p>Een voorbeeld van een correcte setup, met je code op je laptop en de live server op een externe monitor:</p>
       <figure>
          <img src="img/02_vscode/laptop en monitor.jpg" alt="" class="w-800">
          <figcaption>correcte setup: code op je laptop, live server op een externe monitor</figcaption>
