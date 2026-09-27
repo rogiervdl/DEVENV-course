@@ -9,3 +9,91 @@ pre[class*="language-"] {
 #mode {
    display: none !important;
 }
+
+.shortcuts {
+   border-collapse: collapse;
+   font-family: Candara, Calibri, Arial, sans-serif;
+   font-size: min(1.6vw, 16px);
+}
+
+.shortcuts td {
+   border: 0.15em solid black;
+   padding: 0.45em 0.8em;
+}
+
+/* titles */
+
+.shortcuts .title {
+   font-weight: bold;
+}
+
+/* basic editing */
+
+.shortcuts .basic {
+   background-color: #b0cfe7;
+}
+
+.shortcuts .basic.title {
+   background-color: #85b4da;
+}
+
+/* files/folders */
+
+.shortcuts .files {
+   background-color: #deecef;
+}
+
+.shortcuts .files.title {
+   background-color: #3e7f87;
+}
+
+/* selecting */
+
+.shortcuts .selecting {
+   background-color: #efd9b0;
+}
+
+.shortcuts .selecting.title {
+   background-color: #b07d25;
+}
+
+/* navigation */
+
+.shortcuts .navigation {
+   background-color: #f5f5f5;
+}
+
+.shortcuts .navigation.title {
+   background-color: #e0e0e0;
+}
+
+/* coding */
+
+.shortcuts .coding {
+   background-color: #e0a4a4;
+}
+
+.shortcuts .coding.title {
+   background-color: #6e2528;
+}
+
+/* searching */
+
+.shortcuts .searching {
+   background-color: #e1e1e1;
+}
+
+.shortcuts .searching.title {
+   background-color: #a3a3a3;
+}
+
+/* editor */
+
+.shortcuts .editor {
+   background-color: #cfcffd;
+}
+
+.shortcuts .editor.title {
+   background-color: #9f9ffd;
+}
+

@@ -43,22 +43,35 @@
       </a> -->
    </nav>
    <h1>VS Code</h1>
-   <p class="othercourses"><small>Dit hoofdstuk is onderdeel van de cursus <a href="https://rogiervdl.github.io/DEVENV-course/">Ontwikkelomgeving</a>. Andere cursussen in dezelfde reeks: <a href="https://rogiervdl.github.io/HTML-course/">HTML</a>, <a href="https://rogiervdl.github.io/CSS-course/">CSS</a>, <a href="https://rogiervdl.github.io/JS-course/">Javascript</a>, <a href="https://rogiervdl.github.io/CS-course/">C#</a>.</small></p>
+   <p class="othercourses"><small>Dit hoofdstuk is onderdeel van de cursus <a
+            href="https://rogiervdl.github.io/DEVENV-course/">Ontwikkelomgeving</a>. Andere cursussen in dezelfde reeks:
+         <a href="https://rogiervdl.github.io/HTML-course/">HTML</a>, <a
+            href="https://rogiervdl.github.io/CSS-course/">CSS</a>, <a
+            href="https://rogiervdl.github.io/JS-course/">Javascript</a>, <a
+            href="https://rogiervdl.github.io/CS-course/">C#</a>.</small></p>
    <div id="toc"></div>
    <main>
       <h2>NodeJS</h2>
       <p><strong>NodeJS</strong> is een extensie van Javascript voor serverside en lokale toepassingen.</p>
-      <p>We zullen er zelf niet rechtstreeks mee werken, maar een aantal tools die we binnen onze tekst editor nodig hebben, vereisen dit. Dus <a href="https://nodejs.org/en/download/prebuilt-installer">download</a> en installeer NodeJS (de windows installer is ok).</p>
+      <p>We zullen er zelf niet rechtstreeks mee werken, maar een aantal tools die we binnen onze tekst editor nodig
+         hebben, vereisen dit. Dus <a href="https://nodejs.org/en/download/prebuilt-installer">download</a> en
+         installeer NodeJS (de windows installer is ok).</p>
       <p><img src="img/02_vscode/nodejs.png" alt="" class="w-300"></p>
-      <p>Je kan in Visual Studio Code (die we in volgende stap installeren) eenvoudig controleren of NodeJS correct geïnstalleerd is door het versienummer op te vragen. Open een nieuwe terminal via <strong>View, New Terminal...</strong>, en tik het commando <strong>npm -version</strong> (<em>npm</em> is een afkorting van <em>Node Package Manager</em>). Als je een foutmelding krijgt, dan is NodeJS nog niet geïnstalleerd.</p>
+      <p>Je kan in Visual Studio Code (die we in volgende stap installeren) eenvoudig controleren of NodeJS correct
+         geïnstalleerd is door het versienummer op te vragen. Open een nieuwe terminal via <strong>View, New
+            Terminal...</strong>, en tik het commando <strong>npm -version</strong> (<em>npm</em> is een afkorting van
+         <em>Node Package Manager</em>). Als je een foutmelding krijgt, dan is NodeJS nog niet geïnstalleerd.
+      </p>
       <p><img src="img/02_vscode/NodeJS installatie test.png" alt="" class="w-700"></p>
 
       <h2>Visual Studio Code</h2>
-      <p><strong>Visual Studio Code</strong> is de tekst editor waarmee we onze code zullen schrijven. Het heeft alle kenmerken die een tekst editor moet bezitten, en is vandaag dé editor voor web development:</p>
+      <p><strong>Visual Studio Code</strong> is de tekst editor waarmee we onze code zullen schrijven. Het heeft alle
+         kenmerken die een tekst editor moet bezitten, en is vandaag dé editor voor web development:</p>
       <ul>
          <li><strong>visueel aantrekkelijk</strong> en strakke GUI</li>
          <li><strong>bestanden &amp; mappen</strong>: navigatiebar, projecten, meerdere bestanden in tabbladen</li>
-         <li><strong>editeren</strong>: code folding, syntax highlighting, autocompletion en -indentatie, on-the-fly syntax check, shortcuts, refactoring, auto layout...</li>
+         <li><strong>editeren</strong>: code folding, syntax highlighting, autocompletion en -indentatie, on-the-fly
+            syntax check, shortcuts, refactoring, auto layout...</li>
          <li><strong>zoeken/vervangen</strong>: basic search, searching in folders, reguliere expressies</li>
          <li><strong>integraties</strong>: Git, terminal...</li>
          <li><strong>aanpasbaarheid</strong>: kleurschema's, voorkeuren</li>
@@ -66,9 +79,11 @@
       </ul>
       <h3>downloaden</h3>
       <p><a href="https://code.visualstudio.com/download">Download</a> en installeer VS Code</p>
-      <p><a href="https://code.visualstudio.com/download"><img src="img/02_vscode/icon.png" alt="" class="w-150"></a></p>
+      <p><a href="https://code.visualstudio.com/download"><img src="img/02_vscode/icon.png" alt="" class="w-150"></a>
+      </p>
       <h3>extensies installeren</h3>
-      <p><strong>Extensies</strong> zijn plugins waarmee je de functionaliteit van VS Code kan uitbreiden of aanpassen. Installeer volgende extensies (zie screenshot):</p>
+      <p><strong>Extensies</strong> zijn plugins waarmee je de functionaliteit van VS Code kan uitbreiden of aanpassen.
+         Installeer volgende extensies (zie screenshot):</p>
       <ol>
          <li>EditorConfig for VS Code</li>
          <li>ESLint</li>
@@ -81,7 +96,8 @@
       <p><img src="img/02_vscode/vscode extensies.png" alt="" class="w-300"></p>
       <div class="tips" data-caption="☝🏾 let op">
          <p>
-            Veel extensies werken alleen als je ook de nodige node packages toevoegt aan je repository, zie <a href="02_vscode.html#packages-installeren">packages installeren</a>
+            Veel extensies werken alleen als je ook de nodige node packages toevoegt aan je repository, zie <a
+               href="02_vscode.html#packages-installeren">packages installeren</a>
          </p>
       </div>
       <h3>github copilot verwijderen</h3>
@@ -89,16 +105,18 @@
       <p><img src="img/02_vscode/copilot-disable.png" alt="" class="w-700"></p>
       <h3>werkmap openen</h3>
       <p>
-         Je opent nooit zomaar losse bestanden in VS code, maar een folder waarin je werkt &mdash; de <em class="em">werkmap</em> of <em class="em">working directory</em>. 
-         Voor elk vak zul je een <mark>boilerplate</mark> krijgen (te downloaden van Toledo): dit is een kant-en-klare mappenstructuur voor je oefeningen. 
-         Open altijd de <strong>volledige boilerplate</strong> in VS Code via het <em>File</em> menu: 
+         Je opent nooit zomaar losse bestanden in VS code, maar een folder waarin je werkt &mdash; de <em
+            class="em">werkmap</em> of <em class="em">working directory</em>.
+         Voor elk vak zul je een <mark>boilerplate</mark> krijgen (te downloaden van Toledo): dit is een kant-en-klare
+         mappenstructuur voor je oefeningen.
+         Open altijd de <strong>volledige boilerplate</strong> in VS Code via het <em>File</em> menu:
       </p>
       <figure>
          <img src="img/02_vscode/vs code open folder.png" alt="" class="w-400">
          <figcaption>alle mappen in VS Code</figcaption>
       </figure>
       <p>
-         Je krijgt alle mappen te zien (screenshot voor Web Development Fundamentals). 
+         Je krijgt alle mappen te zien (screenshot voor Web Development Fundamentals).
          Uit veiligheid wordt de geopende folder niet zomaar vertrouwd. Maak deze folder trusted:
       </p>
       <figure>
@@ -119,19 +137,23 @@
       <h3>packages installeren</h3>
       <p>
          We hebben eerder een aantal extensies als html-validate, stylelint en eslint geïnstalleerd in VS Code.
-         Om te kunnen werken hebben ze een aantal <mark>Node packages</mark> nodig. Dit zijn code libraries met specifieke functionaliteit, die we zullen installeren in de working directory. 
+         Om te kunnen werken hebben ze een aantal <mark>Node packages</mark> nodig. Dit zijn code libraries met
+         specifieke functionaliteit, die we zullen installeren in de working directory.
          Je boilerplate bevat een bestand <strong>package.json</strong>, waarin alle nodige packages opgelijst staan:
       </p>
       <p><img src="img/02_vscode/package-json.png" alt="" class="w-500"></p>
-      <p>Open de Terminal (<em>Terminal</em>, <em>new Terminal...</em> of Shift-Ctrl-`), en installeer alle packages in je working directory met volgend commando:</p>
+      <p>Open de Terminal (<em>Terminal</em>, <em>new Terminal...</em> of Shift-Ctrl-`), en installeer alle packages in
+         je working directory met volgend commando:</p>
       <pre class="language-cs prism-okaida"><code>npm install</code></pre>
       <p>Het kan zijn dat je eerst volgende foutmelding krijgt:</p>
       <p><img src="img/02_vscode/running scripts foutmelding.jpg" alt="" class="w-800"></p>
       <p>Run dan dit commando, en voer daarna <code>npm install</code> opnieuw uit:</p>
-      <pre class="language-cs prism-okaida"><code>Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned</code></pre>
+      <pre
+         class="language-cs prism-okaida"><code>Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned</code></pre>
       <p>Samenvattende screenshot:</p>
       <p><img src="img/02_vscode/npm install.png" alt="" class="w-800"></p>
-      <p>Je ziet dat er een map <strong>node_modules</strong> bijgekomen is. Deze bevat alle packages uit package.json, plus alle packages die zij weer nodig hebben, de zgn. <mark>dependencies</mark>:</p>
+      <p>Je ziet dat er een map <strong>node_modules</strong> bijgekomen is. Deze bevat alle packages uit package.json,
+         plus alle packages die zij weer nodig hebben, de zgn. <mark>dependencies</mark>:</p>
       <p><img src="img/02_vscode/node_modules.png" alt="" class="w-300"></p>
       <h3>uitleg configuratiebestanden</h3>
       <p>In de root van de boilerplate komen allerhande configuratiebestanden voor.</p>
@@ -143,24 +165,33 @@
          <li><strong>.htmlvalidate.json</strong>: HTML-validate HTML linter opties</li>
          <li><strong>.stylelintrc.json</strong>: StyleLint CSS linter opties</li>
          <li><strong>eslint.config.mjs</strong>: ESLint Javascript linter opties</li>
-         <li><strong>package.json</strong>: bestand met alle packages die geïnstalleerd zullen worden via het <code>npm install</code> commando in de terminal</li>
+         <li><strong>package.json</strong>: bestand met alle packages die geïnstalleerd zullen worden via het
+            <code>npm install</code> commando in de terminal
+         </li>
          <li><strong>package-lock.json</strong>: bestand met alle packages versies</li>
       </ul>
-      <p>Deze bevatten allerhande instellingen zoals gebruikte karakterset, indentatiestijl (tabs of spaties, spronggrootte), voorkeuren qua hoofdlettergebruik, layout, toegelaten HTML tags, Javascript syntax, witruimtes enz...</p>
-      <p>Het is belangrijk dat deze instellingen <strong>bij iedereen gelijk</strong> zijn: breng dus geen wijzigingen aan deze bestanden aan!</p>
+      <p>Deze bevatten allerhande instellingen zoals gebruikte karakterset, indentatiestijl (tabs of spaties,
+         spronggrootte), voorkeuren qua hoofdlettergebruik, layout, toegelaten HTML tags, Javascript syntax, witruimtes
+         enz...</p>
+      <p>Het is belangrijk dat deze instellingen <strong>bij iedereen gelijk</strong> zijn: breng dus geen wijzigingen
+         aan deze bestanden aan!</p>
 
 
       <h2>Hoe oefeningen maken</h2>
-      <p>Open altijd eerst je volledige repository in VS Code, zie <a href="#repository-openen">repository openen</a></p>
+      <p>Open altijd eerst je volledige repository in VS Code, zie <a href="#repository-openen">repository openen</a>
+      </p>
       <h3>oefening aanmaken</h3>
-      <p>Eerst moet je weten om <strong>welke les</strong> en wat de <strong>naam van de oefening</strong> is. Dit vind je terug in de opgave:</p>
+      <p>Eerst moet je weten om <strong>welke les</strong> en wat de <strong>naam van de oefening</strong> is. Dit vind
+         je terug in de opgave:</p>
       <figure>
          <img src="img/02_vscode/les en oefening.png" alt="" class="w-500 bordered">
          <figcaption>nummer van de les en naam van de oefening</figcaption>
       </figure>
       <p>Stappen:</p>
       <ol>
-         <li>maak een <strong>submap</strong> in de les met <em>exact</em> de naam van de oefening, hier <em>InVuurEnVlam</em></li>
+         <li>maak een <strong>submap</strong> in de les met <em>exact</em> de naam van de oefening, hier
+            <em>InVuurEnVlam</em>
+         </li>
          <li>voeg daarin eventuele afbeeldingen en ander <strong>startmateriaal</strong> toe</li>
          <li>voeg een bestand <strong>index.html</strong> toe</li>
          <li>maak de <strong>HTML basiscode</strong> aan (b.v. met de <strong>html:5 + tab</strong> shortcut)</li>
@@ -183,7 +214,8 @@
       </figure>
       <figure>
          <img src="img/02_vscode/stap4.png" alt="" class="w-600">
-         <figcaption>...met exact de naam <strong>index.html</strong>, en gebruik de <strong>html:5 + TAB</strong> shortcut...</figcaption>
+         <figcaption>...met exact de naam <strong>index.html</strong>, en gebruik de <strong>html:5 + TAB</strong>
+            shortcut...</figcaption>
       </figure>
       <figure>
          <img src="img/02_vscode/stap5.png" alt="" class="w-600">
@@ -199,13 +231,16 @@
          <li><em>vendor</em>: externe bestanden en plugins als lightbox, carousel...</li>
          <li>...</li>
       </ul>
-      <p>Werk tenslotte de opgave uit. Indien nodig, maak je nog extra submappen aan, b.v. voor afbeeldingen, CSS, fonts enz... VS Code herkent een git repository en geeft in kleur aan welke veranderingen er zijn sinds de laatste commit:</p>
+      <p>Werk tenslotte de opgave uit. Indien nodig, maak je nog extra submappen aan, b.v. voor afbeeldingen, CSS, fonts
+         enz... VS Code herkent een git repository en geeft in kleur aan welke veranderingen er zijn sinds de laatste
+         commit:</p>
       <figure>
          <img src="img/02_vscode/vscode integratie.png" alt="" class="w-800">
       </figure>
 
       <h3>live preview</h3>
-      <p>De <mark>Live Preview</mark> extensie opent je pagina in de browser; elke keer als je opslaat wordt de pagina automatisch bijgewerkt. Je vindt de knop rechtsboven (als een html pagina openstaat):</p>
+      <p>De <mark>Live Preview</mark> extensie opent je pagina in de browser; elke keer als je opslaat wordt de pagina
+         automatisch bijgewerkt. Je vindt de knop rechtsboven (als een html pagina openstaat):</p>
       <figure>
          <img src="img/02_vscode/live preview start.png" alt="" class="w-200">
       </figure>
@@ -220,8 +255,9 @@
          <figcaption>correcte setup: code op je laptop, live server op een externe monitor</figcaption>
       </figure>
       <p>
-         Standaard gebeurt de update elke toetsaanslag, wat hinderlijk kan zijn. 
-         Verander het bij instellingen (shortcut: <kbd>Ctrl ,</kbd>) zodat de update enkel bij het opslaan (shortcut: <kbd>Ctrl S</kbd>) gebeurt:
+         Standaard gebeurt de update elke toetsaanslag, wat hinderlijk kan zijn.
+         Verander het bij instellingen (shortcut: <kbd>Ctrl ,</kbd>) zodat de update enkel bij het opslaan (shortcut:
+         <kbd>Ctrl S</kbd>) gebeurt:
       </p>
       <figure>
          <img src="img/02_vscode/live preview on save only.png" alt="" class="w-400">
@@ -234,27 +270,37 @@
       </figure>
 
       <h2>Code kwaliteit</h2>
-      <p>Zeker even belangrijk als de code functionaliteit, is de <strong>code kwaliteit</strong>: voor de leesbaarheid, efficiëntie, fout(on)gevoeligheid. Gelukkig zijn er een aantal tools die ons kunnen helpen bij het schrijven van betere code en het opvangen van mogelijke fouten. </p>
+      <p>Zeker even belangrijk als de code functionaliteit, is de <strong>code kwaliteit</strong>: voor de leesbaarheid,
+         efficiëntie, fout(on)gevoeligheid. Gelukkig zijn er een aantal tools die ons kunnen helpen bij het schrijven
+         van betere code en het opvangen van mogelijke fouten. </p>
       <div class="tips" data-caption="☝🏾 opgelet">
          <p>
-            Controleer altijd nog eens <strong>layout, linting en validatie</strong> vóór je pusht. Je verliest er veel punten mee en fouten zijn makkelijk te vermijden!
+            Controleer altijd nog eens <strong>layout, linting en validatie</strong> vóór je pusht. Je verliest er veel
+            punten mee en fouten zijn makkelijk te vermijden!
          </p>
       </div>
 
       <h3>layout</h3>
-      <p>Zonder degelijke layout kan je de structuur van je programma niet zien, en dus onmogelijk programmeren. Zolang je zelf de code typt treden geen problemen op; elke editor auto-indenteert tegenwoordig. Als je fragmenten van elders kopieert, kan het zijn dat je de layout handmatig moet goedzetten. Gelukkig heeft elke editor daar een shortcut voor; in VS Code is dat <mark>Shift-Alt-F</mark>.</p>
+      <p>Zonder degelijke layout kan je de structuur van je programma niet zien, en dus onmogelijk programmeren. Zolang
+         je zelf de code typt treden geen problemen op; elke editor auto-indenteert tegenwoordig. Als je fragmenten van
+         elders kopieert, kan het zijn dat je de layout handmatig moet goedzetten. Gelukkig heeft elke editor daar een
+         shortcut voor; in VS Code is dat <mark>Shift-Alt-F</mark>.</p>
       <figure>
          <img src="img/02_vscode/layout.gif" alt="" class="w-400">
          <figcaption>layout goedzetten met <strong>Shift-Alt-F</strong></figcaption>
       </figure>
       <h3>linting</h3>
-      <p>Met <mark>linting</mark> tools wordt de code automatisch gecontroleerd op <strong>mogelijke bugs</strong> (verdachte/gevaarlijke code) en <strong>stijl inconsistentie</strong> (b.v. hoofdlettergebruik, layout...). Er zijn veel linting tools in omloop; wij gebruiken de volgende:</p>
+      <p>Met <mark>linting</mark> tools wordt de code automatisch gecontroleerd op <strong>mogelijke bugs</strong>
+         (verdachte/gevaarlijke code) en <strong>stijl inconsistentie</strong> (b.v. hoofdlettergebruik, layout...). Er
+         zijn veel linting tools in omloop; wij gebruiken de volgende:</p>
       <ul>
          <li><strong>html-validate</strong> voor HTML</li>
          <li><strong>stylelint</strong> voor CSS</li>
          <li><strong>eslint</strong> voor Javascript</li>
       </ul>
-      <p>Naast de tool zelf (geïnstalleerd als NPM package) heb je meestal ook een extensie nodig om het in VS Code te integreren. Tijdens de <a href="#extensies-installeren">installatie van de extensies</a> hebben we dat allemaal al in orde gebracht voor deze drie tools. Een screenshot van typische meldingen:</p>
+      <p>Naast de tool zelf (geïnstalleerd als NPM package) heb je meestal ook een extensie nodig om het in VS Code te
+         integreren. Tijdens de <a href="#extensies-installeren">installatie van de extensies</a> hebben we dat allemaal
+         al in orde gebracht voor deze drie tools. Een screenshot van typische meldingen:</p>
       <figure>
          <img src="img/02_vscode/linting messages.png" alt="" class="w-800">
          <figcaption>voorbeeld van html-validate, stylelint en eslint meldingen (warnings en errors)</figcaption>
@@ -265,13 +311,16 @@
          <li class="warn">de regel lokaal uitschakelen</li>
          <li class="wrong">het configuratiebestand van de linting tool aanpassen</li>
       </ul>
-      <p>Het beste is altijd de fout verbeteren &mdash; meestal handmatig (lees de melding!), maar soms is er ook een <em>Quick Fix</em>:</p>
+      <p>Het beste is altijd de fout verbeteren &mdash; meestal handmatig (lees de melding!), maar soms is er ook een
+         <em>Quick Fix</em>:
+      </p>
       <figure>
          <img src="img/02_vscode/quick fix.png" alt="" class="w-500 print">
          <img src="img/02_vscode/quick fix.gif" alt="" class="w-500 noprint">
          <figcaption>quick fix in ESLint</figcaption>
       </figure>
-      <p>Je kan in theorie de melding ook soms uitschakelen voor deze regel, maar dan moet je echt wel een goede reden hebben (en geloof me, dat heb je meestal niet!):</p>
+      <p>Je kan in theorie de melding ook soms uitschakelen voor deze regel, maar dan moet je echt wel een goede reden
+         hebben (en geloof me, dat heb je meestal niet!):</p>
       <figure>
          <img src="img/02_vscode/linting ignore.png" alt="" class="w-500 print">
          <img src="img/02_vscode/linting ignore.gif" alt="" class="w-500 noprint">
@@ -279,10 +328,14 @@
       </figure>
       <h3>W3C validatie</h3>
       <p>
-         Lintingtools zullen over het algemeen naast de stijl van je code ook controleren op <strong>pure syntaxfouten</strong>.
+         Lintingtools zullen over het algemeen naast de stijl van je code ook controleren op <strong>pure
+            syntaxfouten</strong>.
          Voor HTML worden de syntaxregels onderhouden door het W3C of <strong>World Wide Web Consortium</strong>.
-         Dit zijn er dermate veel dat de HTML-validate linting tool niet volstaat, en een extra <strong>W3C Web Validator extensie</strong> nodig is (installatie zie <a href="#extensies-installeren">extensies installeren</a>).
-         Deze moet je manueel uitvoeren, bij voorkeur telkens voor het pushen. Soms vindt het toch nog fouten die door de HTML-validate linting tool over het hoofd worden gezien, zoals hier:
+         Dit zijn er dermate veel dat de HTML-validate linting tool niet volstaat, en een extra <strong>W3C Web
+            Validator extensie</strong> nodig is (installatie zie <a href="#extensies-installeren">extensies
+            installeren</a>).
+         Deze moet je manueel uitvoeren, bij voorkeur telkens voor het pushen. Soms vindt het toch nog fouten die door
+         de HTML-validate linting tool over het hoofd worden gezien, zoals hier:
       </p>
       <figure>
          <img src="img/02_vscode/w3c validation.png" alt="" class="w-600">
@@ -291,21 +344,139 @@
       <h2>Sneller typen</h2>
       <p>Er zijn twee belangrijke redenen om te investeren in het sneller leren typen:</p>
       <ul>
-         <li><strong>snelheid</strong>: een programmeur kost al snel 100€ per uur aan zijn werkgever; dankzij shortcuts kan je veel sneller werken</li>
-         <li><strong>ontlasting lichaam</strong>: met shortcuts werken b.v. is veel minder belastend voor gewrichten en spieren dan telkens te moeten wisselen tussen toetsenbord en muis</li>
+         <li><strong>snelheid</strong>: een programmeur kost al snel 100€ per uur aan zijn werkgever; dankzij shortcuts
+            kan je veel sneller werken</li>
+         <li><strong>ontlasting lichaam</strong>: met shortcuts werken b.v. is veel minder belastend voor gewrichten en
+            spieren dan telkens te moeten wisselen tussen toetsenbord en muis</li>
       </ul>
       <h3>Shortcuts</h3>
-      <p>Tabel van de belangrijkste shortcuts die je zo snel mogelijk onder de knie zou moeten krijgen (volledige cheatsheet zie <a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf">Windows</a> en <a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf">OSX</a>); probeer ze zoveel mogelijk uit tijdens de oefeningen.</p>
-      <p><img src="img/02_vscode/vs code shortcuts.png" alt="" class="w-800"></p>
+      <p>Tabel van de belangrijkste shortcuts die je zo snel mogelijk onder de knie zou moeten krijgen (volledige
+         cheatsheet zie <a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf">Windows</a> en
+         <a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf">OSX</a>); probeer ze zoveel
+         mogelijk uit tijdens de oefeningen.
+      </p>
+      <table class="shortcuts">
+         <tbody>
+            <tr>
+               <td class="title basic" colspan="2">BASIC EDITING</td>
+               <td class="title selecting" colspan="2">SELECTING</td>
+               <td class="title coding" colspan="2">CODING</td>
+            </tr>
+            <tr>
+               <td class="basic">Ctrl-C</td>
+               <td class="basic">copy</td>
+               <td class="selecting">Shift-RIGHT</td>
+               <td class="selecting">select character</td>
+               <td class="coding">Ctrl-/</td>
+               <td class="coding">(un)comment</td>
+            </tr>
+            <tr>
+               <td class="basic">Ctrl-X</td>
+               <td class="basic">cut</td>
+               <td class="selecting">Shift-Ctrl-RIGHT</td>
+               <td class="selecting">select word</td>
+               <td class="coding">Ctrl-[, Ctrl-]</td>
+               <td class="coding">(un)indent</td>
+            </tr>
+            <tr>
+               <td class="basic">Ctrl-V</td>
+               <td class="basic">paste</td>
+               <td class="selecting">Shift-END</td>
+               <td class="selecting">select till end</td>
+               <td class="coding">TAB, Shift-TAB</td>
+               <td class="coding">add/remove tabs</td>
+            </tr>
+            <tr>
+               <td class="basic">Ctrl-Z</td>
+               <td class="basic">undo</td>
+               <td class="selecting">Shift-DOWN</td>
+               <td class="selecting">select line</td>
+               <td class="coding">Ctrl-SPACE</td>
+               <td class="coding">trigger suggestion</td>
+            </tr>
+            <tr>
+               <td class="basic">Ctrl-Y</td>
+               <td class="basic">redo</td>
+               <td class="selecting">Ctrl-L</td>
+               <td class="selecting">select current line</td>
+               <td class="coding">Shift-Alt-F</td>
+               <td class="coding">layout document</td>
+            </tr>
+            <tr>
+               <td class="title files" colspan="2">FILES/FOLDERS</td>
+               <td class="selecting">Ctrl-A</td>
+               <td class="selecting">select all</td>
+               <td class="title searching" colspan="2">SEARCHING</td>
+            </tr>
+            <tr>
+               <td class="files">Ctrl-O</td>
+               <td class="files">open</td>
+               <td class="selecting">Shift-Alt-RIGHT</td>
+               <td class="selecting">select block</td>
+               <td class="searching">Ctrl-F</td>
+               <td class="searching">find text</td>
+            </tr>
+            <tr>
+               <td class="files">Ctrl-S</td>
+               <td class="files">save</td>
+               <td class="title navigation" colspan="2">NAVIGATION</td>
+               <td class="searching">Ctrl-H</td>
+               <td class="searching">find/replace</td>
+            </tr>
+            <tr>
+               <td class="files">Shift-Ctrl-S</td>
+               <td class="files">save as</td>
+               <td class="navigation">HOME</td>
+               <td class="navigation">begin of line</td>
+               <td class="searching">Shift-Ctrl-F</td>
+               <td class="searching">find in files</td>
+            </tr>
+            <tr>
+               <td class="files">Alt-TAB</td>
+               <td class="files">switch window</td>
+               <td class="navigation">END</td>
+               <td class="navigation">end of line</td>
+               <td class="searching">Ctrl-P</td>
+               <td class="searching">find file</td>
+            </tr>
+            <tr>
+               <td class="files">Ctrl-TAB</td>
+               <td class="files">switch tab</td>
+               <td class="navigation">Ctrl-RIGHT</td>
+               <td class="navigation">next word</td>
+               <td class="title editor" colspan="2">EDITOR</td>
+            </tr>
+            <tr>
+               <td class="files">Shift-Ctrl-T</td>
+               <td class="files">reopen last tab</td>
+               <td class="navigation">Ctrl-HOME</td>
+               <td class="navigation">begin of file</td>
+               <td class="editor">Ctrl-B</td>
+               <td class="editor">show/hide sidebar</td>
+            </tr>
+            <tr>
+               <td class="files">Ctrl-W</td>
+               <td class="files">close tab</td>
+               <td class="navigation">Ctrl-END</td>
+               <td class="navigation">end of file</td>
+               <td class="editor">Ctrl-J</td>
+               <td class="editor">show/hide terminal</td>
+            </tr>
+         </tbody>
+      </table>
       <h3>HTML tags aanvullen met TAB</h3>
-      <p>Tags voeg je snel toe door in HTML enkel de naam te typen, gevolgd door de <strong>TAB</strong>. Demo (animated gif):</p>
+      <p>Tags voeg je snel toe door in HTML enkel de naam te typen, gevolgd door de <strong>TAB</strong>. Demo (animated
+         gif):</p>
       <figure>
          <img src="img/02_vscode/typing tags.gif" alt="" class="w-500">
          <figcaption>gebruik telkens de TAB toets</figcaption>
       </figure>
-      <p>Daarnaast is het uiteraard ook belangrijk vlot te kunnen navigeren met pijltjestoetsen en te kunnen copy-pasten, zie <a href="#shortcuts">shortcuts</a></p>
+      <p>Daarnaast is het uiteraard ook belangrijk vlot te kunnen navigeren met pijltjestoetsen en te kunnen
+         copy-pasten, zie <a href="#shortcuts">shortcuts</a></p>
       <h3>htmltagwrap</h3>
-      <p>De veelgebruikte extensie htmltagwrap laat toe makkelijk een element rond een tekst of code te plaatsen met <strong>Alt-W</strong>:</p>
+      <p>De veelgebruikte extensie htmltagwrap laat toe makkelijk een element rond een tekst of code te plaatsen met
+         <strong>Alt-W</strong>:
+      </p>
       <figure>
          <img src="img/02_vscode/htmltagwrap.gif" alt="" class="w-400">
          <figcaption>htmltagwrap met <strong>Alt-W</strong></figcaption>
@@ -329,7 +500,10 @@
       <img src="common/img/thats-all.jpg" alt="">
       <div class="footer__bottom">
          <p>@2024, Rogier van der Linde</p>
-         <p>cursussen in dezelfde reeks: <a href="https://rogiervdl.github.io/HTML-course/">HTML</a> &mdash; <a href="https://rogiervdl.github.io/CSS-course/">CSS</a> &mdash; <a href="https://rogiervdl.github.io/JS-course/">Javascript</a> &mdash; <a href="https://rogiervdl.github.io/CS-course/">C#</a></p>
+         <p>cursussen in dezelfde reeks: <a href="https://rogiervdl.github.io/HTML-course/">HTML</a> &mdash; <a
+               href="https://rogiervdl.github.io/CSS-course/">CSS</a> &mdash; <a
+               href="https://rogiervdl.github.io/JS-course/">Javascript</a> &mdash; <a
+               href="https://rogiervdl.github.io/CS-course/">C#</a></p>
       </div>
    </footer>
    <a aria-label="up" id="up" href="#top"><span class="fas fa-chevron-circle-up"></span></a>
