@@ -27,53 +27,33 @@ pre[class*="language-"] {
    font-weight: bold;
 }
 
-/* basic editing */
+/* windows */
 
-.shortcuts .basic {
-   background-color: #b0cfe7;
-}
-
-.shortcuts .basic.title {
-   background-color: #85b4da;
-}
-
-/* files/folders */
-
-.shortcuts .files {
+.shortcuts .windows {
    background-color: #deecef;
 }
 
-.shortcuts .files.title {
+.shortcuts .windows.title {
    background-color: #3e7f87;
 }
 
-/* selecting */
+/* navigating */
 
-.shortcuts .selecting {
+.shortcuts .navigating {
    background-color: #efd9b0;
 }
 
-.shortcuts .selecting.title {
+.shortcuts .navigating.title {
    background-color: #b07d25;
 }
 
-/* navigation */
+/* vs code */
 
-.shortcuts .navigation {
-   background-color: #f5f5f5;
+.shortcuts .vscode {
+   background-color: #b0cfe7;
 }
 
-.shortcuts .navigation.title {
-   background-color: #e0e0e0;
-}
-
-/* editor */
-
-.shortcuts .editor {
-   background-color: #e2cdf2;
-}
-
-.shortcuts .editor.title {
-   background-color: #b186d6;
+.shortcuts .vscode.title {
+   background-color: #85b4da;
 }
 
